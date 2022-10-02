@@ -8,7 +8,9 @@ import Company.Employee;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 /**
  *
  * @author srikr
@@ -89,6 +91,7 @@ public class Search extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable = new javax.swing.JTable();
         jViewDetails = new javax.swing.JButton();
+        jSearchtf = new javax.swing.JTextField();
 
         jEmployeeId.setText("Employee ID");
 
@@ -170,6 +173,11 @@ public class Search extends javax.swing.JPanel {
                 jSearch1ActionPerformed(evt);
             }
         });
+        jSearch1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jSearch1KeyReleased(evt);
+            }
+        });
 
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -188,9 +196,16 @@ public class Search extends javax.swing.JPanel {
             Class[] types = new Class [] {
                 java.lang.String.class, java.lang.String.class, java.lang.Byte.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jTable.setRequestFocusEnabled(false);
@@ -246,21 +261,25 @@ public class Search extends javax.swing.JPanel {
                                     .addComponent(jPositionTitletf, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPhoneNotf, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jEmailidtf, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jSearch1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
                                         .addComponent(jUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
+                                        .addGap(111, 111, 111)
                                         .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jNametf, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jEmployeeIdtf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)))
+                                    .addComponent(jNametf)
+                                    .addComponent(jEmployeeIdtf, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jImage2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jEmployee))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(12, 12, 12)
+                                    .addComponent(jEmployee)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jSearchtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jSearch1)
+                                    .addGap(31, 31, 31))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(292, 292, 292)
                         .addComponent(jViewDetails)))
@@ -271,12 +290,17 @@ public class Search extends javax.swing.JPanel {
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jSearch1, jUpdate});
 
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLeveltf, jSearchtf});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jEmployee)
-                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jEmployee)
+                    .addComponent(jSearch1)
+                    .addComponent(jSearchtf, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jViewDetails)
@@ -326,12 +350,13 @@ public class Search extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSearch1))
+                    .addComponent(jUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jSearch1, jUpdate});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLeveltf, jSearchtf});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -378,6 +403,10 @@ public class Search extends javax.swing.JPanel {
 
     private void jSearch1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearch1ActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
+        jTable.setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter(jSearchtf.getText().trim()));
     }//GEN-LAST:event_jSearch1ActionPerformed
 
     private void jViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jViewDetailsActionPerformed
@@ -385,7 +414,7 @@ public class Search extends javax.swing.JPanel {
         int selectedrow = jTable.getSelectedRow();
         if (selectedrow >= 0){
 
-            Employee employee = (Employee) jTable.getValueAt(selectedrow,0);
+            Employee employee = (Employee)jTable.getValueAt(selectedrow, 0);
 
             jNametf.setText(String.valueOf(employee.getName()));
             jEmployeeIdtf.setText(String.valueOf(employee.getEmployeeId()));
@@ -406,6 +435,14 @@ public class Search extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "please select");
         }
     }//GEN-LAST:event_jViewDetailsActionPerformed
+
+    private void jSearch1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jSearch1KeyReleased
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
+        jTable.setRowSorter(tr);
+        tr.setRowFilter(RowFilter.regexFilter(jSearchtf.getText().trim()));
+    }//GEN-LAST:event_jSearch1KeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -433,6 +470,7 @@ public class Search extends javax.swing.JPanel {
     private javax.swing.JTextField jPositionTitletf;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jSearch1;
+    private javax.swing.JTextField jSearchtf;
     private javax.swing.JLabel jStartDate;
     private com.toedter.calendar.JDateChooser jStartDatetf;
     private javax.swing.JTable jTable;
