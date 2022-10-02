@@ -9,27 +9,27 @@ import java.util.ArrayList;
  * @author srikr
  */
 public class Employees {
-    private ArrayList<Employee> Employees;
+    private ArrayList<Employee> employees;
     
     public Employees(){
-        Employees = new ArrayList<Employee>();
+        employees = new ArrayList<Employee>();
     }
     
     public ArrayList<Employee> getEmployees() {
-        return Employees;
+        return employees;
     }
     
-    public void setEmployees(ArrayList<Employee> Employees) {
-        this.Employees = Employees;
+    public void setEmployees(ArrayList<Employee> employees) {
+        this.employees = employees;
     }
     
     public Employee addEmployee(){
         Employee es = new Employee();
-        Employees.add(es);
+        employees.add(es);
         return es;
     }
     
     public void deleteEmployee(Employee e){
-        Employees.remove(e);
+        employees.remove(e);
     }
 }
