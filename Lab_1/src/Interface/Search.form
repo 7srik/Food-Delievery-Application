@@ -24,7 +24,17 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="jEmployee" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jSearchtf" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jSearch1" linkSize="2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" alignment="0" min="-2" pref="692" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -39,52 +49,46 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jAgetf" min="-2" pref="54" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jGender" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jMale" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jFemale" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLGBTQ" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jStartDatetf" min="-2" pref="132" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLevel" min="-2" pref="27" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLeveltf" linkSize="4" min="-2" pref="138" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jTeamInfotf" linkSize="1" alignment="0" min="-2" pref="276" max="-2" attributes="0"/>
-                                  <Component id="jPositionTitletf" linkSize="1" alignment="0" min="-2" pref="247" max="-2" attributes="0"/>
-                                  <Component id="jPhoneNotf" linkSize="1" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
-                                  <Component id="jEmailidtf" linkSize="1" alignment="0" min="-2" pref="221" max="-2" attributes="0"/>
+                                  <Component id="jPositionTitletf" linkSize="1" alignment="0" pref="247" max="32767" attributes="0"/>
+                                  <Component id="jPhoneNotf" linkSize="1" alignment="0" pref="229" max="32767" attributes="0"/>
+                                  <Component id="jEmailidtf" linkSize="1" alignment="0" pref="221" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                       <Component id="jUpdate" linkSize="2" min="-2" pref="92" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                                       <Component id="jDelete" min="-2" pref="92" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jNametf" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jEmployeeIdtf" linkSize="1" alignment="0" pref="309" max="32767" attributes="0"/>
+                                  <Component id="jTeamInfotf" linkSize="1" pref="276" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jAgetf" min="-2" pref="54" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jGender" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jMale" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jStartDatetf" min="-2" pref="133" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLevel" min="-2" pref="27" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="jFemale" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLGBTQ" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLeveltf" min="-2" pref="137" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jNametf" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                               <Component id="jImage2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                  <Component id="jEmployee" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jSearchtf" linkSize="4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jSearch1" linkSize="2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jScrollPane1" alignment="0" min="-2" pref="692" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -104,7 +108,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jEmployee" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jSearch1" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jSearchtf" linkSize="5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="jSearchtf" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="202" max="-2" attributes="0"/>
@@ -112,7 +116,7 @@
               <Component id="jViewDetails" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jNametf" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -136,39 +140,39 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="jLeveltf" linkSize="5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLevel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jStartDatetf" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLeveltf" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jStartDatetf" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTeamInfotf" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jPositionTitle" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPositionTitletf" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jPhoneNotf" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPhoneNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jEmailidtf" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jEmailId" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jDelete" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="jUpdate" linkSize="3" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jImage2" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTeamInfotf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTeamInfo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jPositionTitle" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPositionTitletf" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jPhoneNotf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPhoneNo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jEmailidtf" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jEmailId" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jDelete" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="jUpdate" linkSize="3" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="jImage2" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -316,11 +320,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jUpdateActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jLeveltf">
-    </Component>
     <Component class="javax.swing.JTextField" name="jEmployeeIdtf">
-    </Component>
-    <Component class="com.toedter.calendar.JDateChooser" name="jStartDatetf">
     </Component>
     <Component class="javax.swing.JButton" name="jSearch1">
       <Properties>
@@ -424,6 +424,10 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jSearchtf">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jStartDatetf">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jLeveltf">
     </Component>
   </SubComponents>
 </Form>

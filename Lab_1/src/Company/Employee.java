@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Company;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
  *
@@ -14,7 +15,7 @@ public class Employee {
     private String employeeId;
     private int age;
     private String gender;
-    private Date startDate = new Date();
+    private String startDate;
     private String level;
     private String teamInfo;
     private String positionTitle;
@@ -53,13 +54,7 @@ public class Employee {
         this.gender = gender;
     }
 
-    public Date getStartDate() {
-        return startDate;
-    }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
 
     public String getLevel() {
         return level;
@@ -99,5 +94,13 @@ public class Employee {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 }

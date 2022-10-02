@@ -5,6 +5,8 @@
 package Interface;
 import Company.Employee;
 import Company.Employees;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 /**
  *
@@ -266,7 +268,9 @@ public class CreatePanel extends javax.swing.JPanel {
             case 2 -> employee.setGender(jFemale.getText());
             default -> employee.setGender(jLGBTQ.getText());
         }
-        employee.setStartDate(jStartDatetf.getDate());
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        String date=sdf.format(jStartDatetf.getDate());
+        employee.setStartDate(date);
         employee.setLevel(jLeveltf.getText());
         employee.setTeamInfo(jTeamInfotf.getText());
         employee.setPositionTitle(jPositionTitletf.getText());
