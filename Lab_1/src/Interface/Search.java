@@ -208,7 +208,6 @@ public class Search extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jTable.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTable);
 
         jViewDetails.setText("View Details");
@@ -413,9 +412,7 @@ public class Search extends javax.swing.JPanel {
         // TODO add your handling code here:
         int selectedrow = jTable.getSelectedRow();
         if (selectedrow >= 0){
-
-            Employee employee = (Employee)jTable.getValueAt(selectedrow, 0);
-
+            Employee employee = (Employee) jTable.getValueAt(selectedrow, 0);
             jNametf.setText(String.valueOf(employee.getName()));
             jEmployeeIdtf.setText(String.valueOf(employee.getEmployeeId()));
             jAgetf.setText(String.valueOf(employee.getAge()));
