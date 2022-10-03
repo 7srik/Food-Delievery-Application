@@ -42,11 +42,6 @@
                       <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jEmployee" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jImage" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
                               <Component id="jAgetf" min="-2" pref="101" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jGender" min="-2" max="-2" attributes="0"/>
@@ -76,6 +71,21 @@
                       <EmptySpace min="252" pref="252" max="-2" attributes="0"/>
                       <Component id="jCreate" min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="jEmployee" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jBrowse" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jPanelImage" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="335" max="32767" attributes="0"/>
           </Group>
@@ -86,10 +96,12 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jImage" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanelImage" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jEmployee" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="jBrowse" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -116,10 +128,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jStartDate" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jStartDatetf" linkSize="2" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="jLeveltf" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLevel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jLeveltf" linkSize="2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLevel" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -237,20 +247,32 @@
         <Property name="text" type="java.lang.String" value="Email ID"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JPanel" name="jImage">
+    <Container class="javax.swing.JPanel" name="jPanelImage">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="137" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jImage" pref="126" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="135" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jImage" pref="123" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jImage">
+        </Component>
+      </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="jEmployeeId">
       <Properties>
@@ -368,6 +390,14 @@
       </Properties>
     </Component>
     <Component class="com.toedter.calendar.JDateChooser" name="jStartDatetf">
+    </Component>
+    <Component class="javax.swing.JButton" name="jBrowse">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Browse Image"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBrowseActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

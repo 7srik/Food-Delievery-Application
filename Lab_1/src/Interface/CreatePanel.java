@@ -5,9 +5,12 @@
 package Interface;
 import Company.Employee;
 import Company.Employees;
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import static javax.swing.text.html.HTML.Tag.OPTION;
 /**
  *
  * @author srikr
@@ -42,7 +45,8 @@ public class CreatePanel extends javax.swing.JPanel {
         jMale = new javax.swing.JRadioButton();
         jCreate = new javax.swing.JButton();
         jEmailId = new javax.swing.JLabel();
-        jImage = new javax.swing.JPanel();
+        jPanelImage = new javax.swing.JPanel();
+        jImage = new javax.swing.JLabel();
         jEmployeeId = new javax.swing.JLabel();
         jTeamInfo = new javax.swing.JLabel();
         jEmployeeIdtf = new javax.swing.JTextField();
@@ -59,6 +63,7 @@ public class CreatePanel extends javax.swing.JPanel {
         jNametf = new javax.swing.JTextField();
         jPositionTitle = new javax.swing.JLabel();
         jStartDatetf = new com.toedter.calendar.JDateChooser();
+        jBrowse = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -110,15 +115,21 @@ public class CreatePanel extends javax.swing.JPanel {
         jEmailId.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jEmailId.setText("Email ID");
 
-        javax.swing.GroupLayout jImageLayout = new javax.swing.GroupLayout(jImage);
-        jImage.setLayout(jImageLayout);
-        jImageLayout.setHorizontalGroup(
-            jImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 137, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanelImageLayout = new javax.swing.GroupLayout(jPanelImage);
+        jPanelImage.setLayout(jPanelImageLayout);
+        jPanelImageLayout.setHorizontalGroup(
+            jPanelImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelImageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jImage, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jImageLayout.setVerticalGroup(
-            jImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 135, Short.MAX_VALUE)
+        jPanelImageLayout.setVerticalGroup(
+            jPanelImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelImageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jImage, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jEmployeeId.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -159,6 +170,13 @@ public class CreatePanel extends javax.swing.JPanel {
         jPositionTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jPositionTitle.setText("Position Title");
 
+        jBrowse.setText("Browse Image");
+        jBrowse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBrowseActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -178,10 +196,6 @@ public class CreatePanel extends javax.swing.JPanel {
                             .addComponent(jEmailId))
                         .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jEmployee)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jAgetf, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -206,7 +220,18 @@ public class CreatePanel extends javax.swing.JPanel {
                                 .addComponent(jLeveltf))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(252, 252, 252)
-                        .addComponent(jCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addComponent(jEmployee)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBrowse)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(jPanelImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(335, Short.MAX_VALUE))
         );
 
@@ -217,10 +242,12 @@ public class CreatePanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jEmployee)
-                        .addGap(54, 54, 54)))
+                        .addGap(33, 33, 33)
+                        .addComponent(jBrowse)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jName)
                     .addComponent(jNametf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -241,9 +268,8 @@ public class CreatePanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jStartDate)
                     .addComponent(jStartDatetf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLeveltf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLevel)))
+                    .addComponent(jLeveltf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLevel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTeamInfotf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -325,10 +351,20 @@ public class CreatePanel extends javax.swing.JPanel {
         jEmailidtf.setText("");
     }//GEN-LAST:event_jCreateActionPerformed
 
+    private void jBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBrowseActionPerformed
+        /*TODO add your handling code here:
+        JFileChooser imageFile = new JFileChooser();
+        int showOpenDialog = imageFile.showOpenDialog(null);
+        if (showOpenDialog == APPROVE_OPTION){
+            File selImageFile = imageFile.getSelectedFile()
+        }*/
+    }//GEN-LAST:event_jBrowseActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jAge;
     private javax.swing.JTextField jAgetf;
+    private javax.swing.JButton jBrowse;
     private javax.swing.JButton jCreate;
     private javax.swing.JLabel jEmailId;
     private javax.swing.JTextField jEmailidtf;
@@ -338,13 +374,14 @@ public class CreatePanel extends javax.swing.JPanel {
     private javax.swing.JRadioButton jFemale;
     private javax.swing.JLabel jGender;
     private javax.swing.ButtonGroup jGenderGroup;
-    private javax.swing.JPanel jImage;
+    private javax.swing.JLabel jImage;
     private javax.swing.JRadioButton jLGBTQ;
     private javax.swing.JLabel jLevel;
     private javax.swing.JTextField jLeveltf;
     private javax.swing.JRadioButton jMale;
     private javax.swing.JLabel jName;
     private javax.swing.JTextField jNametf;
+    private javax.swing.JPanel jPanelImage;
     private javax.swing.JLabel jPhoneNo;
     private javax.swing.JTextField jPhoneNotf;
     private javax.swing.JLabel jPositionTitle;
