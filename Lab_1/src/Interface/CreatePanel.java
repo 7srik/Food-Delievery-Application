@@ -62,10 +62,11 @@ public class CreatePanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jAge.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jAge.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jAge.setText("Age");
 
         jGenderGroup.add(jLGBTQ);
+        jLGBTQ.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jLGBTQ.setText("LGBTQ+");
         jLGBTQ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,13 +74,14 @@ public class CreatePanel extends javax.swing.JPanel {
             }
         });
 
-        jPhoneNo.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jPhoneNo.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jPhoneNo.setText("Phone No");
 
-        jName.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jName.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jName.setText("Name");
 
         jGenderGroup.add(jFemale);
+        jFemale.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jFemale.setText("Female");
         jFemale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +90,7 @@ public class CreatePanel extends javax.swing.JPanel {
         });
 
         jGenderGroup.add(jMale);
+        jMale.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         jMale.setText("Male");
         jMale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,7 +99,7 @@ public class CreatePanel extends javax.swing.JPanel {
         });
 
         jCreate.setBackground(new java.awt.Color(255, 204, 0));
-        jCreate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jCreate.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jCreate.setText("Create");
         jCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,40 +107,56 @@ public class CreatePanel extends javax.swing.JPanel {
             }
         });
 
-        jEmailId.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jEmailId.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jEmailId.setText("Email ID");
 
         javax.swing.GroupLayout jImageLayout = new javax.swing.GroupLayout(jImage);
         jImage.setLayout(jImageLayout);
         jImageLayout.setHorizontalGroup(
             jImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 137, Short.MAX_VALUE)
         );
         jImageLayout.setVerticalGroup(
             jImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 135, Short.MAX_VALUE)
         );
 
-        jEmployeeId.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jEmployeeId.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jEmployeeId.setText("Employee ID");
 
-        jTeamInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jTeamInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jTeamInfo.setText("Team Info");
 
+        jEmployeeIdtf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
         jEmployee.setBackground(new java.awt.Color(255, 255, 255));
-        jEmployee.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        jEmployee.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jEmployee.setText("Employee Details");
 
-        jGender.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jGender.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jGender.setText("Gender");
 
-        jStartDate.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jStartDate.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jStartDate.setText("Start Date");
 
-        jLevel.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jEmailidtf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jAgetf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jPositionTitletf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jLevel.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLevel.setText("Level");
 
-        jPositionTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jPhoneNotf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jLeveltf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jTeamInfotf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jNametf.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+
+        jPositionTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jPositionTitle.setText("Position Title");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -145,13 +164,9 @@ public class CreatePanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jStartDate)
                             .addComponent(jEmployeeId)
@@ -164,7 +179,11 @@ public class CreatePanel extends javax.swing.JPanel {
                         .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jAgetf, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jEmployee)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jAgetf, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jGender)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -173,34 +192,35 @@ public class CreatePanel extends javax.swing.JPanel {
                                 .addComponent(jFemale)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLGBTQ))
-                            .addComponent(jEmployeeIdtf, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jStartDatetf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPositionTitletf)
+                            .addComponent(jNametf)
+                            .addComponent(jEmployeeIdtf, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                            .addComponent(jTeamInfotf, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                            .addComponent(jPhoneNotf, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                            .addComponent(jEmailidtf, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jStartDatetf, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLevel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLeveltf, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTeamInfotf, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
-                                .addComponent(jPositionTitletf, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                                .addComponent(jPhoneNotf, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
-                                .addComponent(jEmailidtf, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
-                                .addComponent(jCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jNametf))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(jLeveltf))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(252, 252, 252)
+                        .addComponent(jCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jEmailidtf, jEmployeeIdtf, jPhoneNotf, jPositionTitletf, jTeamInfotf});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jEmailidtf, jEmployeeIdtf, jPhoneNotf, jTeamInfotf});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jEmployee)
+                        .addGap(54, 54, 54)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jName)
                     .addComponent(jNametf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -219,17 +239,17 @@ public class CreatePanel extends javax.swing.JPanel {
                         .addComponent(jLGBTQ)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jStartDate)
+                    .addComponent(jStartDatetf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLeveltf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLevel))
-                    .addComponent(jStartDate)
-                    .addComponent(jStartDatetf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLevel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTeamInfotf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTeamInfo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPositionTitle)
                     .addComponent(jPositionTitletf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -241,9 +261,12 @@ public class CreatePanel extends javax.swing.JPanel {
                     .addComponent(jEmailidtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jEmailId))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAgetf, jEmailidtf, jEmployeeIdtf, jLeveltf, jNametf, jPhoneNotf, jPositionTitletf, jStartDatetf, jTeamInfotf});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLGBTQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLGBTQActionPerformed

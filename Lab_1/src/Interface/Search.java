@@ -127,7 +127,7 @@ public class Search extends javax.swing.JPanel {
         jPhoneNo.setText("Phone No");
 
         jEmployee.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
-        jEmployee.setText("Edit Employee Details");
+        jEmployee.setText("Employees Details");
 
         jTeamInfo.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         jTeamInfo.setText("Team Info");
@@ -163,7 +163,7 @@ public class Search extends javax.swing.JPanel {
         });
 
         jDelete.setBackground(new java.awt.Color(255, 204, 0));
-        jDelete.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jDelete.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jDelete.setText("Delete");
         jDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,7 +175,7 @@ public class Search extends javax.swing.JPanel {
         jPositionTitle.setText("Position Title");
 
         jUpdate.setBackground(new java.awt.Color(255, 204, 0));
-        jUpdate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jUpdate.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jUpdate.setText("Update");
         jUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +184,7 @@ public class Search extends javax.swing.JPanel {
         });
 
         jSearch1.setBackground(new java.awt.Color(255, 204, 0));
+        jSearch1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jSearch1.setText("Search");
         jSearch1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,10 +229,17 @@ public class Search extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable);
 
         jViewDetails.setBackground(new java.awt.Color(255, 204, 0));
+        jViewDetails.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jViewDetails.setText("View Details");
         jViewDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jViewDetailsActionPerformed(evt);
+            }
+        });
+
+        jSearchtf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSearchtfActionPerformed(evt);
             }
         });
 
@@ -240,35 +248,26 @@ public class Search extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jViewDetails)
-                        .addGap(201, 201, 201)
-                        .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jSearchtf, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jSearch1)
-                                .addGap(31, 31, 31))
+                            .addComponent(jStartDate)
+                            .addComponent(jEmployeeId)
+                            .addComponent(jAge)
+                            .addComponent(jTeamInfo)
+                            .addComponent(jName)
+                            .addComponent(jPositionTitle)
+                            .addComponent(jPhoneNo)
+                            .addComponent(jEmailId))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPositionTitletf, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                            .addComponent(jPhoneNotf, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                            .addComponent(jEmailidtf, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jStartDate)
-                                    .addComponent(jEmployeeId)
-                                    .addComponent(jAge)
-                                    .addComponent(jTeamInfo)
-                                    .addComponent(jName)
-                                    .addComponent(jPositionTitle)
-                                    .addComponent(jPhoneNo)
-                                    .addComponent(jEmailId))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jEmployeeIdtf, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jAgetf, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -280,51 +279,53 @@ public class Search extends javax.swing.JPanel {
                                         .addComponent(jFemale)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLGBTQ))
-                                    .addComponent(jPositionTitletf, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                                    .addComponent(jPhoneNotf, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
-                                    .addComponent(jEmailidtf, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(jStartDatetf, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLeveltf, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jTeamInfotf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))
-                                    .addComponent(jNametf, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
-                                .addComponent(jImage2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(99, 99, 99)
-                                .addComponent(jUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jStartDatetf, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLeveltf, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTeamInfotf, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+                                    .addComponent(jNametf, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jViewDetails)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jImage2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(40, 40, 40)
+                            .addComponent(jEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(105, 105, 105)
+                            .addComponent(jSearchtf, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSearch1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 692, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jEmailidtf, jEmployeeIdtf, jPhoneNotf, jPositionTitletf, jTeamInfotf});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jSearch1, jUpdate});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDelete, jViewDetails});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDelete, jSearch1, jUpdate, jViewDetails});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jSearch1)
-                            .addComponent(jSearchtf, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSearchtf, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSearch1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jViewDetails)
-                    .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jViewDetails))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -373,9 +374,7 @@ public class Search extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jSearch1, jUpdate});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDelete, jViewDetails});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDelete, jSearch1, jUpdate, jViewDetails});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -414,20 +413,31 @@ public class Search extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) jTable.getModel();
         if (selectedRowIndex >= 0)
         {
-            model.setValueAt(jNametf.getText(), selectedRowIndex, 0);
-            model.setValueAt(jEmployeeIdtf.getText(), selectedRowIndex, 1);
-            model.setValueAt(jAgetf.getText(), selectedRowIndex, 2);
-            String genderValue="";
-                if (jMale.isSelected()) genderValue="Male";
-                else if (jFemale.isSelected()) genderValue="Female";
-                else  genderValue="Other";
-            model.setValueAt(genderValue, selectedRowIndex, 3);
-            model.setValueAt(jStartDatetf.getText(), selectedRowIndex, 4);
-            model.setValueAt(jLeveltf.getText(), selectedRowIndex, 5);
-            model.setValueAt(jTeamInfotf.getText(), selectedRowIndex, 6);
-            model.setValueAt(jPositionTitletf.getText(), selectedRowIndex, 7);
-            model.setValueAt(jPhoneNotf.getText(), selectedRowIndex, 8);
-            model.setValueAt(jEmailidtf.getText(), selectedRowIndex, 9);
+            if("".equals(jNametf.getText())||"".equals(jEmployeeIdtf.getText())||
+            "".equals(jAgetf.getText())||"".equals(jStartDatetf.getText())||
+            "".equals(jLeveltf.getText())||"".equals(jTeamInfotf.getText())||
+            "".equals(jPositionTitletf.getText())||"".equals(jPhoneNotf.getText())||
+            "".equals(jEmailidtf.getText())||(jMale.isSelected()&&
+            jFemale.isSelected()&&jLGBTQ.isSelected()))             {
+                
+                JOptionPane.showMessageDialog(this, "Please Fill All the Fields");
+            }
+            else{
+                model.setValueAt(jNametf.getText(), selectedRowIndex, 0);
+                model.setValueAt(jEmployeeIdtf.getText(), selectedRowIndex, 1);
+                model.setValueAt(jAgetf.getText(), selectedRowIndex, 2);
+                String genderValue="";
+                    if (jMale.isSelected()) genderValue="Male";
+                    else if (jFemale.isSelected()) genderValue="Female";
+                    else if (jLGBTQ.isSelected()) genderValue="LGBTQ+";
+                model.setValueAt(genderValue, selectedRowIndex, 3);
+                model.setValueAt(jStartDatetf.getText(), selectedRowIndex, 4);
+                model.setValueAt(jLeveltf.getText(), selectedRowIndex, 5);
+                model.setValueAt(jTeamInfotf.getText(), selectedRowIndex, 6);
+                model.setValueAt(jPositionTitletf.getText(), selectedRowIndex, 7);
+                model.setValueAt(jPhoneNotf.getText(), selectedRowIndex, 8);
+                model.setValueAt(jEmailidtf.getText(), selectedRowIndex, 9);
+            }
         }
         else{
           JOptionPane.showMessageDialog(this, "Please Select a row to View.");
@@ -449,9 +459,9 @@ public class Search extends javax.swing.JPanel {
     private void jSearch1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearch1ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTable.getModel();
-        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
-        jTable.setRowSorter(tr);
-        tr.setRowFilter(RowFilter.regexFilter(jSearchtf.getText().trim()));
+        TableRowSorter<DefaultTableModel> tm = new TableRowSorter<>(model);
+        jTable.setRowSorter(tm);
+        tm.setRowFilter(RowFilter.regexFilter(jSearchtf.getText().trim()));
     }//GEN-LAST:event_jSearch1ActionPerformed
 
     private void jViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jViewDetailsActionPerformed
@@ -495,10 +505,14 @@ public class Search extends javax.swing.JPanel {
     private void jSearch1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jSearch1KeyReleased
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTable.getModel();
-        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<>(model);
-        jTable.setRowSorter(tr);
-        tr.setRowFilter(RowFilter.regexFilter(jSearchtf.getText().trim()));
+        TableRowSorter<DefaultTableModel> tm = new TableRowSorter<>(model);
+        jTable.setRowSorter(tm);
+        tm.setRowFilter(RowFilter.regexFilter(jSearchtf.getText().trim()));
     }//GEN-LAST:event_jSearch1KeyReleased
+
+    private void jSearchtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchtfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jSearchtfActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
