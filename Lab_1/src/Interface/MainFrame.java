@@ -37,6 +37,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jControlPanel.setBackground(new java.awt.Color(204, 255, 204));
+
+        Create.setBackground(new java.awt.Color(255, 204, 0));
         Create.setText("Create");
         Create.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,6 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        Search.setBackground(new java.awt.Color(255, 204, 0));
         Search.setText("View");
         Search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,9 +62,9 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jControlPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(Search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Create))
-                .addGap(19, 19, 19))
+                    .addComponent(Create, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Search, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         jControlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {Create, Search});
@@ -68,9 +72,9 @@ public class MainFrame extends javax.swing.JFrame {
         jControlPanelLayout.setVerticalGroup(
             jControlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jControlPanelLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addGap(75, 75, 75)
                 .addComponent(Create)
-                .addGap(51, 51, 51)
+                .addGap(34, 34, 34)
                 .addComponent(Search, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                 .addGap(89, 89, 89))
         );
@@ -79,15 +83,18 @@ public class MainFrame extends javax.swing.JFrame {
 
         jSplitPane.setLeftComponent(jControlPanel);
 
+        jDisplayPanel.setBackground(new java.awt.Color(255, 255, 255));
+        jDisplayPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout jDisplayPanelLayout = new javax.swing.GroupLayout(jDisplayPanel);
         jDisplayPanel.setLayout(jDisplayPanelLayout);
         jDisplayPanelLayout.setHorizontalGroup(
             jDisplayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
+            .addGap(0, 291, Short.MAX_VALUE)
         );
         jDisplayPanelLayout.setVerticalGroup(
             jDisplayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 356, Short.MAX_VALUE)
+            .addGap(0, 352, Short.MAX_VALUE)
         );
 
         jSplitPane.setRightComponent(jDisplayPanel);
