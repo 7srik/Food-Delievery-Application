@@ -278,6 +278,18 @@ public class CreatePanel extends javax.swing.JPanel {
         employee.setEmailId(jEmailidtf.getText());
         
         JOptionPane.showMessageDialog(null, "Employee Profile Created Successfully");
+        jNametf.setText("");
+        jEmployeeIdtf.setText("");
+        jAgetf.setText("");
+        jMale.setSelected(false);
+        jFemale.setSelected(false);
+        jLGBTQ.setSelected(false);
+        jStartDatetf.setDate(null);
+        jLeveltf.setText("");
+        jTeamInfotf.setText("");
+        jPositionTitletf.setText("");
+        jPhoneNotf.setText("");
+        jEmailidtf.setText("");
     }//GEN-LAST:event_jCreateActionPerformed
 
 
