@@ -413,8 +413,11 @@ public class PersonjPanel extends javax.swing.JPanel {
                 pr.setAddress(jAddresstxt.getText());
                 pr.setCommunityName(jCommunitytxt.getText());
                 pr.setCityName(jCitytxt.getText());
-                JOptionPane.showMessageDialog(null, "Person Created with unique id"+pr.getPersonid()+" "+pr.getId());
+                JOptionPane.showMessageDialog(null, "Person Created with unique id  "+pr.getPersonid());
                 clearFields();
+                //PersonInfojPanel personinfo = new PersonInfojPanel(person,patient);
+                //personinfo.setVisible(true);
+                //setVisible(false);
         } else {
                 JOptionPane.showMessageDialog(null, "Cannot Create Person, Please provide all the details");
         }   

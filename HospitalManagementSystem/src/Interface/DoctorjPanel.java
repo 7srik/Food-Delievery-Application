@@ -27,31 +27,78 @@ public class DoctorjPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        jUsernamelbl = new javax.swing.JLabel();
+        jUsernametxt = new javax.swing.JTextField();
+        jPasswordlbl = new javax.swing.JLabel();
+        jPasswordtxt = new javax.swing.JTextField();
+        jLoginbtn = new javax.swing.JButton();
+        jCancelbtn = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1000, 600));
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel2.setText("DOCTOR INFORMATION");
+        jLabel2.setText("DOCTOR LOGIN");
+
+        jUsernamelbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jUsernamelbl.setText("USERNAME");
+
+        jPasswordlbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
+        jPasswordlbl.setText("PASSWORD");
+
+        jLoginbtn.setText("LOGIN");
+
+        jCancelbtn.setText("CLEAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(393, 393, 393)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(358, 358, 358))
+                .addGap(460, 460, 460)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jUsernamelbl)
+                    .addComponent(jUsernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordlbl))
+                .addContainerGap(304, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPasswordtxt, jUsernametxt});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addGap(0, 573, Short.MAX_VALUE))
+                .addGap(100, 100, 100)
+                .addComponent(jUsernamelbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jUsernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPasswordlbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 221, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPasswordtxt, jUsernametxt});
+
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jCancelbtn;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jLoginbtn;
+    private javax.swing.JLabel jPasswordlbl;
+    private javax.swing.JTextField jPasswordtxt;
+    private javax.swing.JLabel jUsernamelbl;
+    private javax.swing.JTextField jUsernametxt;
     // End of variables declaration//GEN-END:variables
 }
