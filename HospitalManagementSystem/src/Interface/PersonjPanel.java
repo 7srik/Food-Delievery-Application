@@ -9,11 +9,8 @@ import Source.*;
 import Source.Person;
 import Source.Patient;
 import Source.PersonDirectory;;
-import Source.PatientDirectory;
 import java.util.ArrayList;
-import Source.PatientDirectory;
 import javax.swing.table.DefaultTableModel;
-import Source.PatientDirectory;
 import java.util.ArrayList;
 import Source.PatientDirectory;
 
@@ -30,6 +27,7 @@ public class PersonjPanel extends javax.swing.JPanel {
     PatientDirectory patient;
     ArrayList<Person> personList;
     ArrayList<Patient> patientList;
+    int g=0;
     public PersonjPanel(PersonDirectory person,PatientDirectory patient) {
         initComponents();
         this.person = person;
@@ -44,8 +42,14 @@ public class PersonjPanel extends javax.swing.JPanel {
         jCitytxt.setText(null);
         jCommunitytxt.setText(null);
         jAddresstxt.setText(null);
-        jPersonUsernametxt.setText(null);
-        jPersonPasswordtxt.setText(null);
+        jMale.setSelected(false);
+        jFemale.setSelected(false);
+        jLgbtq.setSelected(false);
+        jGenderbtngrp.clearSelection();
+        jPhonenotxt.setText(null);
+        jEmailidtxt.setText(null);
+        //jPersonUsernametxt.setText(null);
+        //jPersonPasswordtxt.setText(null);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,6 +60,7 @@ public class PersonjPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jGenderbtngrp = new javax.swing.ButtonGroup();
         jHeading = new javax.swing.JLabel();
         jNamelbl = new javax.swing.JLabel();
         jAgelbl = new javax.swing.JLabel();
@@ -69,13 +74,17 @@ public class PersonjPanel extends javax.swing.JPanel {
         jCitytxt = new javax.swing.JTextField();
         jCreatebtn = new javax.swing.JButton();
         jClearbtn = new javax.swing.JButton();
-        jPersonUsernamelbl = new javax.swing.JLabel();
-        jPersonPasswordlbl = new javax.swing.JLabel();
-        jPersonUsernametxt = new javax.swing.JTextField();
-        jPersonPasswordtxt = new javax.swing.JPasswordField();
+        jGenderlbl = new javax.swing.JLabel();
+        jMale = new javax.swing.JRadioButton();
+        jFemale = new javax.swing.JRadioButton();
+        jLgbtq = new javax.swing.JRadioButton();
+        jPhonenolbl = new javax.swing.JLabel();
+        jPhonenotxt = new javax.swing.JTextField();
+        jEmailidlbl = new javax.swing.JLabel();
+        jEmailidtxt = new javax.swing.JTextField();
 
         jHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jHeading.setText("PERSON INFORMATION");
+        jHeading.setText("PERSON REGISTRATION");
 
         jNamelbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jNamelbl.setText("Name :");
@@ -140,11 +149,44 @@ public class PersonjPanel extends javax.swing.JPanel {
             }
         });
 
-        jPersonUsernamelbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
-        jPersonUsernamelbl.setText("Person Username");
+        jGenderlbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jGenderlbl.setText("Gender :");
 
-        jPersonPasswordlbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
-        jPersonPasswordlbl.setText("Person Password :");
+        jGenderbtngrp.add(jMale);
+        jMale.setText("Male");
+        jMale.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMaleActionPerformed(evt);
+            }
+        });
+
+        jGenderbtngrp.add(jFemale);
+        jFemale.setText("Female");
+        jFemale.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFemaleActionPerformed(evt);
+            }
+        });
+
+        jGenderbtngrp.add(jLgbtq);
+        jLgbtq.setText("LGBTQ+");
+        jLgbtq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLgbtqActionPerformed(evt);
+            }
+        });
+
+        jPhonenolbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jPhonenolbl.setText("Phone Number :");
+
+        jPhonenotxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPhonenotxtKeyTyped(evt);
+            }
+        });
+
+        jEmailidlbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jEmailidlbl.setText("Email ID :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -154,40 +196,44 @@ public class PersonjPanel extends javax.swing.JPanel {
                 .addGap(183, 183, 183)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCreatebtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(65, 65, 65)
-                        .addComponent(jClearbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jAddresslbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCitylbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jCommunitylbl, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                                .addComponent(jCommunitylbl, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE))
+                            .addComponent(jEmailidlbl)
+                            .addComponent(jPhonenolbl)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jAgelbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jNamelbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jPersonPasswordlbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPersonUsernamelbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jGenderlbl))
+                        .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jAgetxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jNametxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jAddresstxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCommunitytxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jCitytxt, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPersonUsernametxt)
-                            .addComponent(jPersonPasswordtxt))))
-                .addGap(424, 424, 424))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(389, 389, 389)
-                .addComponent(jHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(368, 368, 368))
+                            .addComponent(jNametxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jAgetxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jPhonenotxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jEmailidtxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jAddresstxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jCommunitytxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addComponent(jCitytxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jMale)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jFemale)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLgbtq))
+                            .addComponent(jHeading))))
+                .addGap(298, 298, 298))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jNamelbl)
                     .addComponent(jNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -197,9 +243,23 @@ public class PersonjPanel extends javax.swing.JPanel {
                     .addComponent(jAgetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jGenderlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jMale)
+                    .addComponent(jFemale)
+                    .addComponent(jLgbtq))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPhonenolbl)
+                    .addComponent(jPhonenotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jEmailidlbl)
+                    .addComponent(jEmailidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jAddresslbl)
                     .addComponent(jAddresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCommunitylbl)
                     .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -207,19 +267,11 @@ public class PersonjPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCitylbl)
                     .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPersonUsernamelbl)
-                    .addComponent(jPersonUsernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPersonPasswordlbl)
-                    .addComponent(jPersonPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCreatebtn)
                     .addComponent(jClearbtn))
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresslbl, jAgelbl, jCitylbl, jCommunitylbl, jNamelbl});
@@ -227,8 +279,6 @@ public class PersonjPanel extends javax.swing.JPanel {
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresstxt, jAgetxt, jCitytxt, jCommunitytxt, jNametxt});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jClearbtn, jCreatebtn});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPersonPasswordtxt, jPersonUsernametxt});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -281,38 +331,60 @@ public class PersonjPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         short checkName = 0;
         short checkAge = 0;
+        short checkGender = 0;
+        short checkPhoneno = 0;
+        short checkEmailid = 0;
         short checkAddress = 0;
         short checkCommunity = 0;
         short checkCity = 0;
-        short checkPersonUsername = 0;
-        short checkPersonPassword = 0;
+        //short checkPersonUsername = 0;
+        //short checkPersonPassword = 0;
         try{
             if (jNametxt.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null, "Please provide Name");
                 jNametxt.setText("");
                 checkName = 1;
             }
-            if (jAgetxt.getText().isEmpty()){
+            if (jAgetxt.getText().isEmpty() && checkName==0){
                 JOptionPane.showMessageDialog(null, "Please provide Age");
                 jAgetxt.setText("");
                 checkAge = 1;
             }
-            if (jAddresstxt.getText().isEmpty()){
+            if (g == 0 && checkName==0 && checkAge==0){
+                JOptionPane.showMessageDialog(null, "Please provide Gender");
+                jNametxt.setText("");
+                checkGender = 1;
+            }
+            if (jPhonenotxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0){
+                JOptionPane.showMessageDialog(null, "Please provide Phone Number");
+                jPhonenotxt.setText("");
+                checkPhoneno = 1;
+            }
+            if (jEmailidtxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0){
+                JOptionPane.showMessageDialog(null, "Please provide Email ID");
+                jEmailidtxt.setText("");
+                checkEmailid = 1;
+            }
+            if (jAddresstxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0){
                 JOptionPane.showMessageDialog(null, "Please provide Address");
                 jAddresstxt.setText("");
                 checkAddress = 1;
             }
-            if (jCommunitytxt.getText().isEmpty()){
+            if (jCommunitytxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0 && checkAddress==0){
                 JOptionPane.showMessageDialog(null, "Please provide Community");
                 jCommunitytxt.setText("");
                 checkCommunity = 1;
             }
-            if (jCitytxt.getText().isEmpty()){
+            if (jCitytxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0 && checkAddress==0 && checkCommunity==0){
                 JOptionPane.showMessageDialog(null, "Please provide City");
                 jCitytxt.setText("");
                 checkCity = 1;
             }
-            if (jPersonUsernametxt.getText().isEmpty()){
+            /*if (jPersonUsernametxt.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null, "Please provide Person Username");
                 jPersonUsernametxt.setText("");
                 checkName = 1;
@@ -321,25 +393,62 @@ public class PersonjPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Please provide Person Password");
                 jPersonPasswordtxt.setText("");
                 checkName = 1;
-            }
+            }*/
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error in provided Details");
                 }
-        if (((checkName == 0) && (checkAge == 0) && (checkAddress == 0) && (checkCommunity == 0) && (checkCity == 0))){
+        if (checkCity==0 && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0 && checkAddress==0 && checkCommunity==0){
                 Person pr = person.addNewPersonDetails();
                 pr.setName(jNametxt.getText());
                 pr.setAge(Integer.parseInt(jAgetxt.getText()));
+                switch (g) {
+                    case 1 -> pr.setGender(jMale.getText());
+                    case 2 -> pr.setGender(jFemale.getText());
+                    default -> pr.setGender(jLgbtq.getText());
+                }
+                pr.setPhoneno(Long.parseLong(jPhonenotxt.getText()));
+                pr.setEmailid(jEmailidtxt.getText());
                 pr.setAddress(jAddresstxt.getText());
                 pr.setCommunityName(jCommunitytxt.getText());
                 pr.setCityName(jCitytxt.getText());
-                JOptionPane.showMessageDialog(null, "Person Created");
+                JOptionPane.showMessageDialog(null, "Person Created with unique id"+pr.getPersonid()+" "+pr.getId());
                 clearFields();
         } else {
                 JOptionPane.showMessageDialog(null, "Cannot Create Person, Please provide all the details");
         }   
         
     }//GEN-LAST:event_jCreatebtnActionPerformed
+
+    private void jMaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMaleActionPerformed
+        // TODO add your handling code here:
+        if (jMale.isSelected()) {
+            g=1;
+        }
+    }//GEN-LAST:event_jMaleActionPerformed
+
+    private void jLgbtqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLgbtqActionPerformed
+        // TODO add your handling code here:
+        if (jLgbtq.isSelected()) {
+            g=3;
+        }
+    }//GEN-LAST:event_jLgbtqActionPerformed
+
+    private void jPhonenotxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPhonenotxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isDigit(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jPhonenotxtKeyTyped
+
+    private void jFemaleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFemaleActionPerformed
+        // TODO add your handling code here:
+        if (jFemale.isSelected()) {
+            g=2;
+        }
+    }//GEN-LAST:event_jFemaleActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -353,12 +462,17 @@ public class PersonjPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jCommunitylbl;
     private javax.swing.JTextField jCommunitytxt;
     private javax.swing.JButton jCreatebtn;
+    private javax.swing.JLabel jEmailidlbl;
+    private javax.swing.JTextField jEmailidtxt;
+    private javax.swing.JRadioButton jFemale;
+    private javax.swing.ButtonGroup jGenderbtngrp;
+    private javax.swing.JLabel jGenderlbl;
     private javax.swing.JLabel jHeading;
+    private javax.swing.JRadioButton jLgbtq;
+    private javax.swing.JRadioButton jMale;
     private javax.swing.JLabel jNamelbl;
     private javax.swing.JTextField jNametxt;
-    private javax.swing.JLabel jPersonPasswordlbl;
-    private javax.swing.JPasswordField jPersonPasswordtxt;
-    private javax.swing.JLabel jPersonUsernamelbl;
-    private javax.swing.JTextField jPersonUsernametxt;
+    private javax.swing.JLabel jPhonenolbl;
+    private javax.swing.JTextField jPhonenotxt;
     // End of variables declaration//GEN-END:variables
 }

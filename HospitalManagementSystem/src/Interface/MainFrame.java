@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interface;
+import Source.PersonDirectory;
+import Source.PatientDirectory;
 
 /**
  *
@@ -13,9 +15,15 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    int personid = 22000;
+    PersonDirectory person;
+    PatientDirectory patient;
     public MainFrame() {
         initComponents();
         setExtendedState(MainFrame.MAXIMIZED_BOTH);
+        person = new PersonDirectory();
+        patient = new PatientDirectory();
+        personid = personid+1;
     }
 
     /**
@@ -35,6 +43,7 @@ public class MainFrame extends javax.swing.JFrame {
         jAdminbtn = new javax.swing.JButton();
         jRefreshbtn = new javax.swing.JButton();
         jExitbtn = new javax.swing.JButton();
+        jPersonbtn = new javax.swing.JButton();
         jHomePanel = new javax.swing.JPanel();
         jHeading = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -84,25 +93,40 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jPersonbtn.setText("PERSON");
+        jPersonbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPersonbtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jMenuPanelLayout = new javax.swing.GroupLayout(jMenuPanel);
         jMenuPanel.setLayout(jMenuPanelLayout);
         jMenuPanelLayout.setHorizontalGroup(
             jMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPatientbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jDoctorbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jRefreshbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jExitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jAdminbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jMenuPanelLayout.createSequentialGroup()
+                .addGroup(jMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPatientbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jDoctorbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRefreshbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jExitbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jAdminbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPersonbtn))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jMenuPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAdminbtn, jDoctorbtn, jExitbtn, jHomebtn, jPatientbtn, jRefreshbtn});
+        jMenuPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAdminbtn, jDoctorbtn, jExitbtn, jPatientbtn, jRefreshbtn});
+
+        jMenuPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jHomebtn, jPersonbtn});
 
         jMenuPanelLayout.setVerticalGroup(
             jMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jMenuPanelLayout.createSequentialGroup()
                 .addComponent(jHomebtn)
-                .addGap(118, 118, 118)
+                .addGap(83, 83, 83)
+                .addComponent(jPersonbtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPatientbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jDoctorbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -160,6 +184,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jHomebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHomebtnActionPerformed
@@ -196,6 +221,13 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jExitbtnActionPerformed
+
+    private void jPersonbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPersonbtnActionPerformed
+        // TODO add your handling code here:
+        PersonjPanel personpanel = new PersonjPanel(person, patient);
+        jSplitPane.setRightComponent(personpanel);
+        
+    }//GEN-LAST:event_jPersonbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,6 +274,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jHomebtn;
     private javax.swing.JPanel jMenuPanel;
     private javax.swing.JButton jPatientbtn;
+    private javax.swing.JButton jPersonbtn;
     private javax.swing.JButton jRefreshbtn;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane;
