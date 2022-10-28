@@ -29,22 +29,31 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jDoctordetailsheadinglbl = new javax.swing.JLabel();
         jDScrollPane = new javax.swing.JScrollPane();
         jDoctortbl = new javax.swing.JTable();
+        jCreatebtn = new javax.swing.JButton();
+        jReadbtn = new javax.swing.JButton();
+        jUpdatebtn = new javax.swing.JButton();
 
         jDoctordetailsheadinglbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jDoctordetailsheadinglbl.setText("DOCTOR DETAILS :");
 
         jDoctortbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Doctor ID", "Name", "Age", "Gender", "Phone number", "Email ID", "Hospital", "Community", "City"
             }
         ));
         jDScrollPane.setViewportView(jDoctortbl);
+
+        jCreatebtn.setText("CREATE");
+
+        jReadbtn.setText("READ");
+
+        jUpdatebtn.setText("UPDATE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -52,26 +61,46 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCreatebtn)
+                        .addGap(30, 30, 30)
+                        .addComponent(jReadbtn)
+                        .addGap(30, 30, 30)
+                        .addComponent(jUpdatebtn))
                     .addComponent(jDScrollPane)
                     .addComponent(jDoctordetailsheadinglbl))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addGap(360, 360, 360))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addComponent(jDoctordetailsheadinglbl)
                 .addGap(12, 12, 12)
-                .addComponent(jDScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(311, Short.MAX_VALUE))
+                .addComponent(jDScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCreatebtn)
+                    .addComponent(jReadbtn)
+                    .addComponent(jUpdatebtn))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jCreatebtn;
     private javax.swing.JScrollPane jDScrollPane;
     private javax.swing.JLabel jDoctordetailsheadinglbl;
     private javax.swing.JTable jDoctortbl;
+    private javax.swing.JButton jReadbtn;
+    private javax.swing.JButton jUpdatebtn;
     // End of variables declaration//GEN-END:variables
 }

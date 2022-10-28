@@ -29,22 +29,31 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         jPatientdetailslbl = new javax.swing.JLabel();
         jPScrollPane = new javax.swing.JScrollPane();
         jPatienttbl = new javax.swing.JTable();
+        jCreatebtn = new javax.swing.JButton();
+        jReadbtn = new javax.swing.JButton();
+        jUpdatebtn = new javax.swing.JButton();
 
         jPatientdetailslbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jPatientdetailslbl.setText("PATIENT DETAILS :");
 
         jPatienttbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Patient ID", "Name", "Age", "Gender", "Phone no", "Email ID", "Community", "City"
             }
         ));
         jPScrollPane.setViewportView(jPatienttbl);
+
+        jCreatebtn.setText("CREATE");
+
+        jReadbtn.setText("READ");
+
+        jUpdatebtn.setText("UPDATE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -52,10 +61,17 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
-                    .addComponent(jPatientdetailslbl))
-                .addContainerGap(259, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCreatebtn)
+                        .addGap(30, 30, 30)
+                        .addComponent(jReadbtn)
+                        .addGap(30, 30, 30)
+                        .addComponent(jUpdatebtn))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+                        .addComponent(jPatientdetailslbl)))
+                .addGap(259, 259, 259))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,14 +80,22 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
                 .addComponent(jPatientdetailslbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCreatebtn)
+                    .addComponent(jReadbtn)
+                    .addComponent(jUpdatebtn))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jCreatebtn;
     private javax.swing.JScrollPane jPScrollPane;
     private javax.swing.JLabel jPatientdetailslbl;
     private javax.swing.JTable jPatienttbl;
+    private javax.swing.JButton jReadbtn;
+    private javax.swing.JButton jUpdatebtn;
     // End of variables declaration//GEN-END:variables
 }

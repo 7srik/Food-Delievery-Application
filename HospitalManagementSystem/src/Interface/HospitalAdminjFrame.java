@@ -158,7 +158,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
                     .addComponent(jBackbtn2)
                     .addComponent(jSystemadminheadinglbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE))
+                .addComponent(jSplitPane))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn2, jHomebtn});
@@ -174,6 +174,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
     private void jHomebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHomebtnActionPerformed
         // TODO add your handling code here:
         new MainFrame().setVisible(true);
+        dispose();
     }//GEN-LAST:event_jHomebtnActionPerformed
 
     private void jPatientbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPatientbtnActionPerformed

@@ -34,11 +34,8 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jCitylbl = new javax.swing.JLabel();
         jUpdatebtn = new javax.swing.JButton();
         jCommunitylbl = new javax.swing.JLabel();
-        jCreatepersonbtn = new javax.swing.JButton();
-        jHospitallbl = new javax.swing.JLabel();
-        jAddpatientbtn = new javax.swing.JButton();
+        jAddresslbl = new javax.swing.JLabel();
         jCitytxt = new javax.swing.JTextField();
-        jAdddoctorbtn = new javax.swing.JButton();
         jCommunitytxt = new javax.swing.JTextField();
         jHospitaltxt = new javax.swing.JTextField();
         jCreatebtn = new javax.swing.JButton();
@@ -64,24 +61,18 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jSystemadminheading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jSystemadminheading.setText("COMMUNITY ADMIN");
 
-        jReadbtn.setText("READ->");
+        jReadbtn.setText("READ");
 
         jCitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
-        jCitylbl.setText("City :");
+        jCitylbl.setText("Community :");
 
         jUpdatebtn.setText("UPDATE");
 
         jCommunitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
-        jCommunitylbl.setText("Community :");
+        jCommunitylbl.setText("City :");
 
-        jCreatepersonbtn.setText("CREATE PERSON");
-
-        jHospitallbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
-        jHospitallbl.setText("Hospital :");
-
-        jAddpatientbtn.setText("ADD PATIENT");
-
-        jAdddoctorbtn.setText("ADD DOCTOR");
+        jAddresslbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jAddresslbl.setText("Address :");
 
         jCreatebtn.setText("CREATE");
 
@@ -93,7 +84,7 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Hospital", "City", "Community"
+                "Address", "City", "Community"
             }
         ));
         jScrollPane1.setViewportView(jHcctbl);
@@ -106,92 +97,71 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
                 .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(470, 470, 470)
                 .addComponent(jSystemadminheading)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 318, Short.MAX_VALUE)
+                .addComponent(jBackbtn))
             .addGroup(layout.createSequentialGroup()
-                .addGap(300, 300, 300)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBackbtn, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(480, 480, 480)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(520, 520, 520)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jAddresslbl)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jReadbtn)
-                                        .addGap(46, 46, 46)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(78, 78, 78)
-                                                .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jCitylbl)
-                                                .addComponent(jHospitallbl))))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jCitytxt)
-                                        .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jCommunitylbl)
-                                        .addGap(164, 164, 164))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jUpdatebtn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jCreatebtn))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jCreatepersonbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(80, 80, 80)
-                                .addComponent(jAddpatientbtn)
-                                .addGap(80, 80, 80)
-                                .addComponent(jAdddoctorbtn)
-                                .addGap(57, 57, 57)))
-                        .addGap(155, 155, 155)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(jCitylbl)
+                                    .addComponent(jCommunitylbl))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jCitytxt)
+                                    .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jUpdatebtn)
+                                .addGap(30, 30, 30)
+                                .addComponent(jCreatebtn))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(620, 620, 620)
+                        .addComponent(jReadbtn)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jHomebtn});
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAdddoctorbtn, jAddpatientbtn, jCreatepersonbtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSystemadminheading))
+                    .addComponent(jSystemadminheading)
+                    .addComponent(jBackbtn))
                 .addGap(61, 61, 61)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jReadbtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jHospitallbl)
-                            .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCitylbl)
-                            .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCommunitylbl)
-                            .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCreatebtn)
-                            .addComponent(jUpdatebtn)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jReadbtn)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCreatepersonbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jAddpatientbtn)
-                    .addComponent(jAdddoctorbtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
-                .addComponent(jBackbtn))
+                    .addComponent(jAddresslbl)
+                    .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCitylbl)
+                    .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCommunitylbl)
+                    .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCreatebtn)
+                    .addComponent(jUpdatebtn))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jHomebtn});
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAdddoctorbtn, jAddpatientbtn, jCreatepersonbtn});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -206,6 +176,7 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
     private void jHomebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHomebtnActionPerformed
         // TODO add your handling code here:
         new MainFrame().setVisible(true);
+        dispose();
     }//GEN-LAST:event_jHomebtnActionPerformed
 
     /**
@@ -244,18 +215,15 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jAdddoctorbtn;
-    private javax.swing.JButton jAddpatientbtn;
+    private javax.swing.JLabel jAddresslbl;
     private javax.swing.JButton jBackbtn;
     private javax.swing.JLabel jCitylbl;
     private javax.swing.JTextField jCitytxt;
     private javax.swing.JLabel jCommunitylbl;
     private javax.swing.JTextField jCommunitytxt;
     private javax.swing.JButton jCreatebtn;
-    private javax.swing.JButton jCreatepersonbtn;
     private javax.swing.JTable jHcctbl;
     private javax.swing.JButton jHomebtn;
-    private javax.swing.JLabel jHospitallbl;
     private javax.swing.JTextField jHospitaltxt;
     private javax.swing.JButton jReadbtn;
     private javax.swing.JScrollPane jScrollPane1;

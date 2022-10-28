@@ -29,22 +29,31 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         jHospitaldetailslbl = new javax.swing.JLabel();
         jHScrollPane = new javax.swing.JScrollPane();
         jHospitaltbl = new javax.swing.JTable();
+        jCreatebtn = new javax.swing.JButton();
+        jReadbtn = new javax.swing.JButton();
+        jUpdatebtn = new javax.swing.JButton();
 
         jHospitaldetailslbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jHospitaldetailslbl.setText("HOSPITAL DETAILS :");
 
         jHospitaltbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Community", "City"
             }
         ));
         jHScrollPane.setViewportView(jHospitaltbl);
+
+        jCreatebtn.setText("CREATE");
+
+        jReadbtn.setText("READ");
+
+        jUpdatebtn.setText("UPDATE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -52,10 +61,16 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCreatebtn)
+                        .addGap(30, 30, 30)
+                        .addComponent(jReadbtn)
+                        .addGap(30, 30, 30)
+                        .addComponent(jUpdatebtn))
                     .addComponent(jHScrollPane)
                     .addComponent(jHospitaldetailslbl))
-                .addContainerGap(356, Short.MAX_VALUE))
+                .addGap(356, 356, 356))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -63,15 +78,23 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                 .addGap(100, 100, 100)
                 .addComponent(jHospitaldetailslbl)
                 .addGap(12, 12, 12)
-                .addComponent(jHScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addComponent(jHScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCreatebtn)
+                    .addComponent(jReadbtn)
+                    .addComponent(jUpdatebtn))
+                .addContainerGap(217, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jCreatebtn;
     private javax.swing.JScrollPane jHScrollPane;
     private javax.swing.JLabel jHospitaldetailslbl;
     private javax.swing.JTable jHospitaltbl;
+    private javax.swing.JButton jReadbtn;
+    private javax.swing.JButton jUpdatebtn;
     // End of variables declaration//GEN-END:variables
 }
