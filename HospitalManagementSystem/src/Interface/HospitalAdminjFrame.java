@@ -28,6 +28,20 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jBackbtn2 = new javax.swing.JButton();
+        jHomebtn = new javax.swing.JButton();
+        jSystemadminheadinglbl = new javax.swing.JLabel();
+        jPScrollPane = new javax.swing.JScrollPane();
+        jPatienttbl = new javax.swing.JTable();
+        jPatientdetailslbl = new javax.swing.JLabel();
+        jDScrollPane = new javax.swing.JScrollPane();
+        jDoctortbl = new javax.swing.JTable();
+        jDoctordetailsheadinglbl = new javax.swing.JLabel();
+        jHospitaldetailslbl = new javax.swing.JLabel();
+        jHScrollPane = new javax.swing.JScrollPane();
+        jHospitaltbl = new javax.swing.JTable();
+        jEncounterdetailslbl = new javax.swing.JLabel();
+        jEScrollPane = new javax.swing.JScrollPane();
+        jEncountertbl = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,20 +52,137 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jHomebtn.setText("HOME");
+        jHomebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jHomebtnActionPerformed(evt);
+            }
+        });
+
+        jSystemadminheadinglbl.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jSystemadminheadinglbl.setText("HOSPITAL ADMIN");
+
+        jPatienttbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jPScrollPane.setViewportView(jPatienttbl);
+
+        jPatientdetailslbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jPatientdetailslbl.setText("PATIENT DETAILS :");
+
+        jDoctortbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jDScrollPane.setViewportView(jDoctortbl);
+
+        jDoctordetailsheadinglbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jDoctordetailsheadinglbl.setText("DOCTOR DETAILS :");
+
+        jHospitaldetailslbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jHospitaldetailslbl.setText("HOSPITAL DETAILS :");
+
+        jHospitaltbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jHScrollPane.setViewportView(jHospitaltbl);
+
+        jEncounterdetailslbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jEncounterdetailslbl.setText("ENCOUNTER DETAILS :");
+
+        jEncountertbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jEScrollPane.setViewportView(jEncountertbl);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jBackbtn2)
-                .addGap(0, 328, Short.MAX_VALUE))
+                .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(485, 485, 485)
+                .addComponent(jSystemadminheadinglbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBackbtn2))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jEScrollPane)
+                    .addComponent(jHScrollPane)
+                    .addComponent(jDScrollPane)
+                    .addComponent(jPScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+                    .addComponent(jPatientdetailslbl)
+                    .addComponent(jHospitaldetailslbl)
+                    .addComponent(jEncounterdetailslbl)
+                    .addComponent(jDoctordetailsheadinglbl))
+                .addContainerGap(698, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn2, jHomebtn});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDScrollPane, jEScrollPane, jHScrollPane, jPScrollPane});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jBackbtn2)
-                .addGap(0, 277, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBackbtn2)
+                    .addComponent(jSystemadminheadinglbl))
+                .addGap(14, 14, 14)
+                .addComponent(jPatientdetailslbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jDoctordetailsheadinglbl)
+                .addGap(12, 12, 12)
+                .addComponent(jDScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jHospitaldetailslbl)
+                .addGap(12, 12, 12)
+                .addComponent(jHScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jEncounterdetailslbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jEScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn2, jHomebtn});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDScrollPane, jEScrollPane, jHScrollPane, jPScrollPane});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -60,6 +191,11 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         new MainFrame().setVisible(true);
     }//GEN-LAST:event_jBackbtn2ActionPerformed
+
+    private void jHomebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHomebtnActionPerformed
+        // TODO add your handling code here:
+        new MainFrame().setVisible(true);
+    }//GEN-LAST:event_jHomebtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -97,8 +233,20 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBackbtn;
-    private javax.swing.JButton jBackbtn1;
     private javax.swing.JButton jBackbtn2;
+    private javax.swing.JScrollPane jDScrollPane;
+    private javax.swing.JLabel jDoctordetailsheadinglbl;
+    private javax.swing.JTable jDoctortbl;
+    private javax.swing.JScrollPane jEScrollPane;
+    private javax.swing.JLabel jEncounterdetailslbl;
+    private javax.swing.JTable jEncountertbl;
+    private javax.swing.JScrollPane jHScrollPane;
+    private javax.swing.JButton jHomebtn;
+    private javax.swing.JLabel jHospitaldetailslbl;
+    private javax.swing.JTable jHospitaltbl;
+    private javax.swing.JScrollPane jPScrollPane;
+    private javax.swing.JLabel jPatientdetailslbl;
+    private javax.swing.JTable jPatienttbl;
+    private javax.swing.JLabel jSystemadminheadinglbl;
     // End of variables declaration//GEN-END:variables
 }

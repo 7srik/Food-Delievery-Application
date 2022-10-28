@@ -120,7 +120,7 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
 
         jFemalebtn.setText("Female");
 
-        jPersonidlbl.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
+        jPersonidlbl.setFont(new java.awt.Font("Segoe UI Variable", 1, 14)); // NOI18N
         jPersonidlbl.setText("PERSON UNIQUE ID :");
 
         jLgbtqbtn.setText("LGBTQ+");
