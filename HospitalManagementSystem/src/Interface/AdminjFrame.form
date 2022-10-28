@@ -23,31 +23,37 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="620" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="2" attributes="0">
                       <Component id="jPasswordlbl" alignment="2" min="-2" max="-2" attributes="0"/>
                       <Component id="jPasswordtxt" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
                       <Component id="jSelectadminlbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jAdminsbox" alignment="1" min="-2" pref="236" max="-2" attributes="0"/>
+                      <Component id="jAdminbox" alignment="1" min="-2" pref="236" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jAdminHeading" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="jUsernametxt" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
                   <Component id="jUsernamelbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="2" groupAlignment="2" attributes="0">
-                      <Component id="jCancelbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
-                      <Component id="jBackbtn" linkSize="1" alignment="2" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="jCancelbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Component id="jBackbtn" linkSize="1" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="jLoginbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
+              <EmptySpace min="304" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="1074" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Component id="jAdminHeading" min="-2" pref="26" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Component id="jUsernamelbl" min="-2" max="-2" attributes="0"/>
@@ -60,14 +66,19 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jSelectadminlbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jAdminsbox" min="-2" pref="42" max="-2" attributes="0"/>
+              <Component id="jAdminbox" min="-2" pref="42" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jLoginbtn" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jCancelbtn" linkSize="2" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jBackbtn" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="84" max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -114,7 +125,7 @@
         <Property name="text" type="java.lang.String" value="SELECT ADMIN"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jAdminsbox">
+    <Component class="javax.swing.JComboBox" name="jAdminbox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="3">
@@ -125,7 +136,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jAdminsboxActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jAdminboxActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -146,6 +157,21 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBackbtnActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="system sys"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="community com"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="hospital hos"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

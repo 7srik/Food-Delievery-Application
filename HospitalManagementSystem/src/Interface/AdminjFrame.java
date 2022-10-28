@@ -14,6 +14,7 @@ public class AdminjFrame extends javax.swing.JFrame {
     /**
      * Creates new form AdminjFrame
      */
+    String adminbox="SYSTEM";
     public AdminjFrame() {
         initComponents();
         setExtendedState(MainFrame.MAXIMIZED_BOTH);
@@ -35,9 +36,12 @@ public class AdminjFrame extends javax.swing.JFrame {
         jUsernametxt = new javax.swing.JTextField();
         jPasswordlbl = new javax.swing.JLabel();
         jSelectadminlbl = new javax.swing.JLabel();
-        jAdminsbox = new javax.swing.JComboBox<>();
+        jAdminbox = new javax.swing.JComboBox<>();
         jAdminHeading = new javax.swing.JLabel();
         jBackbtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,10 +63,10 @@ public class AdminjFrame extends javax.swing.JFrame {
         jSelectadminlbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jSelectadminlbl.setText("SELECT ADMIN");
 
-        jAdminsbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SYSTEM", "COMMUNITY", "HOSPITAL" }));
-        jAdminsbox.addActionListener(new java.awt.event.ActionListener() {
+        jAdminbox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SYSTEM", "COMMUNITY", "HOSPITAL" }));
+        jAdminbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jAdminsboxActionPerformed(evt);
+                jAdminboxActionPerformed(evt);
             }
         });
 
@@ -76,6 +80,12 @@ public class AdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("system sys");
+
+        jLabel2.setText("community com");
+
+        jLabel3.setText("hospital hos");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,22 +97,27 @@ public class AdminjFrame extends javax.swing.JFrame {
                         .addComponent(jPasswordlbl)
                         .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jSelectadminlbl)
-                        .addComponent(jAdminsbox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jAdminbox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jAdminHeading, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jUsernametxt, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUsernamelbl, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addGroup(javax.swing.GroupLayout.Alignment.CENTER, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jBackbtn))
+                    .addComponent(jCancelbtn, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBackbtn, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLoginbtn, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(304, 304, 304))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(1074, 1074, 1074)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jCancelbtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jAdminHeading, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(100, 100, 100)
                 .addComponent(jUsernamelbl)
@@ -115,14 +130,19 @@ public class AdminjFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSelectadminlbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jAdminsbox, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jAdminbox, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jBackbtn)
-                .addGap(0, 84, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jCancelbtn});
@@ -135,7 +155,7 @@ public class AdminjFrame extends javax.swing.JFrame {
         String username = jUsernametxt.getText();
         String password = jPasswordtxt.getText();
 
-        if (password.contains("abc") && (username.contains("sys")))
+        if (password.contains("sys") && (username.contains("system")) && (adminbox.equals("SYSTEM")))
         {
             SystemAdminjFrame sa = new SystemAdminjFrame();
             //splitPane.setRightComponent(sa);
@@ -143,14 +163,14 @@ public class AdminjFrame extends javax.swing.JFrame {
             dispose();
 
         }
-        else if (password.contains("123") && (username.contains("comm")))
+        else if (password.contains("com") && (username.contains("community")) && (adminbox.equals("COMMUNITY")))
         {
             CommunityAdminjFrame ca = new CommunityAdminjFrame();
             //splitPane.setRightComponent(sa);
             ca.setVisible(true);
             dispose();
         }
-        else if (password.contains("xyz") && (username.contains("hospital")))
+        else if (password.contains("hos") && (username.contains("hospital")) && (adminbox.equals("HOSPITAL")))
         {
             HospitalAdminjFrame ha = new HospitalAdminjFrame();
             //splitPane.setRightComponent(sa);
@@ -173,9 +193,11 @@ public class AdminjFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLoginbtnActionPerformed
 
-    private void jAdminsboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminsboxActionPerformed
+    private void jAdminboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jAdminsboxActionPerformed
+        adminbox = jAdminbox.getSelectedItem().toString();
+        
+    }//GEN-LAST:event_jAdminboxActionPerformed
 
     private void jBackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackbtnActionPerformed
         // TODO add your handling code here:
@@ -219,9 +241,12 @@ public class AdminjFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jAdminHeading;
-    private javax.swing.JComboBox<String> jAdminsbox;
+    private javax.swing.JComboBox<String> jAdminbox;
     private javax.swing.JButton jBackbtn;
     private javax.swing.JButton jCancelbtn;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jLoginbtn;
     private javax.swing.JLabel jPasswordlbl;
     private javax.swing.JTextField jPasswordtxt;

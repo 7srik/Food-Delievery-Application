@@ -21,49 +21,56 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="440" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jCreatebtn" min="-2" pref="132" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jClearbtn" min="-2" pref="132" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jHeading" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jAddresslbl" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jCitylbl" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jCommunitylbl" alignment="0" pref="91" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jCreatebtn" min="-2" pref="132" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
+                              <Component id="jClearbtn" min="-2" pref="132" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jEmailidlbl" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPhonenolbl" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jAgelbl" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jNamelbl" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jAddresslbl" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCitylbl" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jCommunitylbl" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jEmailidlbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPhonenolbl" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jAgelbl" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jNamelbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jGenderlbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jNametxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="jAgetxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="jPhonenotxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="jEmailidtxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="jAddresstxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="jCommunitytxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Component id="jCitytxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jMale" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jFemale" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jLgbtq" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <Component id="jGenderlbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jNametxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Component id="jAgetxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Component id="jPhonenotxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Component id="jEmailidtxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Component id="jAddresstxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Component id="jCommunitytxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Component id="jCitytxt" alignment="0" pref="272" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="jMale" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jFemale" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLgbtq" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jHeading" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,7 +78,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jHeading" min="-2" pref="33" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jNamelbl" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jNametxt" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -118,7 +125,7 @@
                   <Component id="jCreatebtn" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jClearbtn" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="168" max="32767" attributes="0"/>
+              <EmptySpace pref="124" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
