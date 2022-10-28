@@ -206,8 +206,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jAdminbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminbtnActionPerformed
         // TODO add your handling code here:
-        AdminjPanel adminpanel = new AdminjPanel();
-        jSplitPane.setRightComponent(adminpanel);
+        AdminjFrame admin = new AdminjFrame();
+        admin.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jAdminbtnActionPerformed
 
     private void jRefreshbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRefreshbtnActionPerformed

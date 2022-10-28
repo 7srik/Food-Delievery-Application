@@ -1,22 +1,22 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interface;
 
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author srikr
  */
-public class AdminjPanel extends javax.swing.JPanel {
+public class AdminjFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form AdminjPanel
+     * Creates new form AdminjFrame
      */
-    public AdminjPanel() {
+    public AdminjFrame() {
         initComponents();
+        setExtendedState(MainFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -28,7 +28,6 @@ public class AdminjPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jAdminHeading = new javax.swing.JLabel();
         jPasswordtxt = new javax.swing.JTextField();
         jLoginbtn = new javax.swing.JButton();
         jCancelbtn = new javax.swing.JButton();
@@ -37,12 +36,10 @@ public class AdminjPanel extends javax.swing.JPanel {
         jPasswordlbl = new javax.swing.JLabel();
         jSelectadminlbl = new javax.swing.JLabel();
         jAdminsbox = new javax.swing.JComboBox<>();
+        jAdminHeading = new javax.swing.JLabel();
         jBackbtn = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(1000, 600));
-
-        jAdminHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jAdminHeading.setText("ADMIN LOGIN");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -69,6 +66,9 @@ public class AdminjPanel extends javax.swing.JPanel {
             }
         });
 
+        jAdminHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jAdminHeading.setText("ADMIN LOGIN");
+
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,12 +76,12 @@ public class AdminjPanel extends javax.swing.JPanel {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(460, 460, 460)
+                .addGap(620, 620, 620)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                         .addComponent(jPasswordlbl)
@@ -122,43 +122,40 @@ public class AdminjPanel extends javax.swing.JPanel {
                 .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jBackbtn)
-                .addGap(0, 67, Short.MAX_VALUE))
+                .addGap(0, 84, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jCancelbtn});
 
+        pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jAdminsboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminsboxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jAdminsboxActionPerformed
 
     private void jLoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLoginbtnActionPerformed
         // TODO add your handling code here:
-        String password = jUsernametxt.getText();
-        String username = jPasswordtxt.getText();
+        String username = jUsernametxt.getText();
+        String password = jPasswordtxt.getText();
 
         if (password.contains("abc") && (username.contains("sys")))
         {
             SystemAdminjFrame sa = new SystemAdminjFrame();
             //splitPane.setRightComponent(sa);
             sa.setVisible(true);
-            //dispose();
-        
+            dispose();
+
         }
         else if (password.contains("123") && (username.contains("comm")))
         {
             CommunityAdminjFrame ca = new CommunityAdminjFrame();
             //splitPane.setRightComponent(sa);
             ca.setVisible(true);
-            //dispose();
+            dispose();
         }
         else if (password.contains("xyz") && (username.contains("hospital")))
         {
             HospitalAdminjFrame ha = new HospitalAdminjFrame();
             //splitPane.setRightComponent(sa);
             ha.setVisible(true);
-           // dispose();
+            dispose();
         }
         /*else if (password.contains("456") && (username.contains("doctor")))
         {
@@ -176,11 +173,49 @@ public class AdminjPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jLoginbtnActionPerformed
 
+    private void jAdminsboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminsboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jAdminsboxActionPerformed
+
     private void jBackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackbtnActionPerformed
         // TODO add your handling code here:
         new MainFrame().setVisible(true);
     }//GEN-LAST:event_jBackbtnActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(AdminjFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(AdminjFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(AdminjFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(AdminjFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new AdminjFrame().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jAdminHeading;

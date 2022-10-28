@@ -27,29 +27,353 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPatientHeading = new javax.swing.JLabel();
+        jDoctorComPane = new javax.swing.JScrollPane();
+        jDoctorComtbl = new javax.swing.JTable();
+        jDoctorcomHeading = new javax.swing.JLabel();
+        jPEncounterPane = new javax.swing.JScrollPane();
+        jPEncountertbl = new javax.swing.JTable();
+        jEncountersHeading = new javax.swing.JLabel();
+        jLogoutbtn = new javax.swing.JButton();
+        jDCReadbtn = new javax.swing.JButton();
+        jPEReadbtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jPIEditbtn = new javax.swing.JButton();
+        jPISavebtn = new javax.swing.JButton();
+        jMalebtn = new javax.swing.JRadioButton();
+        jFemalebtn = new javax.swing.JRadioButton();
+        jPersonidlbl = new javax.swing.JLabel();
+        jLgbtqbtn = new javax.swing.JRadioButton();
+        jPersonidtxt = new javax.swing.JTextField();
+        jEmailidlbl = new javax.swing.JLabel();
+        jNametxt = new javax.swing.JTextField();
+        jGenderlbl = new javax.swing.JLabel();
+        jAgetxt = new javax.swing.JTextField();
+        jNamelbl = new javax.swing.JLabel();
+        jPhonenotxt = new javax.swing.JTextField();
+        jAgelbl = new javax.swing.JLabel();
+        jEmailidtxt = new javax.swing.JTextField();
+        jCommunitylbl = new javax.swing.JLabel();
+        jAddresstxt = new javax.swing.JTextField();
+        jCitylbl = new javax.swing.JLabel();
+        jCommunitytxt = new javax.swing.JTextField();
+        jAddresslbl = new javax.swing.JLabel();
+        jCitytxt = new javax.swing.JTextField();
+        jPhonenolbl = new javax.swing.JLabel();
 
         jPatientHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jPatientHeading.setText("PATIENT");
+
+        jDoctorComtbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jDoctorComPane.setViewportView(jDoctorComtbl);
+
+        jDoctorcomHeading.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jDoctorcomHeading.setText("Doctors in the Community");
+
+        jPEncountertbl.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jPEncounterPane.setViewportView(jPEncountertbl);
+
+        jEncountersHeading.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jEncountersHeading.setText("Personal Encounters");
+
+        jLogoutbtn.setText("LOGOUT");
+
+        jDCReadbtn.setText("READ");
+        jDCReadbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jDCReadbtnActionPerformed(evt);
+            }
+        });
+
+        jPEReadbtn.setText("READ");
+
+        jButton1.setText("BOOK APPOINTMENT");
+
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jLabel1.setText("Personal Information");
+
+        jPIEditbtn.setText("EDIT");
+
+        jPISavebtn.setText("SAVE");
+
+        jMalebtn.setText("Male");
+
+        jFemalebtn.setText("Female");
+
+        jPersonidlbl.setFont(new java.awt.Font("Segoe UI Variable", 1, 18)); // NOI18N
+        jPersonidlbl.setText("PERSON UNIQUE ID :");
+
+        jLgbtqbtn.setText("LGBTQ+");
+
+        jPersonidtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPersonidtxtActionPerformed(evt);
+            }
+        });
+
+        jEmailidlbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jEmailidlbl.setText("Email ID :");
+
+        jGenderlbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jGenderlbl.setText("Gender :");
+
+        jAgetxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAgetxtActionPerformed(evt);
+            }
+        });
+
+        jNamelbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jNamelbl.setText("Name :");
+
+        jAgelbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jAgelbl.setText("Age :");
+
+        jCommunitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jCommunitylbl.setText("Community :");
+
+        jCitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jCitylbl.setText("City :");
+
+        jAddresslbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jAddresslbl.setText("Address :");
+
+        jPhonenolbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jPhonenolbl.setText("Phone Number :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(470, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPersonidlbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jNamelbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jAgelbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jAgetxt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jNametxt)
+                    .addComponent(jPersonidtxt))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jGenderlbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPhonenolbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jEmailidlbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jMalebtn)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jFemalebtn)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLgbtqbtn))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGap(6, 6, 6)
+                                    .addComponent(jPhonenotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jEmailidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(234, 234, 234)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCommunitylbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jCitylbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jAddresslbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jCommunitytxt, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jAddresstxt, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPIEditbtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPISavebtn)
+                        .addGap(307, 307, 307))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1))
+                                    .addComponent(jDoctorcomHeading)
+                                    .addComponent(jDoctorComPane))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jEncountersHeading)
+                                    .addComponent(jPEncounterPane)))
+                            .addComponent(jLabel1))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(470, 470, 470)
                 .addComponent(jPatientHeading)
-                .addGap(402, 402, 402))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 457, Short.MAX_VALUE)
+                .addComponent(jLogoutbtn))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctorComPane, jPEncounterPane});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAddresstxt, jAgetxt, jCitytxt, jCommunitytxt, jEmailidtxt, jNametxt, jPersonidtxt, jPhonenotxt});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPatientHeading)
-                .addGap(0, 573, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPatientHeading)
+                            .addComponent(jLogoutbtn))
+                        .addGap(8, 8, 8)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jPersonidlbl)
+                            .addComponent(jPersonidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
+                        .addComponent(jNamelbl))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jGenderlbl, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jMalebtn)
+                                            .addComponent(jFemalebtn)
+                                            .addComponent(jLgbtqbtn))
+                                        .addGap(12, 12, 12)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(jPhonenotxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jPhonenolbl))))
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jAgetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jAgelbl)
+                                    .addComponent(jEmailidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jEmailidlbl)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jAddresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jAddresslbl))
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCommunitylbl))
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCitylbl))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPIEditbtn)
+                    .addComponent(jPISavebtn))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jDoctorcomHeading)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jDoctorComPane, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jEncountersHeading)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPEncounterPane, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(375, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDoctorComPane, jPEncounterPane});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jDCReadbtn});
+
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jDCReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDCReadbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jDCReadbtnActionPerformed
+
+    private void jPersonidtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPersonidtxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPersonidtxtActionPerformed
+
+    private void jAgetxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgetxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jAgetxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jAddresslbl;
+    private javax.swing.JTextField jAddresstxt;
+    private javax.swing.JLabel jAgelbl;
+    private javax.swing.JTextField jAgetxt;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jCitylbl;
+    private javax.swing.JTextField jCitytxt;
+    private javax.swing.JLabel jCommunitylbl;
+    private javax.swing.JTextField jCommunitytxt;
+    private javax.swing.JButton jDCReadbtn;
+    private javax.swing.JScrollPane jDoctorComPane;
+    private javax.swing.JTable jDoctorComtbl;
+    private javax.swing.JLabel jDoctorcomHeading;
+    private javax.swing.JLabel jEmailidlbl;
+    private javax.swing.JTextField jEmailidtxt;
+    private javax.swing.JLabel jEncountersHeading;
+    private javax.swing.JRadioButton jFemalebtn;
+    private javax.swing.JLabel jGenderlbl;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JRadioButton jLgbtqbtn;
+    private javax.swing.JButton jLogoutbtn;
+    private javax.swing.JRadioButton jMalebtn;
+    private javax.swing.JLabel jNamelbl;
+    private javax.swing.JTextField jNametxt;
+    private javax.swing.JButton jPEReadbtn;
+    private javax.swing.JScrollPane jPEncounterPane;
+    private javax.swing.JTable jPEncountertbl;
+    private javax.swing.JButton jPIEditbtn;
+    private javax.swing.JButton jPISavebtn;
     private javax.swing.JLabel jPatientHeading;
+    private javax.swing.JLabel jPersonidlbl;
+    private javax.swing.JTextField jPersonidtxt;
+    private javax.swing.JLabel jPhonenolbl;
+    private javax.swing.JTextField jPhonenotxt;
     // End of variables declaration//GEN-END:variables
 }

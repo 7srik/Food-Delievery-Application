@@ -33,7 +33,10 @@
                   <Component id="jAdminHeading" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="jUsernametxt" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
                   <Component id="jUsernamelbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCancelbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Group type="103" alignment="2" groupAlignment="2" attributes="0">
+                      <Component id="jCancelbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="jBackbtn" linkSize="1" alignment="2" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="jLoginbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
@@ -59,8 +62,10 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jLoginbtn" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jCancelbtn" min="-2" pref="44" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="129" max="32767" attributes="0"/>
+              <Component id="jCancelbtn" linkSize="2" min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jBackbtn" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="67" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -80,6 +85,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="LOGIN"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jLoginbtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jCancelbtn">
       <Properties>
@@ -128,6 +136,14 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBackbtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="BACK"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBackbtnActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
