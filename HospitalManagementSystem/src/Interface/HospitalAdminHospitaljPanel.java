@@ -4,6 +4,14 @@
  */
 package Interface;
 
+import Source.City;
+import Source.Hospital;
+import Source.HospitalDirectory;
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+
+
 /**
  *
  * @author srikr
@@ -13,10 +21,28 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
     /**
      * Creates new form HospitalAdminHospitaljPanel
      */
+    DefaultTableModel tableModel;
+    static ArrayList<City> cityList = new ArrayList<City>();
+    private HospitalDirectory hosd;
     public HospitalAdminHospitaljPanel() {
         initComponents();
+        //this.hosd=hosd;
+        tableModel = (DefaultTableModel)jHospitaltbl.getModel();
+        //populateTable();
     }
-
+    /*private void populateTable(){
+        tableModel.setRowCount(0);
+        
+        for(Hospital hos : hosd.getHospitals()){
+            Object[] row = new Object[3];
+            row[0] = hos.getCity();
+            row[1] = hos.getCommunity();
+            row[2] = hos.getHospital();
+            
+            tableModel.addRow(row);
+        }
+    }
+    */
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,16 +58,19 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         jCreatebtn = new javax.swing.JButton();
         jReadbtn = new javax.swing.JButton();
         jUpdatebtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jCitytxt = new javax.swing.JTextField();
+        jCommunitytxt = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jHospitaltxt = new javax.swing.JTextField();
 
         jHospitaldetailslbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jHospitaldetailslbl.setText("HOSPITAL DETAILS :");
 
         jHospitaltbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Name", "Community", "City"
@@ -50,10 +79,49 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         jHScrollPane.setViewportView(jHospitaltbl);
 
         jCreatebtn.setText("CREATE");
+        jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCreatebtnActionPerformed(evt);
+            }
+        });
 
         jReadbtn.setText("READ");
+        jReadbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jReadbtnActionPerformed(evt);
+            }
+        });
 
         jUpdatebtn.setText("UPDATE");
+        jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUpdatebtnActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("City");
+
+        jCitytxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCitytxtActionPerformed(evt);
+            }
+        });
+
+        jCommunitytxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCommunitytxtActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Community");
+
+        jLabel4.setText("Hospital");
+
+        jHospitaltxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jHospitaltxtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -63,15 +131,38 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                 .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCreatebtn)
-                        .addGap(30, 30, 30)
                         .addComponent(jReadbtn)
-                        .addGap(30, 30, 30)
-                        .addComponent(jUpdatebtn))
-                    .addComponent(jHScrollPane)
-                    .addComponent(jHospitaldetailslbl))
-                .addGap(356, 356, 356))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jHScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jHospitaldetailslbl)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(356, 356, 356))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(31, 31, 31)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jUpdatebtn)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCitytxt, jCommunitytxt});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -79,21 +170,123 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                 .addComponent(jHospitaldetailslbl)
                 .addGap(12, 12, 12)
                 .addComponent(jHScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(24, 24, 24)
+                .addComponent(jReadbtn)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCreatebtn)
-                    .addComponent(jReadbtn)
+                    .addComponent(jLabel2)
+                    .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUpdatebtn))
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCitytxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCitytxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCitytxtActionPerformed
+
+    private void jCommunitytxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCommunitytxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCommunitytxtActionPerformed
+
+    private void jHospitaltxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHospitaltxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jHospitaltxtActionPerformed
+
+    private void jCreatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCreatebtnActionPerformed
+        // TODO add your handling code here:
+        String cityName = jCitytxt.getText();
+        String community = jCommunitytxt.getText();
+        String hospital=jHospitaltxt.getText();
+        if(cityName.isEmpty() || community.isEmpty() || hospital.isEmpty()){
+            JOptionPane.showMessageDialog(this,
+                "Enter all Fields",
+                "Try Again",
+                JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            City city=new City(cityName,community,hospital);
+            cityList.add(city);
+            Object[] data = {cityName, community,hospital};
+            tableModel.addRow(data);
+            JOptionPane.showMessageDialog(this,
+                "City Data Saved",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
+        }
+        jCitytxt.setText("");
+        jCommunitytxt.setText("");
+        jHospitaltxt.setText("");
+    }//GEN-LAST:event_jCreatebtnActionPerformed
+
+    private void jReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jReadbtnActionPerformed
+        // TODO add your handling code here:
+        int selectedrow = jHospitaltbl.getSelectedRow();
+        if (selectedrow < 0){
+            JOptionPane.showMessageDialog(null, "please select");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        String hospital = model.getValueAt(jHospitaltbl.getSelectedRow(),0).toString();
+        String community = model.getValueAt(jHospitaltbl.getSelectedRow(),1).toString();
+        String city = model.getValueAt(jHospitaltbl.getSelectedRow(),2).toString();
+        
+        jHospitaltxt.setText(hospital);
+        jCommunitytxt.setText(community);
+        jCitytxt.setText(city);
+    }//GEN-LAST:event_jReadbtnActionPerformed
+
+    private void jUpdatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUpdatebtnActionPerformed
+        // TODO add your handling code here:
+         int selectedRowIndex = jHospitaltbl.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        if (selectedRowIndex >= 0)
+        {
+            if("".equals(jHospitaltxt.getText())||"".equals(jCommunitytxt.getText())||
+            "".equals(jCitytxt.getText()))             {
+                
+                JOptionPane.showMessageDialog(this, "Please Fill All the Fields");
+            }
+            else{
+                model.setValueAt(jHospitaltxt.getText(), selectedRowIndex, 0);
+                model.setValueAt(jCommunitytxt.getText(), selectedRowIndex, 1);
+                model.setValueAt(jCitytxt.getText(), selectedRowIndex, 2);
+            }
+        }
+        else{
+          JOptionPane.showMessageDialog(this, "Please Select a row to View.");
+        }  
+        jHospitaltxt.setText("");
+        jCommunitytxt.setText("");
+        jCitytxt.setText("");
+    }//GEN-LAST:event_jUpdatebtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField jCitytxt;
+    private javax.swing.JTextField jCommunitytxt;
     private javax.swing.JButton jCreatebtn;
     private javax.swing.JScrollPane jHScrollPane;
     private javax.swing.JLabel jHospitaldetailslbl;
     private javax.swing.JTable jHospitaltbl;
+    private javax.swing.JTextField jHospitaltxt;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton jReadbtn;
     private javax.swing.JButton jUpdatebtn;
     // End of variables declaration//GEN-END:variables

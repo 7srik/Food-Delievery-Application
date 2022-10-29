@@ -21,7 +21,10 @@ public class City {
         this.community= community;
         this.hospital=hospital;
     }
-
+    
+    public City(){
+        
+    }
     public String getCityName() {
         return cityName;
     }

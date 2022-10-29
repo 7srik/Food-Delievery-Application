@@ -34,6 +34,7 @@ public class PersonjPanel extends javax.swing.JPanel {
         this.personList = person.getPerson();
         this.patient = patient;
         this.patientList = patient.getPatient();
+        loadComboBoxData();
     }
 
     private void clearFields(){
@@ -433,6 +434,21 @@ public class PersonjPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jFemaleActionPerformed
 
+    private void loadComboBoxData(){
+        jCommunitytxt.removeAllItems();
+        jCitytxt.removeAllItems();
+        for(City city: SystemHospitaljPanel.cityList){
+            jCitytxt.addItem(city.getCityName());
+        }
+        for(City city:SystemHospitaljPanel.cityList){
+            jCommunitytxt.addItem(city.getCommunity());
+        }
+        //for(City city:SystemAdminJFrame.cityList){
+        //   comboHospital.addItem(city.getHospital());
+        //}
+        jCommunitytxt.setSelectedIndex(-1);
+        jCitytxt.setSelectedIndex(-1);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jAddresslbl;

@@ -41,10 +41,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
 
         jDoctortbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Doctor ID", "Name", "Age", "Gender", "Phone number", "Email ID", "Hospital", "Community", "City"

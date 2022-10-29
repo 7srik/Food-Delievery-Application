@@ -126,19 +126,24 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
 
     private void jLoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLoginbtnActionPerformed
         // TODO add your handling code here:
-        String username = jUsernametxt.getText();
-        String password = jPasswordtxt.getText();
+        String usn = jUsernametxt.getText();
+        String pwd = jPasswordtxt.getText();
+        int s=0;
         for(Person p : persons.getPerson()){
-            String pid=Integer.toString(p.getPersonid());
-            JOptionPane.showMessageDialog(this,pid);
-            if (password.equals(pid) && (username.equals(pid)))
+            int pid = p.getPersonid();
+            int username = Integer.parseInt(usn);
+            int password = Integer.parseInt(pwd);
+            if (password==(pid) && (username==(pid)))
             {
+                s=1;
                 PatientDetailsjFrame pdf = new PatientDetailsjFrame();
                 pdf.setVisible(true);
                 dispose();
             }
         }
-        JOptionPane.showMessageDialog(this ,"Please enter correct Username and Password ");
+        if(s==0){
+            JOptionPane.showMessageDialog(this ,"Please enter correct Username and Password ");
+        }
     }//GEN-LAST:event_jLoginbtnActionPerformed
 
     private void jBackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackbtnActionPerformed

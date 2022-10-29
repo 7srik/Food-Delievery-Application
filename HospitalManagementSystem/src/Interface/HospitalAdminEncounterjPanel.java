@@ -38,10 +38,7 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
 
         jEncountertbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Patient Name", "Doctor Name", "Respiration Rate", "Heart Rate", "Height", "Weight", "Abnormal"

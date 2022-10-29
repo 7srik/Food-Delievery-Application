@@ -38,10 +38,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
 
         jPatienttbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Patient ID", "Name", "Age", "Gender", "Phone no", "Email ID", "Community", "City"
