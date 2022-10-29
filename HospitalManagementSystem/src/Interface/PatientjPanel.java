@@ -46,6 +46,11 @@ public class PatientjPanel extends javax.swing.JPanel {
         jPasswordlbl.setText("PASSWORD");
 
         jLoginbtn.setText("LOGIN");
+        jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jLoginbtnActionPerformed(evt);
+            }
+        });
 
         jCancelbtn.setText("CLEAR");
 
@@ -90,6 +95,14 @@ public class PatientjPanel extends javax.swing.JPanel {
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPasswordtxt, jUsernametxt});
 
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLoginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLoginbtnActionPerformed
+        // TODO add your handling code here:
+        
+        PatientLoginjPanel plp = new PatientLoginjPanel();
+        plp.setVisible(true);
+        //dispose();
+    }//GEN-LAST:event_jLoginbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

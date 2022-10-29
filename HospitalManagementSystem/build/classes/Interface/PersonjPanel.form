@@ -50,14 +50,12 @@
                                   <Component id="jGenderlbl" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jNametxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <Component id="jAgetxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <Component id="jPhonenotxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <Component id="jEmailidtxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <Component id="jAddresstxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <Component id="jCommunitytxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
-                                  <Component id="jCitytxt" alignment="0" min="-2" pref="272" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jNametxt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jAgetxt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPhonenotxt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jEmailidtxt" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jAddresstxt" linkSize="8" alignment="0" pref="272" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jMale" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -65,6 +63,8 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLgbtq" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="jCommunitytxt" linkSize="8" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jCitytxt" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -118,7 +118,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jCitylbl" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCitytxt" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCitytxt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -192,16 +192,6 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jAddresstxt">
-    </Component>
-    <Component class="javax.swing.JTextField" name="jCommunitytxt">
-      <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jCommunitytxtKeyTyped"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jCitytxt">
-      <Events>
-        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jCitytxtKeyTyped"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jCreatebtn">
       <Properties>
@@ -282,6 +272,26 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jEmailidtxt">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jCommunitytxt">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jCitytxt">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

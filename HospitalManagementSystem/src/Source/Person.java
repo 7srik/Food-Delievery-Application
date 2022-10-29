@@ -8,18 +8,36 @@ package Source;
  *
  * @author srikr
  */
-public class Person extends Address {
+public class Person {
     private String name;
     private int age;    
     private String gender;
     private long phoneno;
     private String emailid;
+    private String city;
+    private String community;
+    private String address;
+    private String hospital;
     private static int id=22000;
     private int personid;
     
     public Person() {
        id++;
        this.personid = id;
+    }
+    
+    public Person(int personid, String name, int age, String gender, long phoneno, String emailid, String address, String city, String community, String hospital) 
+    {
+        this.name = name;
+        this.personid = personid;
+        this.age = age;
+        this.gender = gender;
+        this.phoneno = phoneno;
+        this.emailid = emailid;
+        this.address = address;
+        this.city = city;
+        this.community = community;
+        this.hospital = hospital;
     }
     
     public String getName() {
@@ -81,6 +99,38 @@ public class Person extends Address {
 
     public static void setId(int aId) {
         id = aId;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getHospital() {
+        return hospital;
+    }
+
+    public void setHospital(String hospital) {
+        this.hospital = hospital;
     }
 
 }

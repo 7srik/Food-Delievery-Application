@@ -33,7 +33,7 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
         jPEncounterPane = new javax.swing.JScrollPane();
         jPEncountertbl = new javax.swing.JTable();
         jEncountersHeading = new javax.swing.JLabel();
-        jLogoutbtn = new javax.swing.JButton();
+        jBackbtn = new javax.swing.JButton();
         jDCReadbtn = new javax.swing.JButton();
         jPEReadbtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -96,7 +96,12 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
         jEncountersHeading.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jEncountersHeading.setText("Personal Encounters");
 
-        jLogoutbtn.setText("LOGOUT");
+        jBackbtn.setText("BACK");
+        jBackbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBackbtnActionPerformed(evt);
+            }
+        });
 
         jDCReadbtn.setText("READ");
         jDCReadbtn.addActionListener(new java.awt.event.ActionListener() {
@@ -213,35 +218,35 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPIEditbtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPISavebtn)
-                        .addGap(307, 307, 307))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jPIEditbtn)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPISavebtn)
+                            .addGap(307, 307, 307))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jButton1))
+                                        .addComponent(jDoctorcomHeading)
+                                        .addComponent(jDoctorComPane))
+                                    .addGap(40, 40, 40)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jEncountersHeading)
+                                        .addComponent(jPEncounterPane)))
+                                .addComponent(jLabel1))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton1))
-                                    .addComponent(jDoctorcomHeading)
-                                    .addComponent(jDoctorComPane))
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jEncountersHeading)
-                                    .addComponent(jPEncounterPane)))
-                            .addComponent(jLabel1))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(jPatientHeading)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 457, Short.MAX_VALUE)
-                .addComponent(jLogoutbtn))
+                        .addGap(470, 470, 470)
+                        .addComponent(jPatientHeading)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctorComPane, jPEncounterPane});
@@ -253,9 +258,7 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPatientHeading)
-                            .addComponent(jLogoutbtn))
+                        .addComponent(jPatientHeading)
                         .addGap(8, 8, 8)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -265,7 +268,8 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
                         .addGap(12, 12, 12)
                         .addComponent(jNamelbl))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                        .addComponent(jBackbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -339,12 +343,18 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jAgetxtActionPerformed
 
+    private void jBackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackbtnActionPerformed
+        // TODO add your handling code here:
+        new MainFrame().setVisible(true);
+    }//GEN-LAST:event_jBackbtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jAddresslbl;
     private javax.swing.JTextField jAddresstxt;
     private javax.swing.JLabel jAgelbl;
     private javax.swing.JTextField jAgetxt;
+    private javax.swing.JButton jBackbtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jCitylbl;
     private javax.swing.JTextField jCitytxt;
@@ -361,7 +371,6 @@ public class PatientLoginjPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jGenderlbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jLgbtqbtn;
-    private javax.swing.JButton jLogoutbtn;
     private javax.swing.JRadioButton jMalebtn;
     private javax.swing.JLabel jNamelbl;
     private javax.swing.JTextField jNametxt;

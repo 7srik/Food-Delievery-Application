@@ -8,18 +8,25 @@ package Source;
  *
  * @author srikr
  */
-public class Encounter extends Vital{
-    protected String timeUpdate;
+public class Encounter extends Person{
+    private int encounter;
+    private Vital vital;
 
-    public Encounter() {
+
+    public int getEncounter() {
+        return encounter;
     }
 
-    public String getTimeUpdate() {
-        return timeUpdate;
+    public void setEncounter(int encounter) {
+        this.encounter = encounter;
     }
 
-    public void setTimeUpdate(String timeUpdate) {
-        this.timeUpdate = timeUpdate;
+    public Vital getVital() {
+        return vital;
     }
-    
+
+    public void setVital(Vital vital) {
+        this.vital = vital;
+    }
+
 }

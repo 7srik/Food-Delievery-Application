@@ -169,6 +169,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
     private void jBackbtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackbtn2ActionPerformed
         // TODO add your handling code here:
         new MainFrame().setVisible(true);
+        dispose();
     }//GEN-LAST:event_jBackbtn2ActionPerformed
 
     private void jHomebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHomebtnActionPerformed

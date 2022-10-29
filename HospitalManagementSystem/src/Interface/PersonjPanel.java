@@ -39,8 +39,8 @@ public class PersonjPanel extends javax.swing.JPanel {
     private void clearFields(){
         jNametxt.setText(null);
         jAgetxt.setText(null);
-        jCitytxt.setText(null);
-        jCommunitytxt.setText(null);
+        jCitytxt.setSelectedItem(null);
+        jCommunitytxt.setSelectedItem(null);
         jAddresstxt.setText(null);
         jMale.setSelected(false);
         jFemale.setSelected(false);
@@ -70,8 +70,6 @@ public class PersonjPanel extends javax.swing.JPanel {
         jNametxt = new javax.swing.JTextField();
         jAgetxt = new javax.swing.JTextField();
         jAddresstxt = new javax.swing.JTextField();
-        jCommunitytxt = new javax.swing.JTextField();
-        jCitytxt = new javax.swing.JTextField();
         jCreatebtn = new javax.swing.JButton();
         jClearbtn = new javax.swing.JButton();
         jGenderlbl = new javax.swing.JLabel();
@@ -82,6 +80,8 @@ public class PersonjPanel extends javax.swing.JPanel {
         jPhonenotxt = new javax.swing.JTextField();
         jEmailidlbl = new javax.swing.JLabel();
         jEmailidtxt = new javax.swing.JTextField();
+        jCommunitytxt = new javax.swing.JComboBox<>();
+        jCitytxt = new javax.swing.JComboBox<>();
 
         jHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jHeading.setText("PERSON REGISTRATION");
@@ -120,18 +120,6 @@ public class PersonjPanel extends javax.swing.JPanel {
         jAgetxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jAgetxtKeyTyped(evt);
-            }
-        });
-
-        jCommunitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jCommunitytxtKeyTyped(evt);
-            }
-        });
-
-        jCitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jCitytxtKeyTyped(evt);
             }
         });
 
@@ -217,22 +205,25 @@ public class PersonjPanel extends javax.swing.JPanel {
                                         .addComponent(jNamelbl))
                                     .addComponent(jGenderlbl))
                                 .addGap(26, 26, 26)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jAgetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPhonenotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jEmailidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jAddresstxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jNametxt)
+                                    .addComponent(jAgetxt)
+                                    .addComponent(jPhonenotxt)
+                                    .addComponent(jEmailidtxt)
+                                    .addComponent(jAddresstxt, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jMale)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jFemale)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLgbtq)))))
+                                        .addComponent(jLgbtq))
+                                    .addComponent(jCommunitytxt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jCitytxt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGap(139, 139, 139))))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAddresstxt, jCommunitytxt});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -280,7 +271,7 @@ public class PersonjPanel extends javax.swing.JPanel {
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresslbl, jAgelbl, jCitylbl, jCommunitylbl, jNamelbl});
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresstxt, jAgetxt, jCitytxt, jCommunitytxt, jNametxt});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresstxt, jAgetxt, jCommunitytxt, jNametxt});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jClearbtn, jCreatebtn});
 
@@ -308,14 +299,6 @@ public class PersonjPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jNametxtKeyTyped
 
-    private void jCitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCitytxtKeyTyped
-        // TODO add your handling code here:
-        char value = evt.getKeyChar();
-        if((!Character.isAlphabetic(value))){
-            evt.consume();
-        }
-    }//GEN-LAST:event_jCitytxtKeyTyped
-
     private void jAgetxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jAgetxtKeyTyped
         // TODO add your handling code here:
         char value = evt.getKeyChar();
@@ -323,14 +306,6 @@ public class PersonjPanel extends javax.swing.JPanel {
             evt.consume();
         }
     }//GEN-LAST:event_jAgetxtKeyTyped
-
-    private void jCommunitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCommunitytxtKeyTyped
-        // TODO add your handling code here:
-        char value = evt.getKeyChar();
-        if((!Character.isAlphabetic(value))){
-            evt.consume();
-        }
-    }//GEN-LAST:event_jCommunitytxtKeyTyped
 
     private void jCreatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCreatebtnActionPerformed
         // TODO add your handling code here:
@@ -376,16 +351,16 @@ public class PersonjPanel extends javax.swing.JPanel {
                 jAddresstxt.setText("");
                 checkAddress = 1;
             }
-            if (jCommunitytxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+            if (jCommunitytxt.getSelectedItem().toString().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
                     && checkPhoneno==0 && checkEmailid==0 && checkAddress==0){
                 JOptionPane.showMessageDialog(null, "Please provide Community");
-                jCommunitytxt.setText("");
+                jCommunitytxt.setSelectedItem(null);
                 checkCommunity = 1;
             }
-            if (jCitytxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+            if (jCitytxt.getSelectedItem().toString().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
                     && checkPhoneno==0 && checkEmailid==0 && checkAddress==0 && checkCommunity==0){
                 JOptionPane.showMessageDialog(null, "Please provide City");
-                jCitytxt.setText("");
+                jCitytxt.setSelectedItem(null);
                 checkCity = 1;
             }
             /*if (jPersonUsernametxt.getText().isEmpty()){
@@ -416,9 +391,9 @@ public class PersonjPanel extends javax.swing.JPanel {
                 pr.setPhoneno(Long.parseLong(jPhonenotxt.getText()));
                 pr.setEmailid(jEmailidtxt.getText());
                 pr.setAddress(jAddresstxt.getText());
-                pr.setCommunityName(jCommunitytxt.getText());
-                pr.setCityName(jCitytxt.getText());
-                JOptionPane.showMessageDialog(null, "Person Created with unique id  "+pr.getPersonid());
+                pr.setCommunity(jCommunitytxt.getSelectedItem().toString());
+                pr.setCity(jCitytxt.getSelectedItem().toString());
+                JOptionPane.showMessageDialog(null, "Person Created, Your Unique id is :  "+pr.getPersonid()+"\nPlease use your Unique id as PATIENT USERNAME and PATIENT PASSWORD.");
                 clearFields();
                 //PersonInfojPanel personinfo = new PersonInfojPanel(person,patient);
                 //personinfo.setVisible(true);
@@ -465,10 +440,10 @@ public class PersonjPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jAgelbl;
     private javax.swing.JTextField jAgetxt;
     private javax.swing.JLabel jCitylbl;
-    private javax.swing.JTextField jCitytxt;
+    private javax.swing.JComboBox<String> jCitytxt;
     private javax.swing.JButton jClearbtn;
     private javax.swing.JLabel jCommunitylbl;
-    private javax.swing.JTextField jCommunitytxt;
+    private javax.swing.JComboBox<String> jCommunitytxt;
     private javax.swing.JButton jCreatebtn;
     private javax.swing.JLabel jEmailidlbl;
     private javax.swing.JTextField jEmailidtxt;

@@ -3,27 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Source;
-
 import java.util.ArrayList;
-
 /**
  *
  * @author srikr
  */
 public class PersonDirectory {
-    protected ArrayList<Person> person = new ArrayList();
+    private static ArrayList<Person> person = new ArrayList<Person>();
     
     public PersonDirectory(){
-        this.person = new ArrayList<Person>();
+        //this.person = new ArrayList<Person>();
     }
 
-    public ArrayList<Person> getPerson() {
+    public static ArrayList<Person> getPerson() {
         return person;
     }
 
-    public void setPerson(ArrayList<Person> person) {
-        this.person = person;
-    }
+    //public void setPersons(ArrayList<Person> person) {
+    //    this.person = person;
+    //}
     
     public Person addNewPersonDetails(){
         Person addPersonDetails = new Person();

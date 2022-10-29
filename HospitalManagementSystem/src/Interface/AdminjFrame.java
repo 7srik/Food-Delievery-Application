@@ -31,7 +31,7 @@ public class AdminjFrame extends javax.swing.JFrame {
 
         jPasswordtxt = new javax.swing.JTextField();
         jLoginbtn = new javax.swing.JButton();
-        jCancelbtn = new javax.swing.JButton();
+        jClearbtn = new javax.swing.JButton();
         jUsernamelbl = new javax.swing.JLabel();
         jUsernametxt = new javax.swing.JTextField();
         jPasswordlbl = new javax.swing.JLabel();
@@ -52,7 +52,12 @@ public class AdminjFrame extends javax.swing.JFrame {
             }
         });
 
-        jCancelbtn.setText("CLEAR");
+        jClearbtn.setText("CLEAR");
+        jClearbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jClearbtnActionPerformed(evt);
+            }
+        });
 
         jUsernamelbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jUsernamelbl.setText("USERNAME");
@@ -101,7 +106,7 @@ public class AdminjFrame extends javax.swing.JFrame {
                     .addComponent(jAdminHeading, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jUsernametxt, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUsernamelbl, javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jCancelbtn, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jClearbtn, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBackbtn, javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLoginbtn, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -113,7 +118,7 @@ public class AdminjFrame extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jCancelbtn});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jClearbtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +139,7 @@ public class AdminjFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jBackbtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
@@ -145,7 +150,7 @@ public class AdminjFrame extends javax.swing.JFrame {
                 .addComponent(jLabel3))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jCancelbtn});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jClearbtn});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -177,7 +182,7 @@ public class AdminjFrame extends javax.swing.JFrame {
             ha.setVisible(true);
             dispose();
         }
-        /*else if (password.contains("456") && (username.contains("doctor")))
+        /*else if (password.contains("doc") && (username.contains("doctor")))
         {
             DoctorJPanel df = new DoctorjPanel();
             //splitPane.setRightComponent(df);
@@ -188,8 +193,6 @@ public class AdminjFrame extends javax.swing.JFrame {
         else
         {
             JOptionPane.showMessageDialog(this ,"Please enter correct Username and Password");
-            jUsernametxt.setText(null);
-            jPasswordtxt.setText(null);
         }
     }//GEN-LAST:event_jLoginbtnActionPerformed
 
@@ -202,7 +205,14 @@ public class AdminjFrame extends javax.swing.JFrame {
     private void jBackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBackbtnActionPerformed
         // TODO add your handling code here:
         new MainFrame().setVisible(true);
+        dispose();
     }//GEN-LAST:event_jBackbtnActionPerformed
+
+    private void jClearbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jClearbtnActionPerformed
+        // TODO add your handling code here:
+            jUsernametxt.setText(null);
+            jPasswordtxt.setText(null);
+    }//GEN-LAST:event_jClearbtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,7 +253,7 @@ public class AdminjFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jAdminHeading;
     private javax.swing.JComboBox<String> jAdminbox;
     private javax.swing.JButton jBackbtn;
-    private javax.swing.JButton jCancelbtn;
+    private javax.swing.JButton jClearbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

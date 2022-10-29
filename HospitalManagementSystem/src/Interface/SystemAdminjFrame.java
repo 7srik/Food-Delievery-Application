@@ -176,26 +176,26 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
 
     private void jPatientbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPatientbtnActionPerformed
         // TODO add your handling code here:
-        HospitalAdminPatientjPanel hap = new HospitalAdminPatientjPanel();
-        jSplitPane.setRightComponent(hap);
+        SystemPatientjPanel sp = new SystemPatientjPanel();
+        jSplitPane.setRightComponent(sp);
     }//GEN-LAST:event_jPatientbtnActionPerformed
 
     private void jDoctorbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDoctorbtnActionPerformed
         // TODO add your handling code here:
-        HospitalAdminDoctorjPanel had = new HospitalAdminDoctorjPanel();
-        jSplitPane.setRightComponent(had);
+        SystemDoctorjPanel sd = new SystemDoctorjPanel();
+        jSplitPane.setRightComponent(sd);
     }//GEN-LAST:event_jDoctorbtnActionPerformed
 
     private void jHospitalbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHospitalbtnActionPerformed
         // TODO add your handling code here:
-        HospitalAdminHospitaljPanel hah = new HospitalAdminHospitaljPanel();
-        jSplitPane.setRightComponent(hah);
+        SystemHospitaljPanel sh = new SystemHospitaljPanel();
+        jSplitPane.setRightComponent(sh);
     }//GEN-LAST:event_jHospitalbtnActionPerformed
 
     private void jEncounterbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEncounterbtnActionPerformed
         // TODO add your handling code here:
-        HospitalAdminEncounterjPanel hae = new HospitalAdminEncounterjPanel();
-        jSplitPane.setRightComponent(hae);
+        SystemEncounterjPanel se = new SystemEncounterjPanel();
+        jSplitPane.setRightComponent(se);
     }//GEN-LAST:event_jEncounterbtnActionPerformed
 
     /**
