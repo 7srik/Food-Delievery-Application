@@ -9,21 +9,33 @@ package Source;
  * @author srikr
  */
 public class Person {
-    private String name;
-    private int age;    
-    private String gender;
-    private long phoneno;
-    private String emailid;
-    private String city;
-    private String community;
-    private String address;
+    String name;
+    int age;    
+    String gender;
+    long phoneno;
+    String emailid;
+    String city;
+    String community;
+    String address;
     private String hospital;
-    private static int id=22000;
-    private int personid;
+    static int id=22000;
+    int personid;
     
     public Person() {
        id++;
        this.personid = id;
+    }
+    public Person(int personid, String name, int age, String gender, long phoneno, String emailid, String address, String city, String community) 
+    {
+        this.name = name;
+        this.personid = personid;
+        this.age = age;
+        this.gender = gender;
+        this.phoneno = phoneno;
+        this.emailid = emailid;
+        this.address = address;
+        this.city = city;
+        this.community = community;
     }
     
     public Person(int personid, String name, int age, String gender, long phoneno, String emailid, String address, String city, String community, String hospital) 

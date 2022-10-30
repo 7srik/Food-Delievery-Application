@@ -11,22 +11,26 @@ import java.util.ArrayList;
  * @author srikr
  */
 public class EncounterHistory {
-    private ArrayList<Encounter> encounterHistory;
+    private static ArrayList<Encounter> encounterHistory = new ArrayList<Encounter>();
 
     public EncounterHistory() {
-        this.encounterHistory = new ArrayList<Encounter>();
+        //this.encounterHistory = new ArrayList<Encounter>();
     }
-    public ArrayList<Encounter> getEncounterHistory() {
+    public static ArrayList<Encounter> getEncounterHistory() {
         return encounterHistory;
     }
 
-    public void setEncounterHistory(ArrayList<Encounter> encounterHistory) {
-        this.encounterHistory = encounterHistory;
-    }
+    //public void setEncounterHistory(ArrayList<Encounter> encounterHistory) {
+    //    this.encounterHistory = encounterHistory;
+    //}
     public Encounter addNewEncounterDetails(){
         Encounter newEncounterDetails = new Encounter();
         encounterHistory.add(newEncounterDetails);
         return newEncounterDetails;
     }
+    public void deleteEncounterDetails(Encounter pr){
+        encounterHistory.remove(pr);
+    }
+   
     
 }

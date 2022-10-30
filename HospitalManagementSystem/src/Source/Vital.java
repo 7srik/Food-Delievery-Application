@@ -13,7 +13,7 @@ public class Vital extends Patient{
     protected int heartRate;
     protected int height;
     protected int weight;
-    protected boolean abnormal;
+    private String abnormal;
     
     public int getRespirationRate() {
         return respirationRate;
@@ -47,12 +47,14 @@ public class Vital extends Patient{
         this.weight = weight;
     }
 
-    public boolean isAbnormal() {
+    public String getAbnormal() {
         return abnormal;
     }
 
-    public void setAbnormal(boolean abnormal) {
+    public void setAbnormal(String abnormal) {
         this.abnormal = abnormal;
     }
+
+
     
 }

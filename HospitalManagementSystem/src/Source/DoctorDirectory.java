@@ -12,17 +12,27 @@ import java.util.ArrayList;
  */
 public class DoctorDirectory {
     
-    private ArrayList<Doctor> doctors;
+    private static ArrayList<Doctor> doctors = new ArrayList<Doctor>();
     
     public DoctorDirectory(){
-        this.doctors= new ArrayList<Doctor>();
+        //this.doctors= new ArrayList<Doctor>();
     }
 
-    public ArrayList<Doctor> getDoctors() {
+    public static ArrayList<Doctor> getDoctors() {
         return doctors;
     }
 
-    public void setDoctors(ArrayList<Doctor> doctors) {
-        this.doctors = doctors;
+    //public void setDoctors(ArrayList<Doctor> doctors) {
+    //    this.doctors = doctors;
+    //}
+    
+    public Doctor addNewDoctorDetails(){
+        Doctor addDoctorDetails = new Doctor();
+        doctors.add(addDoctorDetails);
+        return addDoctorDetails;
+    }
+    
+    public void deleteDoctorDetails(Doctor dr){
+        doctors.remove(dr);
     }
 }

@@ -50,7 +50,7 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         jSystemadminheading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jSystemadminheading.setText("SYSTEM ADMIN");
 
-        jBackbtn.setText("BACK");
+        jBackbtn.setText("LOGOUT");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBackbtnActionPerformed(evt);

@@ -24,6 +24,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
     static ArrayList<City> cityList = new ArrayList<City>();
     public SystemHospitaljPanel() {
         initComponents();
+        jUpdatebtn.setEnabled(false);
         tableModel = (DefaultTableModel)jHospitaltbl.getModel();
     }
 
@@ -141,7 +142,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                         .addComponent(jHospitaldetailslbl)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jHScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                        .addComponent(jHScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
                         .addGap(356, 356, 356))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,7 +199,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUpdatebtn))
-                .addContainerGap())
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jDeletebtn, jReadbtn, jUpdatebtn});
@@ -270,6 +271,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
 
     private void jReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jReadbtnActionPerformed
         // TODO add your handling code here:
+        jUpdatebtn.setEnabled(true);
         int selectedrow = jHospitaltbl.getSelectedRow();
         if (selectedrow < 0){
             JOptionPane.showMessageDialog(null, "please select");
@@ -300,12 +302,15 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this,"Please select only one row to delete.");
             }
         }
+        jCitytxt.setText("");
+        jCommunitytxt.setText("");
+        jHospitaltxt.setText("");
     }//GEN-LAST:event_jDeletebtnActionPerformed
 
     private void jCitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCitytxtKeyTyped
         // TODO add your handling code here:
         char value = evt.getKeyChar();
-        if((!Character.isDigit(value))){
+        if((!Character.isAlphabetic(value))){
             evt.consume();
         }
     }//GEN-LAST:event_jCitytxtKeyTyped
@@ -313,7 +318,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
     private void jCommunitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCommunitytxtKeyTyped
         // TODO add your handling code here:
         char value = evt.getKeyChar();
-        if((!Character.isDigit(value))){
+        if((!Character.isAlphabetic(value))){
             evt.consume();
         }
     }//GEN-LAST:event_jCommunitytxtKeyTyped
@@ -321,7 +326,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
     private void jHospitaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHospitaltxtKeyTyped
         // TODO add your handling code here:
         char value = evt.getKeyChar();
-        if((!Character.isDigit(value))){
+        if((!Character.isAlphabetic(value))){
             evt.consume();
         }
     }//GEN-LAST:event_jHospitaltxtKeyTyped

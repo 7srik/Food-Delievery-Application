@@ -9,7 +9,9 @@ package Source;
  * @author srikr
  */
 public class Encounter extends Person{
+    private String name;
     private int encounter;
+    private String doctorName;
     private Vital vital;
 
 
@@ -27,6 +29,22 @@ public class Encounter extends Person{
 
     public void setVital(Vital vital) {
         this.vital = vital;
+    }
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

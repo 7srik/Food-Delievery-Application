@@ -67,6 +67,11 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jCitylbl.setText("Community :");
 
         jUpdatebtn.setText("UPDATE");
+        jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUpdatebtnActionPerformed(evt);
+            }
+        });
 
         jCommunitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCommunitylbl.setText("City :");
@@ -220,6 +225,10 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_jCommunitytxtKeyTyped
+
+    private void jUpdatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUpdatebtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jUpdatebtnActionPerformed
 
     /**
      * @param args the command line arguments

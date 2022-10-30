@@ -444,9 +444,12 @@ public class PersonjPanel extends javax.swing.JPanel {
         for(City city:SystemHospitaljPanel.cityList){
             jCommunitytxt.addItem(city.getCommunity());
         }
-        //for(City city:SystemAdminJFrame.cityList){
-        //   comboHospital.addItem(city.getHospital());
-        //}
+        for(City city: HospitalAdminHospitaljPanel.cityList){
+            jCitytxt.addItem(city.getCityName());
+        }
+        for(City city: HospitalAdminHospitaljPanel.cityList){
+            jCommunitytxt.addItem(city.getCommunity());
+        }
         jCommunitytxt.setSelectedIndex(-1);
         jCitytxt.setSelectedIndex(-1);
     }

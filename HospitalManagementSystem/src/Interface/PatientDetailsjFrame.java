@@ -5,11 +5,15 @@
 package Interface;
 
 import Source.City;
+import Source.Doctor;
+import Source.DoctorDirectory;
 import Source.Patient;
 import Source.PatientDirectory;
 import Source.Person;
 import Source.PersonDirectory;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -21,28 +25,25 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
     /**
      * Creates new form PatientDetailsjFrame
      */
-    PersonDirectory person;
-    PatientDirectory patient;
+    int g=0;
+    private PersonDirectory person;
+    private PatientDirectory patient;
+    private DoctorDirectory perform;
     public PatientDetailsjFrame() {
         initComponents();
         loadComboBoxData();
         setExtendedState(MainFrame.MAXIMIZED_BOTH);
-        //jNametxt.setEditable(false);
-        //jAgetxt.setEditable(false);
-        //jPhonenotxt.setEditable(false);
-        //jEmailidtxt.setEditable(false);
-        //jAddresstxt.setEditable(false);
-        //jCommunitytxt.setEditable(false);
-        //jCitytxt.setEditable(false);
         this.person = new PersonDirectory();
         this.patient = new PatientDirectory();
         loadComboBoxData();
+        populateDocTable();
 
     }
     public PatientDetailsjFrame(PersonDirectory pd) {
         initComponents();
         loadComboBoxData();
         setExtendedState(MainFrame.MAXIMIZED_BOTH);
+        this.person = new PersonDirectory();
     }
     
     /**
@@ -91,6 +92,10 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jSearchbtn = new javax.swing.JButton();
         jCitycmb = new javax.swing.JComboBox<>();
         jCommunitycmb = new javax.swing.JComboBox<>();
+        jDoctorlbl = new javax.swing.JLabel();
+        jHospitallbl = new javax.swing.JLabel();
+        jDoctortxt = new javax.swing.JTextField();
+        jHospitaltxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -108,7 +113,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Patient ID", "Doctor Name", "Encounter ID", "Respiration Rate", "Heart Rate", "Height", "Weight", "Abnormal"
             }
         ));
         jPEncounterPane.setViewportView(jPEncountertbl);
@@ -150,8 +155,18 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jPhonenolbl.setText("Phone Number :");
 
         jPIEditbtn.setText("EDIT");
+        jPIEditbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPIEditbtnActionPerformed(evt);
+            }
+        });
 
         jPISavebtn.setText("SAVE");
+        jPISavebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPISavebtnActionPerformed(evt);
+            }
+        });
 
         jGenderbtngrp.add(jMalebtn);
         jMalebtn.setText("Male");
@@ -202,7 +217,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Doctor Name", "Hospital"
             }
         ));
         jDoctorComPane.setViewportView(jDoctorComtbl);
@@ -227,6 +242,12 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
             }
         });
 
+        jDoctorlbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jDoctorlbl.setText("Doctor Name :");
+
+        jHospitallbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jHospitallbl.setText("Hospital Name :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -237,81 +258,95 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                 .addComponent(jPatientHeading)
                 .addGap(401, 401, 401)
                 .addComponent(jLogoutbtn))
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPersonidlbl)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPersonidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSearchbtn))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jNamelbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jAgelbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jAgetxt, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jGenderlbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPhonenolbl, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jMalebtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jFemalebtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLgbtqbtn))
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPersonidlbl)
+                                .addGap(18, 18, 18)
+                                .addComponent(jPersonidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jSearchbtn))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jPhonenotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
+                                .addGap(97, 97, 97)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCommunitylbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jAddresslbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jNamelbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jAgelbl, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jAddresstxt, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                    .addComponent(jCommunitycmb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jAgetxt, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jNametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jGenderlbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jPhonenolbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jMalebtn)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jFemalebtn)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLgbtqbtn))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jPhonenotxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jCommunitylbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jAddresslbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jAddresstxt, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                            .addComponent(jCommunitycmb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1))
+                                    .addComponent(jDoctorcomHeading)
+                                    .addComponent(jDoctorComPane, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jEncountersHeading)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jPIEditbtn)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jPISavebtn))
+                                    .addComponent(jPEncounterPane, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE))
+                                .addGap(63, 63, 63))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCitylbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(83, 83, 83)
+                                        .addComponent(jEmailidlbl)
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jEmailidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(127, 127, 127)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCitycmb, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(32, 32, 32))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1))
-                            .addComponent(jDoctorcomHeading)
-                            .addComponent(jDoctorComPane, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jEncountersHeading)
-                            .addComponent(jPEncounterPane, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPIEditbtn)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPISavebtn))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCitylbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(jEmailidlbl)
-                                .addGap(6, 6, 6)
-                                .addComponent(jEmailidtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(127, 127, 127)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCitycmb, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                            .addComponent(jDoctorlbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jHospitallbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jDoctortxt, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                            .addComponent(jHospitaltxt))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jLogoutbtn});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctortxt, jEmailidtxt});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,10 +414,20 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                     .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
                     .addComponent(jPEReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jDoctorlbl)
+                    .addComponent(jDoctortxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jHospitallbl)
+                    .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jLogoutbtn});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDoctortxt, jEmailidtxt});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -394,6 +439,17 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
 
     private void jDCReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDCReadbtnActionPerformed
         // TODO add your handling code here:
+        int selectedrow = jDoctorComtbl.getSelectedRow();
+        if (selectedrow < 0){
+            JOptionPane.showMessageDialog(null, "please select");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) jDoctorComtbl.getModel();
+        String doctor = model.getValueAt(jDoctorComtbl.getSelectedRow(),0).toString();
+        String hospital = model.getValueAt(jDoctorComtbl.getSelectedRow(),1).toString();
+        
+        jDoctortxt.setText(doctor);
+        jHospitaltxt.setText(hospital);
     }//GEN-LAST:event_jDCReadbtnActionPerformed
 
     private void jPersonidtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPersonidtxtActionPerformed
@@ -413,7 +469,50 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
 
     private void jSearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchbtnActionPerformed
         // TODO add your handling code here:
-        String patient =jPersonidtxt.getText();
+        int s=0;
+        int id= Integer.parseInt(jPersonidtxt.getText());
+        for(Person p : person.getPerson()){
+            int pid = p.getPersonid();
+            if (id==pid)
+            {
+                s=1;
+                jNametxt.setText(p.getName());
+                jAgetxt.setText(String.valueOf(p.getAge()));
+                if (p.getGender().equals("Male"))
+                {
+                    //genderGroup.setSelected((ButtonModel) btnMale, true);
+                    jMalebtn.setSelected(true);
+                }
+                else if (p.getGender().equals("Female"))
+                {
+                    //genderGroup.setSelected(btnF, true);
+                    jFemalebtn.setSelected(true);
+                }
+                else
+                {
+                    jLgbtqbtn.setSelected(true);
+                }
+                jPhonenotxt.setText(String.valueOf(p.getPhoneno()));
+                jEmailidtxt.setText(p.getEmailid());
+                jAddresstxt.setText(p.getAddress());
+                jCitycmb.setSelectedItem(p.getCity());  
+                jCommunitycmb.setSelectedItem(p.getCommunity());
+            }
+        }
+        if(s==0){
+            JOptionPane.showMessageDialog(this ," NO RECORD FOUND ");
+        }
+        jNametxt.setEditable(false);
+        jAgetxt.setEditable(false);
+        jPhonenotxt.setEditable(false);
+        jEmailidtxt.setEditable(false);
+        jAddresstxt.setEditable(false);
+        jMalebtn.setEnabled(false);
+        jFemalebtn.setEnabled(false);
+        jLgbtqbtn.setEnabled(false);
+        jCommunitycmb.setEnabled(false);
+        jCitycmb.setEnabled(false);
+        /*String patient =jPersonidtxt.getText();
         Person p = new Person();
         for(Person per : person.getPerson()){
             if (String.valueOf(per.getPersonid()).equals(patient))
@@ -441,7 +540,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                 jCommunitycmb.setSelectedItem(p.getCommunity());
                 break;
             }
-        } 
+        } */
     }//GEN-LAST:event_jSearchbtnActionPerformed
 
     private void jNametxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jNametxtKeyTyped
@@ -468,6 +567,137 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jPhonenotxtKeyTyped
 
+    private void jPIEditbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPIEditbtnActionPerformed
+        // TODO add your handling code here:
+        jNametxt.setEditable(true);
+        jAgetxt.setEditable(true);
+        jPhonenotxt.setEditable(true);
+        jEmailidtxt.setEditable(true);
+        jAddresstxt.setEditable(true);
+        jMalebtn.setEnabled(true);
+        jFemalebtn.setEnabled(true);
+        jLgbtqbtn.setEnabled(true);
+        jCommunitycmb.setEnabled(true);
+        jCitycmb.setEnabled(true);
+    }//GEN-LAST:event_jPIEditbtnActionPerformed
+
+    private void jPISavebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPISavebtnActionPerformed
+        // TODO add your handling code here:
+        short checkName = 0;
+        short checkAge = 0;
+        short checkGender = 0;
+        short checkPhoneno = 0;
+        short checkEmailid = 0;
+        short checkAddress = 0;
+        short checkCommunity = 0;
+        short checkCity = 0;
+        if (jMalebtn.isSelected()) {
+            g=1;
+        }
+        else if (jFemalebtn.isSelected()) {
+            g=2;
+        }
+        else if (jLgbtqbtn.isSelected()) {
+            g=3;
+        }
+        //short checkPersonUsername = 0;
+        //short checkPersonPassword = 0;
+        try{
+            if (jNametxt.getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "Please provide Name");
+                jNametxt.setText("");
+                checkName = 1;
+            }
+            if (jAgetxt.getText().isEmpty() && checkName==0){
+                JOptionPane.showMessageDialog(null, "Please provide Age");
+                jAgetxt.setText("");
+                checkAge = 1;
+            }
+            if (g == 0 && checkName==0 && checkAge==0){
+                JOptionPane.showMessageDialog(null, "Please provide Gender");
+                checkGender = 1;
+            }
+            if (jPhonenotxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0){
+                JOptionPane.showMessageDialog(null, "Please provide Phone Number");
+                jPhonenotxt.setText("");
+                checkPhoneno = 1;
+            }
+            if (jEmailidtxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0){
+                JOptionPane.showMessageDialog(null, "Please provide Email ID");
+                jEmailidtxt.setText("");
+                checkEmailid = 1;
+            }
+            if (jAddresstxt.getText().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0){
+                JOptionPane.showMessageDialog(null, "Please provide Address");
+                jAddresstxt.setText("");
+                checkAddress = 1;
+            }
+            if (jCommunitycmb.getSelectedItem().toString().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0 && checkAddress==0){
+                JOptionPane.showMessageDialog(null, "Please provide Community");
+                jCommunitycmb.setSelectedItem(null);
+                checkCommunity = 1;
+            }
+            if (jCitycmb.getSelectedItem().toString().isEmpty() && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0 && checkAddress==0 && checkCommunity==0){
+                JOptionPane.showMessageDialog(null, "Please provide City");
+                jCitycmb.setSelectedItem(null);
+                checkCity = 1;
+            }
+            /*if (jPersonUsernametxt.getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "Please provide Person Username");
+                jPersonUsernametxt.setText("");
+                checkName = 1;
+            }
+            if (jPersonPasswordtxt.getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "Please provide Person Password");
+                jPersonPasswordtxt.setText("");
+                checkName = 1;
+            }*/
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error in provided Details");
+                }
+        if (checkCity==0 && checkGender==0 && checkName==0 && checkAge==0 
+                    && checkPhoneno==0 && checkEmailid==0 && checkAddress==0 && checkCommunity==0){
+                int personid = (Integer.parseInt(jPersonidtxt.getText()));
+                String name = (jNametxt.getText());
+                int age = (Integer.parseInt(jAgetxt.getText()));
+                String gender;
+                switch (g) {
+                    case 1 -> gender = (jMalebtn.getText());
+                    case 2 -> gender = (jFemalebtn.getText());
+                    default -> gender = (jLgbtqbtn.getText());
+                }
+                long phoneno = (Long.parseLong(jPhonenotxt.getText()));
+                String emailid = (jEmailidtxt.getText());
+                String address = (jAddresstxt.getText());
+                String community = (jCommunitycmb.getSelectedItem().toString());
+                String city = (jCitycmb.getSelectedItem().toString());
+                Person p = new Person(personid,name,age,gender,phoneno,emailid,address,city,community);
+                JOptionPane.showMessageDialog(null, "Person Data Updated for Unique id :  "+personid);
+                //PersonInfojPanel personinfo = new PersonInfojPanel(person,patient);
+                //personinfo.setVisible(true);
+                //setVisible(false);
+        } else {
+                JOptionPane.showMessageDialog(null, "Cannot Update Person, Please provide all the details");
+        }   
+        
+        jNametxt.setEditable(false);
+        jAgetxt.setEditable(false);
+        jPhonenotxt.setEditable(false);
+        jEmailidtxt.setEditable(false);
+        jAddresstxt.setEditable(false);
+        jMalebtn.setEnabled(false);
+        jFemalebtn.setEnabled(false);
+        jLgbtqbtn.setEnabled(false);
+        jCommunitycmb.setEnabled(false);
+        jCitycmb.setEnabled(false);
+        
+    }//GEN-LAST:event_jPISavebtnActionPerformed
+
     private void loadComboBoxData(){
         jCitycmb.removeAllItems();
         jCommunitycmb.removeAllItems();
@@ -477,8 +707,28 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         for(City city:SystemHospitaljPanel.cityList){
             jCommunitycmb.addItem(city.getCommunity());
         }
+        for(City city: HospitalAdminHospitaljPanel.cityList){
+            jCitycmb.addItem(city.getCityName());
+        }
+        for(City city: HospitalAdminHospitaljPanel.cityList){
+            jCommunitycmb.addItem(city.getCommunity());
+        }
         jCitycmb.setSelectedIndex(-1);
         jCommunitycmb.setSelectedIndex(-1);
+    }
+    
+    private void populateDocTable() {
+    DefaultTableModel model = (DefaultTableModel) jDoctorComtbl.getModel();
+    model.setRowCount(0);
+    
+    for(Doctor doc:perform.getDoctors())
+    {
+        Object[] row =new Object[2];
+        row[0] =doc.getDoctorName();
+        row[1] =doc.getHospital();
+
+        model.addRow(row);
+    }
     }
     /**
      * @param args the command line arguments
@@ -532,12 +782,16 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jDoctorComPane;
     private javax.swing.JTable jDoctorComtbl;
     private javax.swing.JLabel jDoctorcomHeading;
+    private javax.swing.JLabel jDoctorlbl;
+    private javax.swing.JTextField jDoctortxt;
     private javax.swing.JLabel jEmailidlbl;
     private javax.swing.JTextField jEmailidtxt;
     private javax.swing.JLabel jEncountersHeading;
     private javax.swing.JRadioButton jFemalebtn;
     private javax.swing.ButtonGroup jGenderbtngrp;
     private javax.swing.JLabel jGenderlbl;
+    private javax.swing.JLabel jHospitallbl;
+    private javax.swing.JTextField jHospitaltxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jLgbtqbtn;
     private javax.swing.JButton jLogoutbtn;
