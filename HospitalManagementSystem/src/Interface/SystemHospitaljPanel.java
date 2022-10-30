@@ -20,13 +20,34 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
     /**
      * Creates new form SystemHospitaljPanel
      */
+    City phistory;
     DefaultTableModel tableModel;
     static ArrayList<City> cityList = new ArrayList<City>();
     public SystemHospitaljPanel() {
         initComponents();
+        this.phistory= new City();
         jUpdatebtn.setEnabled(false);
         tableModel = (DefaultTableModel)jHospitaltbl.getModel();
+        //populateTable();
     }
+    
+    /*private void populateTable() {
+        
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        model.setRowCount(0);
+        
+        for (City pd : phistory.()){
+          
+            Object[] row = new Object[3];
+            row[0] = pd.getCityName();
+            row[1] = pd.getCommunity();
+            row[2] = pd.getHospital();
+            
+            model.addRow(row);
+
+        }
+
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.

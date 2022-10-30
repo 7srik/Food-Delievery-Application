@@ -4,11 +4,14 @@
  */
 package Interface;
 
+import Source.City;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 import Source.Encounter;
 import Source.EncounterHistory;
 import Source.Vital;
+import Source.Person;
+import java.util.ArrayList;
 import javax.swing.RowFilter;
 import javax.swing.table.TableRowSorter;
 /**
@@ -21,36 +24,21 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
      * Creates new form SystemEncounterjPanel
      */
     EncounterHistory phistory;
+    static ArrayList<Person> plist = new ArrayList<Person>();
     public SystemEncounterjPanel() {
         initComponents();
         this.phistory = new EncounterHistory();
         populateTable();
-        loadComboBoxData();
         jUpdatebtn.setEnabled(false);
     }
     private void clearFields(){
-        jPatienttxt.setSelectedItem(null);
-        jDoctortxt.setSelectedItem(null);
+        jPatienttxt.setText(null);
+        jDoctortxt.setText(null);
         jRRatetxt.setText(null);
         jHRatetxt.setText(null);
         jAbnormaltxt.setSelectedItem(null);
         jHeighttxt.setText(null);
         jWeighttxt.setText(null);
-    }
-    private void loadComboBoxData(){
-        
-        jPatienttxt.removeAllItems();
-        jDoctortxt.removeAllItems();
-        
-        /*for(City city:SystemAdminjFrame.cityList){
-            comboHospital.addItem(city.getHospital());
-        }
-        for(Hospital hospital:HospitalJFrame.hospitalList){
-            comboDoctor.addItem(hospital.getHospital());
-        }
-        */
-        jPatienttxt.setSelectedIndex(-1); 
-        jDoctortxt.setSelectedIndex(-1);
     }
 
     /**
@@ -86,8 +74,8 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jAbnormaltxt = new javax.swing.JComboBox<>();
-        jPatienttxt = new javax.swing.JComboBox<>();
-        jDoctortxt = new javax.swing.JComboBox<>();
+        jPatienttxt = new javax.swing.JTextField();
+        jDoctortxt = new javax.swing.JTextField();
 
         jLabel2.setText("jLabel2");
 
@@ -189,6 +177,18 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
 
         jAbnormaltxt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "false", "true" }));
 
+        jPatienttxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jPatienttxtKeyTyped(evt);
+            }
+        });
+
+        jDoctortxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jDoctortxtKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -224,13 +224,13 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jHRatelbl, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jWeightlbl, javax.swing.GroupLayout.Alignment.TRAILING)))
-                                    .addComponent(jPatienttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jPatienttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jDoctorlbl)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jDoctortxt, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jDoctortxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jWeighttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -309,8 +309,6 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jHRatetxt, jHeighttxt, jRRatetxt, jWeighttxt});
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDoctortxt, jPatienttxt});
-
     }// </editor-fold>//GEN-END:initComponents
 
     private void jSearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchbtnActionPerformed
@@ -372,14 +370,14 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
         short checkHeight = 0;
         short checkWeight = 0;
         try{
-            if (jPatienttxt.getSelectedItem().toString().isEmpty()){
+            if (jPatienttxt.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null, "Please provide Patient Name");
-                jPatienttxt.setSelectedItem("");
+                jPatienttxt.setText("");
                 checkPatient = 1;
             }
-            if (jDoctortxt.getSelectedItem().toString().isEmpty() && checkPatient==0){
+            if (jDoctortxt.getText().isEmpty() && checkPatient==0){
                 JOptionPane.showMessageDialog(null, "Please provide Doctor Name");
-                jDoctortxt.setSelectedItem("");
+                jDoctortxt.setText("");
                 checkDoctor = 1;
             }
 
@@ -421,8 +419,8 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
                 DefaultTableModel model = (DefaultTableModel) jEncountertbl.getModel();
                 if (selectedRowIndex >= 0)
                 {
-                    model.setValueAt(jPatienttxt.getSelectedItem().toString(), selectedRowIndex,0);
-                    model.setValueAt(jDoctortxt.getSelectedItem().toString(), selectedRowIndex,1);
+                    model.setValueAt(jPatienttxt.getText(), selectedRowIndex,0);
+                    model.setValueAt(jDoctortxt.getText(), selectedRowIndex,1);
                     model.setValueAt(jRRatetxt.getText(), selectedRowIndex,2);
                     model.setValueAt(jHRatetxt.getText(), selectedRowIndex, 3);
                     model.setValueAt(jHeighttxt.getText(), selectedRowIndex,4);
@@ -432,14 +430,20 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
                 else{
                     JOptionPane.showMessageDialog(this, "Please Select a row to View.");
                 }
-                String personid = (jPatienttxt.getSelectedItem().toString());
-                String doctor = (jDoctortxt.getSelectedItem().toString());
+                String personid = (jPatienttxt.getText());
+                String doctor = (jDoctortxt.getText());
                 int rrate = (Integer.parseInt(jRRatetxt.getText()));
                 int hrate = (Integer.parseInt(jHRatetxt.getText()));
                 int height = (Integer.parseInt(jHeighttxt.getText()));
                 int weight = (Integer.parseInt(jWeighttxt.getText()));
                 String abnormal = (jAbnormaltxt.getSelectedItem().toString());
-                Encounter p = new Encounter();
+                Vital v = new Vital();
+                v.setRespirationRate(rrate);
+                v.setHeartRate(hrate);
+                v.setHeight(height);
+                v.setWeight(weight);
+                v.setAbnormal(abnormal);
+                Encounter p = new Encounter(personid,doctor,v);
                 JOptionPane.showMessageDialog(null, "Encounter Data Updated for Unique id :  "+personid);
                 clearFields();
         } else {
@@ -465,8 +469,8 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
         String weight = model.getValueAt(jEncountertbl.getSelectedRow(),5).toString();
         String abnormal = model.getValueAt(jEncountertbl.getSelectedRow(),6).toString();
         
-        jPatienttxt.setSelectedItem(patient);
-        jDoctortxt.setSelectedItem(doctor);
+        jPatienttxt.setText(patient);
+        jDoctortxt.setText(doctor);
         jRRatetxt.setText(rrate);
         jHRatetxt.setText(hrrate);
         jHeighttxt.setText(height);
@@ -501,14 +505,14 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
         short checkHeight = 0;
         short checkWeight = 0;
         try{
-            if (jPatienttxt.getSelectedItem().toString().isEmpty()){
+            if (jPatienttxt.getText().toString().isEmpty()){
                 JOptionPane.showMessageDialog(null, "Please provide Patient Name");
-                jPatienttxt.setSelectedItem("");
+                jPatienttxt.setText("");
                 checkPatient = 1;
             }
-            if (jDoctortxt.getSelectedItem().toString().isEmpty() && checkPatient==0){
+            if (jDoctortxt.getText().toString().isEmpty() && checkPatient==0){
                 JOptionPane.showMessageDialog(null, "Please provide Age");
-                jDoctortxt.setSelectedItem("");
+                jDoctortxt.setText("");
                 checkDoctor = 1;
             }
 
@@ -547,8 +551,8 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
         if (checkPatient==0 && checkDoctor==0 && checkRrate==0 && checkHrate==0 
                     && checkAbnormal==0 && checkHeight==0 && checkWeight==0){
                 Encounter pr = phistory.addNewEncounterDetails();
-                pr.setName(jPatienttxt.getSelectedItem().toString());
-                pr.setDoctorName(jDoctortxt.getSelectedItem().toString());
+                pr.setName(jPatienttxt.getText());
+                pr.setDoctorName(jDoctortxt.getText());
                 Vital v = new Vital();
                 v.setRespirationRate(Integer.parseInt(jRRatetxt.getText()));
                 v.setHeartRate(Integer.parseInt(jHRatetxt.getText()));
@@ -563,6 +567,22 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Cannot Create Encounter, Please provide all the details");
         }
     }//GEN-LAST:event_jCreatebtnActionPerformed
+
+    private void jPatienttxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPatienttxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jPatienttxtKeyTyped
+
+    private void jDoctortxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jDoctortxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jDoctortxtKeyTyped
 
     
     private void populateTable() {
@@ -593,7 +613,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
     private javax.swing.JButton jCreatebtn;
     private javax.swing.JButton jDeletebtn;
     private javax.swing.JLabel jDoctorlbl;
-    private javax.swing.JComboBox<String> jDoctortxt;
+    private javax.swing.JTextField jDoctortxt;
     private javax.swing.JScrollPane jEScrollPane;
     private javax.swing.JLabel jEncounterdetailslbl;
     private javax.swing.JTable jEncountertbl;
@@ -605,7 +625,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jPatientlbl;
-    private javax.swing.JComboBox<String> jPatienttxt;
+    private javax.swing.JTextField jPatienttxt;
     private javax.swing.JLabel jRRatelbl;
     private javax.swing.JTextField jRRatetxt;
     private javax.swing.JButton jReadbtn;

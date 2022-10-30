@@ -13,6 +13,18 @@ public class Encounter extends Person{
     private int encounter;
     private String doctorName;
     private Vital vital;
+    
+    public Encounter(String name,String doctorname, Vital vital)
+    {
+        this.name=name;
+        this.doctorName=doctorname;
+        this.vital=vital;
+    }
+
+    Encounter() {
+        id++;
+       this.personid = id;
+    }
 
 
     public int getEncounter() {
@@ -45,6 +57,11 @@ public class Encounter extends Person{
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    @Override
+    public String toString(){
+      return getName(); 
     }
 
 }

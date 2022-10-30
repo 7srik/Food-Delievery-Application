@@ -14,6 +14,19 @@ public class Vital extends Patient{
     protected int height;
     protected int weight;
     private String abnormal;
+    public Vital(){
+        
+    }
+    
+    public Vital(int rr, int hr, int h, int w, String abnormal) 
+    {
+        this.respirationRate = rr;
+        this.heartRate = hr;
+        this.height = h;
+        this.weight = w;
+        this.abnormal = abnormal;
+        
+    }
     
     public int getRespirationRate() {
         return respirationRate;

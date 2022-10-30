@@ -201,8 +201,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jDoctorbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jDoctorbtnActionPerformed
         // TODO add your handling code here:
-        DoctorjPanel doctorpanel = new DoctorjPanel();
-        jSplitPane.setRightComponent(doctorpanel);
+        DoctorLoginjFrame doctorframe = new DoctorLoginjFrame();
+        doctorframe.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jDoctorbtnActionPerformed
 
     private void jAdminbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdminbtnActionPerformed
