@@ -106,10 +106,20 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                 jCitytxtActionPerformed(evt);
             }
         });
+        jCitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCitytxtKeyTyped(evt);
+            }
+        });
 
         jCommunitytxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCommunitytxtActionPerformed(evt);
+            }
+        });
+        jCommunitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCommunitytxtKeyTyped(evt);
             }
         });
 
@@ -120,6 +130,11 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         jHospitaltxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jHospitaltxtActionPerformed(evt);
+            }
+        });
+        jHospitaltxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jHospitaltxtKeyTyped(evt);
             }
         });
 
@@ -274,6 +289,30 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         jCommunitytxt.setText("");
         jCitytxt.setText("");
     }//GEN-LAST:event_jUpdatebtnActionPerformed
+
+    private void jCitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCitytxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jCitytxtKeyTyped
+
+    private void jCommunitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCommunitytxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jCommunitytxtKeyTyped
+
+    private void jHospitaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHospitaltxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jHospitaltxtKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

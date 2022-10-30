@@ -394,6 +394,7 @@ public class PersonjPanel extends javax.swing.JPanel {
                 pr.setAddress(jAddresstxt.getText());
                 pr.setCommunity(jCommunitytxt.getSelectedItem().toString());
                 pr.setCity(jCitytxt.getSelectedItem().toString());
+                PersonDirectory.getPerson().add(pr);
                 JOptionPane.showMessageDialog(null, "Person Created, Your Unique id is :  "+pr.getPersonid()+"\nPlease use your Unique id as PATIENT USERNAME and PATIENT PASSWORD.");
                 clearFields();
                 //PersonInfojPanel personinfo = new PersonInfojPanel(person,patient);

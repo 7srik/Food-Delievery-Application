@@ -74,6 +74,24 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jAddresslbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jAddresslbl.setText("Address :");
 
+        jCitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCitytxtKeyTyped(evt);
+            }
+        });
+
+        jCommunitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCommunitytxtKeyTyped(evt);
+            }
+        });
+
+        jHospitaltxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jHospitaltxtKeyTyped(evt);
+            }
+        });
+
         jCreatebtn.setText("CREATE");
 
         jHcctbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -178,6 +196,30 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         new MainFrame().setVisible(true);
         dispose();
     }//GEN-LAST:event_jHomebtnActionPerformed
+
+    private void jHospitaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHospitaltxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jHospitaltxtKeyTyped
+
+    private void jCitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCitytxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jCitytxtKeyTyped
+
+    private void jCommunitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCommunitytxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jCommunitytxtKeyTyped
 
     /**
      * @param args the command line arguments

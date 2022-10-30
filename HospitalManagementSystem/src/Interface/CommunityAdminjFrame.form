@@ -168,10 +168,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jCitytxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jCitytxtKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jCommunitytxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jCommunitytxtKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jHospitaltxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jHospitaltxtKeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jCreatebtn">
       <Properties>

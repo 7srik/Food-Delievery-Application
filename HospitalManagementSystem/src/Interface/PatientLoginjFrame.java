@@ -18,6 +18,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
      * Creates new form PatientLoginjFrame
      */
    private PersonDirectory persons;
+   int personid;
     public PatientLoginjFrame() {
         initComponents();
         setExtendedState(MainFrame.MAXIMIZED_BOTH);
@@ -136,6 +137,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
             if (password==(pid) && (username==(pid)))
             {
                 s=1;
+                personid=pid;
                 PatientDetailsjFrame pdf = new PatientDetailsjFrame();
                 pdf.setVisible(true);
                 dispose();

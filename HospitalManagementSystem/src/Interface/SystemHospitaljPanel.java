@@ -98,10 +98,20 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                 jCitytxtActionPerformed(evt);
             }
         });
+        jCitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCitytxtKeyTyped(evt);
+            }
+        });
 
         jCommunitytxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCommunitytxtActionPerformed(evt);
+            }
+        });
+        jCommunitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCommunitytxtKeyTyped(evt);
             }
         });
 
@@ -112,6 +122,11 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
         jHospitaltxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jHospitaltxtActionPerformed(evt);
+            }
+        });
+        jHospitaltxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jHospitaltxtKeyTyped(evt);
             }
         });
 
@@ -147,13 +162,10 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(60, 60, 60)
                                         .addComponent(jDeletebtn))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(jCitytxt, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jCommunitytxt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                    .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jCitytxt, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jCommunitytxt, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -289,6 +301,30 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_jDeletebtnActionPerformed
+
+    private void jCitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCitytxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isDigit(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jCitytxtKeyTyped
+
+    private void jCommunitytxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCommunitytxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isDigit(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jCommunitytxtKeyTyped
+
+    private void jHospitaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHospitaltxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isDigit(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jHospitaltxtKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
