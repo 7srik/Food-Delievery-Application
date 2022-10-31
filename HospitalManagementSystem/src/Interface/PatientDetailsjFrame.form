@@ -35,8 +35,12 @@
               <Component id="jLogoutbtn" linkSize="1" min="-2" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jReadbtn" min="-2" pref="84" max="-2" attributes="0"/>
+                      <EmptySpace min="639" pref="639" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -89,29 +93,6 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jDCReadbtn" min="-2" pref="81" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jDoctorcomHeading" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jDoctorComPane" alignment="0" min="-2" pref="401" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPEReadbtn" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                  <Component id="jEncountersHeading" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jPIEditbtn" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jPISavebtn" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="jPEncounterPane" alignment="0" pref="487" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="63" pref="63" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jCitylbl" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -127,9 +108,35 @@
                               <Component id="jCitycmb" min="-2" pref="194" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace min="173" pref="173" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="482" pref="482" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jEncountersHeading" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPIEditbtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPISavebtn" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jPEncounterPane" alignment="0" min="-2" pref="655" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jDCReadbtn" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jDoctorcomHeading" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jDoctorComPane" alignment="0" min="-2" pref="401" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jDoctorlbl" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jHospitallbl" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -139,9 +146,59 @@
                           <Component id="jDoctortxt" linkSize="3" pref="144" max="32767" attributes="0"/>
                           <Component id="jHospitaltxt" max="32767" attributes="0"/>
                       </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPatientlbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRRatelbl" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jHeightlbl" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jRRatetxt" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jHeighttxt" min="-2" pref="122" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="jPatienttxt" min="-2" pref="150" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jHRatelbl" min="-2" max="-2" attributes="0"/>
+                  <Component id="jDoctorlbl1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jWeightlbl" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jHRatetxt1" linkSize="7" min="-2" pref="152" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="jAbnormallbl" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jAbnormaltxt" min="-2" pref="96" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jWeighttxt" min="-2" pref="126" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jDoctortxt1" linkSize="7" alignment="0" min="-2" pref="126" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="69" pref="69" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -223,23 +280,60 @@
                       <Component id="jPEncounterPane" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jDCReadbtn" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPEReadbtn" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jDCReadbtn" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="jReadbtn" min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jDoctorlbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jDoctortxt" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jDoctorlbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jDoctortxt" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jHospitallbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jHospitaltxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jPatientlbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jDoctorlbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPatienttxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jDoctortxt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jRRatelbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jHRatelbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jAbnormallbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRRatetxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jHRatetxt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jAbnormaltxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jHeightlbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jHeighttxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jWeightlbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jWeighttxt" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jHospitallbl" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jHospitaltxt" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="95" max="32767" attributes="0"/>
+              <EmptySpace pref="104" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -370,11 +464,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jDCReadbtnActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jPEReadbtn">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="READ"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jAddresslbl">
       <Properties>
@@ -597,6 +686,102 @@
     <Component class="javax.swing.JTextField" name="jDoctortxt">
     </Component>
     <Component class="javax.swing.JTextField" name="jHospitaltxt">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jRRatelbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Respiration Rate :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cms"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jHRatelbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Heart Rate :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kgs"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jAbnormallbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Abnormal :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jAbnormaltxt">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="2">
+            <StringItem index="0" value="false"/>
+            <StringItem index="1" value="true"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jRRatetxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jRRatetxtKeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jPatienttxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jPatienttxtKeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jHRatetxt1">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jHRatetxt1KeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jDoctortxt1">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jDoctortxt1KeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jHeightlbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Height :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jReadbtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="READ"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jReadbtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jHeighttxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jHeighttxtKeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jWeighttxt">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jWeighttxtKeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jWeightlbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Weight :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jPatientlbl">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Patient Name :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jDoctorlbl1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Doctor Name :"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

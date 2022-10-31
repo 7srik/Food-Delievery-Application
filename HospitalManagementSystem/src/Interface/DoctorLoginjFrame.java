@@ -35,12 +35,12 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
 
         jUsernametxt = new javax.swing.JTextField();
         jPasswordlbl = new javax.swing.JLabel();
-        jPasswordtxt = new javax.swing.JTextField();
         jLoginbtn = new javax.swing.JButton();
         jCancelbtn = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jDoctorHeading = new javax.swing.JLabel();
         jUsernamelbl = new javax.swing.JLabel();
         jBackbtn = new javax.swing.JButton();
+        jPasswordtxt = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,8 +61,8 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel2.setText("DOCTOR LOGIN");
+        jDoctorHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jDoctorHeading.setText("DOCTOR LOGIN");
 
         jUsernamelbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jUsernamelbl.setText("USERNAME");
@@ -79,17 +79,17 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(610, 610, 610)
+                .addGap(611, 611, 611)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jUsernamelbl)
+                    .addComponent(jBackbtn)
+                    .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUsernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPasswordlbl)
-                    .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jUsernamelbl)
-                    .addComponent(jBackbtn))
-                .addContainerGap(110, Short.MAX_VALUE))
+                    .addComponent(jDoctorHeading))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jCancelbtn});
@@ -99,7 +99,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(jDoctorHeading)
                 .addGap(100, 100, 100)
                 .addComponent(jUsernamelbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -197,10 +197,10 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBackbtn;
     private javax.swing.JButton jCancelbtn;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jDoctorHeading;
     private javax.swing.JButton jLoginbtn;
     private javax.swing.JLabel jPasswordlbl;
-    private javax.swing.JTextField jPasswordtxt;
+    private javax.swing.JPasswordField jPasswordtxt;
     private javax.swing.JLabel jUsernamelbl;
     private javax.swing.JTextField jUsernametxt;
     // End of variables declaration//GEN-END:variables

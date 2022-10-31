@@ -3,6 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interface;
+import static Interface.HospitalAdminHospitaljPanel.cityList;
+import Source.City;
+import Source.Hospital;
+import Source.HospitalDirectory;
+import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,9 +20,13 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
     /**
      * Creates new form CommunityAdminjFrame
      */
+    DefaultTableModel tableModel;
+    static ArrayList<City> cityList = new ArrayList<City>();
     public CommunityAdminjFrame() {
         initComponents();
         setExtendedState(MainFrame.MAXIMIZED_BOTH);
+        jUpdatebtn.setEnabled(false);
+        tableModel = (DefaultTableModel)jHcctbl.getModel();
     }
 
     /**
@@ -62,6 +73,11 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jSystemadminheading.setText("COMMUNITY ADMIN");
 
         jReadbtn.setText("READ");
+        jReadbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jReadbtnActionPerformed(evt);
+            }
+        });
 
         jCitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCitylbl.setText("Community :");
@@ -98,13 +114,15 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         });
 
         jCreatebtn.setText("CREATE");
+        jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCreatebtnActionPerformed(evt);
+            }
+        });
 
         jHcctbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "Address", "City", "Community"
@@ -143,9 +161,9 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
                                     .addComponent(jCitytxt)
                                     .addComponent(jCommunitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jUpdatebtn)
-                                .addGap(30, 30, 30)
-                                .addComponent(jCreatebtn))))
+                                .addComponent(jCreatebtn)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jUpdatebtn))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(620, 620, 620)
                         .addComponent(jReadbtn)))
@@ -228,7 +246,72 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
 
     private void jUpdatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUpdatebtnActionPerformed
         // TODO add your handling code here:
+        int selectedRowIndex = jHcctbl.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jHcctbl.getModel();
+        if (selectedRowIndex >= 0)
+        {
+            if("".equals(jHospitaltxt.getText())||"".equals(jCommunitytxt.getText())||
+                "".equals(jCitytxt.getText()))             {
+
+                JOptionPane.showMessageDialog(this, "Please Fill All the Fields");
+            }
+            else{
+                model.setValueAt(jHospitaltxt.getText(), selectedRowIndex, 0);
+                model.setValueAt(jCommunitytxt.getText(), selectedRowIndex, 1);
+                model.setValueAt(jCitytxt.getText(), selectedRowIndex, 2);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "Please Select a row to View.");
+        }
+        jHospitaltxt.setText("");
+        jCommunitytxt.setText("");
+        jCitytxt.setText("");
     }//GEN-LAST:event_jUpdatebtnActionPerformed
+
+    private void jCreatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCreatebtnActionPerformed
+        // TODO add your handling code here:
+        String cityName = jCitytxt.getText();
+        String community = jCommunitytxt.getText();
+        String hospital=jHospitaltxt.getText();
+        if(cityName.isEmpty() || community.isEmpty() || hospital.isEmpty()){
+            JOptionPane.showMessageDialog(this,
+                "Enter all Fields",
+                "Try Again",
+                JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            City city=new City(cityName,community,hospital);
+            cityList.add(city);
+            Object[] data = {cityName, community,hospital};
+            tableModel.addRow(data);
+            JOptionPane.showMessageDialog(this,
+                "City Data Saved",
+                "Success",
+                JOptionPane.INFORMATION_MESSAGE);
+        }
+        jCitytxt.setText("");
+        jCommunitytxt.setText("");
+        jHospitaltxt.setText("");
+    }//GEN-LAST:event_jCreatebtnActionPerformed
+
+    private void jReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jReadbtnActionPerformed
+        // TODO add your handling code here:
+        jUpdatebtn.setEnabled(true);
+        int selectedrow = jHcctbl.getSelectedRow();
+        if (selectedrow < 0){
+            JOptionPane.showMessageDialog(null, "please select");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) jHcctbl.getModel();
+        String hospital = model.getValueAt(jHcctbl.getSelectedRow(),0).toString();
+        String community = model.getValueAt(jHcctbl.getSelectedRow(),1).toString();
+        String city = model.getValueAt(jHcctbl.getSelectedRow(),2).toString();
+
+        jHospitaltxt.setText(hospital);
+        jCommunitytxt.setText(community);
+        jCitytxt.setText(city);
+    }//GEN-LAST:event_jReadbtnActionPerformed
 
     /**
      * @param args the command line arguments

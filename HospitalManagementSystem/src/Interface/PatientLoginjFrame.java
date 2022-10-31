@@ -39,9 +39,9 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         jUsernamelbl = new javax.swing.JLabel();
         jUsernametxt = new javax.swing.JTextField();
         jPasswordlbl = new javax.swing.JLabel();
-        jPasswordtxt = new javax.swing.JTextField();
         jLoginbtn = new javax.swing.JButton();
         jBackbtn = new javax.swing.JButton();
+        jPasswordtxt = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,20 +80,18 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(620, 620, 620)
+                .addGap(611, 611, 611)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jUsernamelbl)
-                    .addComponent(jUsernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordlbl)
-                    .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPasswordtxt)
                     .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPatientHeading)
+                    .addComponent(jUsernamelbl)
+                    .addComponent(jUsernametxt, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                    .addComponent(jPasswordlbl)
+                    .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBackbtn))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jPasswordtxt, jUsernametxt});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jClearbtn});
 
@@ -117,8 +115,6 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
                 .addComponent(jBackbtn)
                 .addGap(0, 166, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPasswordtxt, jUsernametxt});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jClearbtn});
 
@@ -200,7 +196,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
     private javax.swing.JButton jClearbtn;
     private javax.swing.JButton jLoginbtn;
     private javax.swing.JLabel jPasswordlbl;
-    private javax.swing.JTextField jPasswordtxt;
+    private javax.swing.JPasswordField jPasswordtxt;
     private javax.swing.JLabel jPatientHeading;
     private javax.swing.JLabel jUsernamelbl;
     private javax.swing.JTextField jUsernametxt;

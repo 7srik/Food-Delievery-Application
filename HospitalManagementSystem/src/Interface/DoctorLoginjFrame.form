@@ -23,35 +23,35 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="610" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="611" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="2" attributes="0">
-                  <Component id="jUsernametxt" linkSize="3" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
-                  <Component id="jPasswordlbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jPasswordtxt" linkSize="3" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLoginbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
-                  <Component id="jCancelbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="jUsernamelbl" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="jBackbtn" linkSize="1" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPasswordtxt" linkSize="5" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jUsernametxt" linkSize="5" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
+                  <Component id="jPasswordlbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLoginbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Component id="jCancelbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                  <Component id="jDoctorHeading" alignment="2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="110" max="32767" attributes="0"/>
+              <EmptySpace pref="109" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <Component id="jDoctorHeading" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Component id="jUsernamelbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jUsernametxt" linkSize="4" min="-2" max="-2" attributes="0"/>
+              <Component id="jUsernametxt" linkSize="6" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jPasswordlbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPasswordtxt" linkSize="4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jPasswordtxt" linkSize="6" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jLoginbtn" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jCancelbtn" linkSize="2" min="-2" pref="44" max="-2" attributes="0"/>
@@ -73,8 +73,6 @@
         <Property name="text" type="java.lang.String" value="PASSWORD"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jPasswordtxt">
-    </Component>
     <Component class="javax.swing.JButton" name="jLoginbtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="LOGIN"/>
@@ -91,7 +89,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCancelbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="jDoctorHeading">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tw Cen MT" size="24" style="1"/>
@@ -114,6 +112,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBackbtnActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="jPasswordtxt">
     </Component>
   </SubComponents>
 </Form>

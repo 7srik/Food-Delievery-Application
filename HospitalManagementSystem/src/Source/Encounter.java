@@ -14,10 +14,11 @@ public class Encounter extends Person{
     private String doctorName;
     private Vital vital;
     
-    public Encounter(String name,String doctorname, Vital vital)
+    public Encounter(String name,String doctorname, int encounter, Vital vital)
     {
         this.name=name;
         this.doctorName=doctorname;
+        this.encounter=encounter;
         this.vital=vital;
     }
 

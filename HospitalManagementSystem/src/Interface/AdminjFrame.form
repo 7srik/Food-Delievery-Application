@@ -23,24 +23,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="620" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="2" attributes="0">
-                      <Component id="jPasswordlbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jPasswordtxt" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
-                      <Component id="jSelectadminlbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jAdminbox" alignment="1" min="-2" pref="236" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jAdminHeading" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jUsernametxt" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
-                  <Component id="jUsernamelbl" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jClearbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
-                  <Component id="jBackbtn" linkSize="1" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLoginbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="304" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="1074" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -48,6 +30,26 @@
                   <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="620" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPasswordtxt" linkSize="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="2" attributes="0">
+                          <Component id="jPasswordlbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jSelectadminlbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jAdminbox" alignment="1" min="-2" pref="236" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jAdminHeading" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jUsernametxt" linkSize="3" alignment="2" min="-2" pref="236" max="-2" attributes="0"/>
+                      <Component id="jUsernamelbl" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jClearbtn" linkSize="1" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="jBackbtn" linkSize="1" alignment="2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLoginbtn" alignment="2" min="-2" pref="98" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -58,12 +60,12 @@
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Component id="jUsernamelbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jUsernametxt" min="-2" max="-2" attributes="0"/>
+              <Component id="jUsernametxt" linkSize="4" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jPasswordlbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPasswordtxt" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jPasswordtxt" linkSize="4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="jSelectadminlbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jAdminbox" min="-2" pref="42" max="-2" attributes="0"/>
@@ -73,7 +75,7 @@
               <Component id="jClearbtn" linkSize="2" min="-2" pref="44" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jBackbtn" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -84,8 +86,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="jPasswordtxt">
-    </Component>
     <Component class="javax.swing.JButton" name="jLoginbtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="LOGIN"/>
@@ -175,6 +175,8 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="hospital hos"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="jPasswordtxt">
     </Component>
   </SubComponents>
 </Form>

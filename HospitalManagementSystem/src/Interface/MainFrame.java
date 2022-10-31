@@ -154,7 +154,7 @@ public class MainFrame extends javax.swing.JFrame {
         jHomePanelLayout.setHorizontalGroup(
             jHomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jHomePanelLayout.createSequentialGroup()
-                .addGap(231, 231, 231)
+                .addGap(500, 500, 500)
                 .addComponent(jHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(317, 317, 317))
             .addGroup(jHomePanelLayout.createSequentialGroup()
