@@ -40,6 +40,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jBackbtn2.setBackground(new java.awt.Color(255, 204, 51));
         jBackbtn2.setText("BACK");
         jBackbtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +48,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jHomebtn.setBackground(new java.awt.Color(255, 204, 51));
         jHomebtn.setText("HOME");
         jHomebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +59,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
         jSystemadminheadinglbl.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jSystemadminheadinglbl.setText("HOSPITAL ADMIN");
 
+        jPatientbtn.setBackground(new java.awt.Color(255, 204, 51));
         jPatientbtn.setText("PATIENT");
         jPatientbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +67,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jDoctorbtn.setBackground(new java.awt.Color(255, 204, 51));
         jDoctorbtn.setText("DOCTOR");
         jDoctorbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +75,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jHospitalbtn.setBackground(new java.awt.Color(255, 204, 51));
         jHospitalbtn.setText("HOSPITAL");
         jHospitalbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +83,7 @@ public class HospitalAdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jEncounterbtn.setBackground(new java.awt.Color(255, 204, 51));
         jEncounterbtn.setText("ENCOUNTER");
         jEncounterbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

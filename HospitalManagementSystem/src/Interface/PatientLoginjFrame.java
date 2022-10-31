@@ -45,6 +45,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jClearbtn.setBackground(new java.awt.Color(255, 204, 51));
         jClearbtn.setText("CLEAR");
         jClearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,6 +62,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         jPasswordlbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jPasswordlbl.setText("PASSWORD");
 
+        jLoginbtn.setBackground(new java.awt.Color(255, 204, 51));
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +70,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
             }
         });
 
+        jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +96,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
                 .addContainerGap(108, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jClearbtn});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jClearbtn, jLoginbtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,7 +119,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
                 .addGap(0, 166, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jClearbtn});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jClearbtn, jLoginbtn});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

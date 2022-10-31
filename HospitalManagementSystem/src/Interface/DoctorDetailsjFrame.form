@@ -44,7 +44,7 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="416" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="450" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jDoctorlbl" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jHospitallbl" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -84,7 +84,7 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="432" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="460" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jRecordlbl" min="-2" max="-2" attributes="0"/>
@@ -96,12 +96,12 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jSearchtxt" min="-2" pref="154" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="jSearchbtn" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jSearchbtn" linkSize="5" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="475" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="500" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -136,7 +136,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jPatientlbl" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jSearchtxt" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jSearchbtn" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jSearchbtn" linkSize="6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -200,6 +200,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="jBackbtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="cc" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="BACK"/>
           </Properties>
           <Events>
@@ -231,6 +234,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jSearchbtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="cc" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="SEARCH"/>
           </Properties>
           <Events>
@@ -296,6 +302,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jCreatebtn">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="cc" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="CREATE"/>
           </Properties>
           <Events>

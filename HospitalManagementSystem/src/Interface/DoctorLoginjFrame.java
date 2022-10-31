@@ -47,6 +47,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         jPasswordlbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jPasswordlbl.setText("PASSWORD");
 
+        jLoginbtn.setBackground(new java.awt.Color(255, 204, 51));
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +55,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
             }
         });
 
+        jCancelbtn.setBackground(new java.awt.Color(255, 204, 51));
         jCancelbtn.setText("CLEAR");
         jCancelbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +69,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         jUsernamelbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jUsernamelbl.setText("USERNAME");
 
+        jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

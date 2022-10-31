@@ -5,11 +5,14 @@
 package Interface;
 
 import Source.City;
+import Source.CityDirectory;
 import Source.Hospital;
 import Source.HospitalDirectory;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 
 /**
@@ -21,29 +24,33 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
     /**
      * Creates new form HospitalAdminHospitaljPanel
      */
+    CityDirectory phistory;
     DefaultTableModel tableModel;
     static ArrayList<City> cityList = new ArrayList<City>();
     private HospitalDirectory hosd;
     public HospitalAdminHospitaljPanel() {
         initComponents();
         //this.hosd=hosd;
+        this.phistory= new CityDirectory();
         jUpdatebtn.setEnabled(false);
         tableModel = (DefaultTableModel)jHospitaltbl.getModel();
-        //populateTable();
+        populateTable();
     }
-    /*private void populateTable(){
-        tableModel.setRowCount(0);
+    private void populateTable() {
         
-        for(Hospital hos : hosd.getHospitals()){
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        model.setRowCount(0);
+        
+        for (City pd : phistory.getCity()){
+          
             Object[] row = new Object[3];
-            row[0] = hos.getCity();
-            row[1] = hos.getCommunity();
-            row[2] = hos.getHospital();
+            row[0] = pd.getCityName();
+            row[1] = pd.getCommunity();
+            row[2] = pd.getHospital();
             
-            tableModel.addRow(row);
+            model.addRow(row);
         }
     }
-    */
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,11 +60,6 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCreatebtn = new javax.swing.JButton();
-        jUpdatebtn = new javax.swing.JButton();
-        jCitylbl = new javax.swing.JLabel();
-        jCitytxt = new javax.swing.JTextField();
-        jCommunitytxt = new javax.swing.JTextField();
         jCommunitylbl = new javax.swing.JLabel();
         jReadbtn = new javax.swing.JButton();
         jHospitallbl = new javax.swing.JLabel();
@@ -65,47 +67,17 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         jHospitaltxt = new javax.swing.JTextField();
         jHScrollPane = new javax.swing.JScrollPane();
         jHospitaltbl = new javax.swing.JTable();
-
-        jCreatebtn.setText("CREATE");
-        jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCreatebtnActionPerformed(evt);
-            }
-        });
-
-        jUpdatebtn.setText("UPDATE");
-        jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jUpdatebtnActionPerformed(evt);
-            }
-        });
-
-        jCitylbl.setText("City");
-
-        jCitytxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCitytxtActionPerformed(evt);
-            }
-        });
-        jCitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jCitytxtKeyTyped(evt);
-            }
-        });
-
-        jCommunitytxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCommunitytxtActionPerformed(evt);
-            }
-        });
-        jCommunitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jCommunitytxtKeyTyped(evt);
-            }
-        });
+        jSearchtxt = new javax.swing.JTextField();
+        jSearchbtn = new javax.swing.JButton();
+        jCreatebtn = new javax.swing.JButton();
+        jUpdatebtn = new javax.swing.JButton();
+        jCitylbl = new javax.swing.JLabel();
+        jCitytxt = new javax.swing.JTextField();
+        jCommunitytxt = new javax.swing.JTextField();
 
         jCommunitylbl.setText("Community");
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +111,60 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         ));
         jHScrollPane.setViewportView(jHospitaltbl);
 
+        jSearchtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSearchtxtActionPerformed(evt);
+            }
+        });
+
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jSearchbtn.setText("SEARCH");
+        jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSearchbtnActionPerformed(evt);
+            }
+        });
+
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setText("CREATE");
+        jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCreatebtnActionPerformed(evt);
+            }
+        });
+
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jUpdatebtn.setText("UPDATE");
+        jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUpdatebtnActionPerformed(evt);
+            }
+        });
+
+        jCitylbl.setText("City");
+
+        jCitytxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCitytxtActionPerformed(evt);
+            }
+        });
+        jCitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCitytxtKeyTyped(evt);
+            }
+        });
+
+        jCommunitytxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCommunitytxtActionPerformed(evt);
+            }
+        });
+        jCommunitytxt.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jCommunitytxtKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -148,6 +174,10 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jHospitaldetailslbl)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSearchbtn)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jHScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
@@ -175,18 +205,22 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
-                .addComponent(jHospitaldetailslbl)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jSearchbtn)
+                        .addComponent(jSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jHospitaldetailslbl))
                 .addGap(18, 18, 18)
                 .addComponent(jHScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jReadbtn)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCitylbl)
                     .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -198,16 +232,62 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jHospitallbl)
                     .addComponent(jHospitaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUpdatebtn))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});
 
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jReadbtnActionPerformed
+        // TODO add your handling code here:
+        jUpdatebtn.setEnabled(true);
+        int selectedrow = jHospitaltbl.getSelectedRow();
+        if (selectedrow < 0){
+            JOptionPane.showMessageDialog(null, "please select");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        String hospital = model.getValueAt(jHospitaltbl.getSelectedRow(),0).toString();
+        String community = model.getValueAt(jHospitaltbl.getSelectedRow(),1).toString();
+        String city = model.getValueAt(jHospitaltbl.getSelectedRow(),2).toString();
+
+        jHospitaltxt.setText(hospital);
+        jCommunitytxt.setText(community);
+        jCitytxt.setText(city);
+    }//GEN-LAST:event_jReadbtnActionPerformed
+
+    private void jHospitaltxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHospitaltxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jHospitaltxtActionPerformed
+
+    private void jHospitaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHospitaltxtKeyTyped
+        // TODO add your handling code here:
+        char value = evt.getKeyChar();
+        if((!Character.isAlphabetic(value))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jHospitaltxtKeyTyped
+
+    private void jSearchtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchtxtActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        TableRowSorter<DefaultTableModel> tm = new TableRowSorter<>(model);
+        jHospitaltbl.setRowSorter(tm);
+        tm.setRowFilter(RowFilter.regexFilter(jSearchtxt.getText().trim()));
+    }//GEN-LAST:event_jSearchtxtActionPerformed
+
+    private void jSearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchbtnActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        TableRowSorter<DefaultTableModel> tm = new TableRowSorter<>(model);
+        jHospitaltbl.setRowSorter(tm);
+        tm.setRowFilter(RowFilter.regexFilter(jSearchtxt.getText().trim()));
+    }//GEN-LAST:event_jSearchbtnActionPerformed
 
     private void jCreatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCreatebtnActionPerformed
         // TODO add your handling code here:
@@ -225,6 +305,11 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
             cityList.add(city);
             Object[] data = {cityName, community,hospital};
             tableModel.addRow(data);
+            City c = phistory.addNewCityDetails();
+            c.setCityName(cityName);
+            c.setCommunity(community);
+            c.setHospital(hospital);
+            populateTable();
             JOptionPane.showMessageDialog(this,
                 "City Data Saved",
                 "Success",
@@ -284,36 +369,6 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jCommunitytxtKeyTyped
 
-    private void jReadbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jReadbtnActionPerformed
-        // TODO add your handling code here:
-        jUpdatebtn.setEnabled(true);
-        int selectedrow = jHospitaltbl.getSelectedRow();
-        if (selectedrow < 0){
-            JOptionPane.showMessageDialog(null, "please select");
-            return;
-        }
-        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
-        String hospital = model.getValueAt(jHospitaltbl.getSelectedRow(),0).toString();
-        String community = model.getValueAt(jHospitaltbl.getSelectedRow(),1).toString();
-        String city = model.getValueAt(jHospitaltbl.getSelectedRow(),2).toString();
-
-        jHospitaltxt.setText(hospital);
-        jCommunitytxt.setText(community);
-        jCitytxt.setText(city);
-    }//GEN-LAST:event_jReadbtnActionPerformed
-
-    private void jHospitaltxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHospitaltxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jHospitaltxtActionPerformed
-
-    private void jHospitaltxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHospitaltxtKeyTyped
-        // TODO add your handling code here:
-        char value = evt.getKeyChar();
-        if((!Character.isAlphabetic(value))){
-            evt.consume();
-        }
-    }//GEN-LAST:event_jHospitaltxtKeyTyped
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jCitylbl;
@@ -327,6 +382,8 @@ public class HospitalAdminHospitaljPanel extends javax.swing.JPanel {
     private javax.swing.JTable jHospitaltbl;
     private javax.swing.JTextField jHospitaltxt;
     private javax.swing.JButton jReadbtn;
+    private javax.swing.JButton jSearchbtn;
+    private javax.swing.JTextField jSearchtxt;
     private javax.swing.JButton jUpdatebtn;
     // End of variables declaration//GEN-END:variables
 }

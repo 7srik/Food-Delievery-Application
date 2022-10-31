@@ -55,6 +55,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="jBackbtn2">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="BACK"/>
       </Properties>
       <Events>
@@ -63,6 +66,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jHomebtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="HOME"/>
       </Properties>
       <Events>
@@ -122,6 +128,9 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="jPatientbtn">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="cc" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="PATIENT"/>
               </Properties>
               <Events>
@@ -130,6 +139,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jDoctorbtn">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="cc" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="DOCTOR"/>
               </Properties>
               <Events>
@@ -138,6 +150,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jHospitalbtn">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="cc" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="HOSPITAL"/>
               </Properties>
               <Events>
@@ -146,6 +161,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jEncounterbtn">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="cc" red="ff" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="ENCOUNTER"/>
               </Properties>
               <Events>

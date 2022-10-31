@@ -108,7 +108,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jAbnormaltxt = new javax.swing.JComboBox<>();
         jRRatetxt = new javax.swing.JTextField();
         jPatienttxt = new javax.swing.JTextField();
-        jHRatetxt1 = new javax.swing.JTextField();
+        jHRatetxt = new javax.swing.JTextField();
         jDoctortxt1 = new javax.swing.JTextField();
         jHeightlbl = new javax.swing.JLabel();
         jReadbtn = new javax.swing.JButton();
@@ -117,6 +117,8 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jWeightlbl = new javax.swing.JLabel();
         jPatientlbl = new javax.swing.JLabel();
         jDoctorlbl1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jEncountertxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -145,6 +147,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jEncountersHeading.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jEncountersHeading.setText("Personal Encounters");
 
+        jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
         jBackbtn.setText("HOME");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -155,6 +158,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jCitylbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCitylbl.setText("City :");
 
+        jDCReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jDCReadbtn.setText("READ");
         jDCReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +169,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jAddresslbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jAddresslbl.setText("Address :");
 
+        jButton1.setBackground(new java.awt.Color(255, 204, 51));
         jButton1.setText("BOOK APPOINTMENT");
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -173,6 +178,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jPhonenolbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPhonenolbl.setText("Phone Number :");
 
+        jPIEditbtn.setBackground(new java.awt.Color(255, 204, 51));
         jPIEditbtn.setText("EDIT");
         jPIEditbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +186,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
             }
         });
 
+        jPISavebtn.setBackground(new java.awt.Color(255, 204, 51));
         jPISavebtn.setText("SAVE");
         jPISavebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,6 +254,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jDoctorcomHeading.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jDoctorcomHeading.setText("Doctors in the Community");
 
+        jLogoutbtn.setBackground(new java.awt.Color(255, 204, 51));
         jLogoutbtn.setText("LOGOUT");
         jLogoutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -291,9 +299,9 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
             }
         });
 
-        jHRatetxt1.addKeyListener(new java.awt.event.KeyAdapter() {
+        jHRatetxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jHRatetxt1KeyTyped(evt);
+                jHRatetxtKeyTyped(evt);
             }
         });
 
@@ -305,6 +313,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
 
         jHeightlbl.setText("Height :");
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -330,6 +339,8 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
 
         jDoctorlbl1.setText("Doctor Name :");
 
+        jLabel4.setText("Encounter ID :");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -341,12 +352,20 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                 .addGap(401, 401, 401)
                 .addComponent(jLogoutbtn))
             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(482, 482, 482)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jEncountersHeading)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPIEditbtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPISavebtn))
+                    .addComponent(jPEncounterPane, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(639, 639, 639))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
@@ -399,81 +418,75 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                                         .addGap(127, 127, 127)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jCitycmb, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(173, 173, 173)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGap(482, 482, 482)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jEncountersHeading)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPIEditbtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPISavebtn))
-                    .addComponent(jPEncounterPane, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1))
-                    .addComponent(jDoctorcomHeading)
-                    .addComponent(jDoctorComPane, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDoctorlbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jHospitallbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jDoctortxt, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                            .addComponent(jHospitaltxt))))
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPatientlbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRRatelbl, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jHeightlbl, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jRRatetxt)
+                        .addGap(142, 142, 142))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jHeighttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jDCReadbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton1))
+                                    .addComponent(jDoctorcomHeading)
+                                    .addComponent(jDoctorComPane, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jDoctorlbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jHospitallbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jDoctortxt, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                                            .addComponent(jHospitaltxt))))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPatientlbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jRRatelbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jHeightlbl, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jRRatetxt)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jHeighttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel2))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jPatienttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jHRatelbl)
+                                    .addComponent(jDoctorlbl1)
+                                    .addComponent(jWeightlbl))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jHRatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jDoctortxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jAbnormallbl, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPatienttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jHRatelbl)
-                    .addComponent(jDoctorlbl1)
-                    .addComponent(jWeightlbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jHRatetxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(19, 19, 19)
-                        .addComponent(jAbnormallbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jAbnormaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jAbnormaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jEncountertxt, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jWeighttxt, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3))
-                            .addComponent(jDoctortxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(69, 69, 69))
+                                .addComponent(jLabel3)
+                                .addGap(218, 218, 218)))))
+                .addGap(0, 31, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jLogoutbtn});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctortxt, jEmailidtxt});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctortxt1, jHRatetxt1});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctortxt1, jHRatetxt});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jDCReadbtn, jPIEditbtn, jPISavebtn, jReadbtn});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -560,14 +573,16 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                             .addComponent(jPatientlbl)
                             .addComponent(jDoctorlbl1)
                             .addComponent(jPatienttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jDoctortxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jDoctortxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(jEncountertxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jRRatelbl)
                             .addComponent(jHRatelbl)
                             .addComponent(jAbnormallbl)
                             .addComponent(jRRatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jHRatetxt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jHRatetxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jAbnormaltxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -577,12 +592,14 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
                             .addComponent(jWeighttxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jLogoutbtn});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDoctortxt, jEmailidtxt});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jDCReadbtn, jPIEditbtn, jPISavebtn, jReadbtn});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -869,13 +886,13 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jPatienttxtKeyTyped
 
-    private void jHRatetxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHRatetxt1KeyTyped
+    private void jHRatetxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jHRatetxtKeyTyped
         // TODO add your handling code here:
         char value = evt.getKeyChar();
         if((!Character.isDigit(value))){
             evt.consume();
         }
-    }//GEN-LAST:event_jHRatetxt1KeyTyped
+    }//GEN-LAST:event_jHRatetxtKeyTyped
 
     private void jDoctortxt1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jDoctortxt1KeyTyped
         // TODO add your handling code here:
@@ -895,14 +912,16 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jPEncountertbl.getModel();
         String patient = model.getValueAt(jPEncountertbl.getSelectedRow(),0).toString();
         String doctor = model.getValueAt(jPEncountertbl.getSelectedRow(),1).toString();
-        String rrate = model.getValueAt(jPEncountertbl.getSelectedRow(),2).toString();
-        String hrrate = model.getValueAt(jPEncountertbl.getSelectedRow(),3).toString();
-        String height = model.getValueAt(jPEncountertbl.getSelectedRow(),4).toString();
-        String weight = model.getValueAt(jPEncountertbl.getSelectedRow(),5).toString();
-        String abnormal = model.getValueAt(jPEncountertbl.getSelectedRow(),6).toString();
+        String enc = model.getValueAt(jPEncountertbl.getSelectedRow(),2).toString();
+        String rrate = model.getValueAt(jPEncountertbl.getSelectedRow(),3).toString();
+        String hrrate = model.getValueAt(jPEncountertbl.getSelectedRow(),4).toString();
+        String height = model.getValueAt(jPEncountertbl.getSelectedRow(),5).toString();
+        String weight = model.getValueAt(jPEncountertbl.getSelectedRow(),6).toString();
+        String abnormal = model.getValueAt(jPEncountertbl.getSelectedRow(),7).toString();
 
         jPatienttxt.setText(patient);
-        jDoctortxt.setText(doctor);
+        jDoctortxt1.setText(doctor);
+        jEncountertxt.setText(enc);
         jRRatetxt.setText(rrate);
         jHRatetxt.setText(hrrate);
         jHeighttxt.setText(height);
@@ -1041,12 +1060,12 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jEmailidlbl;
     private javax.swing.JTextField jEmailidtxt;
     private javax.swing.JLabel jEncountersHeading;
+    private javax.swing.JTextField jEncountertxt;
     private javax.swing.JRadioButton jFemalebtn;
     private javax.swing.ButtonGroup jGenderbtngrp;
     private javax.swing.JLabel jGenderlbl;
     private javax.swing.JLabel jHRatelbl;
     private javax.swing.JTextField jHRatetxt;
-    private javax.swing.JTextField jHRatetxt1;
     private javax.swing.JLabel jHeightlbl;
     private javax.swing.JTextField jHeighttxt;
     private javax.swing.JLabel jHospitallbl;
@@ -1054,6 +1073,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JRadioButton jLgbtqbtn;
     private javax.swing.JButton jLogoutbtn;
     private javax.swing.JRadioButton jMalebtn;

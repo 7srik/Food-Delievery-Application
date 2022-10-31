@@ -95,6 +95,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
         ));
         jEScrollPane.setViewportView(jEncountertbl);
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +103,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
             }
         });
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +111,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
             }
         });
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +119,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
             }
         });
 
+        jDeletebtn.setBackground(new java.awt.Color(255, 204, 51));
         jDeletebtn.setText("DELETE");
         jDeletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +165,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
 
         jWeightlbl.setText("Weight :");
 
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -520,6 +525,7 @@ public class SystemEncounterjPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this,"Please select only one row to delete.");
             }
         }
+        clearFields();
     }//GEN-LAST:event_jDeletebtnActionPerformed
 
     private void jCreatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCreatebtnActionPerformed

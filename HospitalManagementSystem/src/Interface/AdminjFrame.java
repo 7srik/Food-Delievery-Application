@@ -44,7 +44,10 @@ public class AdminjFrame extends javax.swing.JFrame {
         jPasswordtxt = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ADMIN LOGIN");
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        jLoginbtn.setBackground(new java.awt.Color(255, 204, 0));
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +55,7 @@ public class AdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jClearbtn.setBackground(new java.awt.Color(255, 204, 0));
         jClearbtn.setText("CLEAR");
         jClearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +82,7 @@ public class AdminjFrame extends javax.swing.JFrame {
         jAdminHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jAdminHeading.setText("ADMIN LOGIN");
 
+        jBackbtn.setBackground(new java.awt.Color(255, 204, 0));
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

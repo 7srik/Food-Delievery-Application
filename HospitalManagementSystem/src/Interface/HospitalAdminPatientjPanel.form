@@ -33,7 +33,7 @@
                       <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                       <Component id="jSearchtxt" min="-2" pref="171" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jSearchbtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSearchbtn" linkSize="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
@@ -107,13 +107,13 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jReadbtn" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCreatebtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jReadbtn" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCreatebtn" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jUpdatebtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="jUpdatebtn" linkSize="1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="39" max="32767" attributes="0"/>
@@ -126,7 +126,7 @@
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                      <Component id="jSearchbtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSearchbtn" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jSearchtxt" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jPatientdetailslbl" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -134,7 +134,7 @@
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="jPScrollPane" min="-2" pref="147" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Component id="jReadbtn" min="-2" max="-2" attributes="0"/>
+              <Component id="jReadbtn" linkSize="2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jPersonalinfolbl" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -188,8 +188,8 @@
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jUpdatebtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCreatebtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jUpdatebtn" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCreatebtn" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="99" max="32767" attributes="0"/>
           </Group>
@@ -225,6 +225,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="jCreatebtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CREATE"/>
       </Properties>
       <Events>
@@ -233,6 +236,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jReadbtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="READ"/>
       </Properties>
       <Events>
@@ -241,6 +247,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jUpdatebtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="UPDATE"/>
       </Properties>
       <Events>
@@ -350,6 +359,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jSearchbtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="SEARCH"/>
       </Properties>
       <Events>

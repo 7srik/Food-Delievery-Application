@@ -98,6 +98,7 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jSearchbtn = new javax.swing.JButton();
         jSearchtxt = new javax.swing.JTextField();
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +109,7 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jPersonalinfolbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jPersonalinfolbl.setText("Doctor Information");
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +180,7 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jNamelbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jNamelbl.setText("Name :");
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -313,6 +316,10 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jUpdatebtn});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jEmailidtxt, jUsernametxt});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jAddresstxt, jHospitalcmb});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

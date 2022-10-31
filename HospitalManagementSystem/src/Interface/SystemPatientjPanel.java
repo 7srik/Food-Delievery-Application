@@ -102,6 +102,7 @@ public class SystemPatientjPanel extends javax.swing.JPanel {
         ));
         jPScrollPane.setViewportView(jPatienttbl);
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +110,7 @@ public class SystemPatientjPanel extends javax.swing.JPanel {
             }
         });
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +118,7 @@ public class SystemPatientjPanel extends javax.swing.JPanel {
             }
         });
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +126,7 @@ public class SystemPatientjPanel extends javax.swing.JPanel {
             }
         });
 
+        jDeletebtn.setBackground(new java.awt.Color(255, 204, 51));
         jDeletebtn.setText("DELETE");
         jDeletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,6 +223,7 @@ public class SystemPatientjPanel extends javax.swing.JPanel {
         jPhonenolbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPhonenolbl.setText("Phone Number :");
 
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

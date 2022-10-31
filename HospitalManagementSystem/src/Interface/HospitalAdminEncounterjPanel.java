@@ -111,6 +111,7 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
             }
         });
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +119,7 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
             }
         });
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +129,7 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
 
         jLabel4.setText("Encounter ID:");
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,6 +181,7 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
 
         jWeightlbl.setText("Weight :");
 
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,6 +280,9 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
                             .addComponent(jEScrollPane))))
                 .addGap(49, 49, 49))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -318,6 +325,9 @@ public class HospitalAdminEncounterjPanel extends javax.swing.JPanel {
                     .addComponent(jUpdatebtn))
                 .addGap(29, 29, 29))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPatienttxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPatienttxtKeyTyped

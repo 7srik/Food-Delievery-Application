@@ -33,7 +33,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jUsernametxt" min="-2" max="-2" attributes="0"/>
+                              <Component id="jUsernametxt" linkSize="5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jPasswordlbl" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -49,7 +49,7 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jEmailidtxt" min="-2" pref="200" max="-2" attributes="0"/>
+                              <Component id="jEmailidtxt" linkSize="5" min="-2" pref="200" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jCitylbl" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -84,8 +84,8 @@
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jCommunitycmb" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jHospitalcmb" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Component id="jAddresstxt" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jHospitalcmb" linkSize="6" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="jAddresstxt" linkSize="6" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -231,6 +231,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jReadbtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="READ"/>
       </Properties>
       <Events>
@@ -247,6 +250,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jUpdatebtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="UPDATE"/>
       </Properties>
       <Events>
@@ -407,6 +413,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="jCreatebtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="cc" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CREATE"/>
       </Properties>
       <Events>

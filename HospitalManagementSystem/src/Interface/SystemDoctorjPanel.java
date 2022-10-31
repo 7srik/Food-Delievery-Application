@@ -137,6 +137,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jNamelbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jNamelbl.setText("Name :");
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +145,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
             }
         });
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,6 +156,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jPersonalinfolbl.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
         jPersonalinfolbl.setText("Doctor Information");
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +167,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jPhonenolbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPhonenolbl.setText("Phone Number :");
 
+        jDeletebtn.setBackground(new java.awt.Color(255, 204, 51));
         jDeletebtn.setText("DELETE");
         jDeletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,6 +217,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jHospitallbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jHospitallbl.setText("Hospital :");
 
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

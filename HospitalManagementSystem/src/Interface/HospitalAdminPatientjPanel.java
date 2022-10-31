@@ -97,6 +97,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         ));
         jPScrollPane.setViewportView(jPatienttbl);
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +105,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
             }
         });
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +113,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
             }
         });
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,6 +163,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         jPhonenolbl.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPhonenolbl.setText("Phone Number :");
 
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,6 +307,9 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
                         .addComponent(jUpdatebtn)))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -361,6 +368,9 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
                     .addComponent(jCreatebtn))
                 .addContainerGap(99, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCreatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCreatebtnActionPerformed

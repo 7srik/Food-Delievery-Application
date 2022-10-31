@@ -5,11 +5,14 @@
 package Interface;
 
 import Source.City;
+import Source.CityDirectory;
 import Source.Hospital;
 import Source.HospitalDirectory;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -20,23 +23,23 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
     /**
      * Creates new form SystemHospitaljPanel
      */
-    City phistory;
+    CityDirectory phistory;
     DefaultTableModel tableModel;
     static ArrayList<City> cityList = new ArrayList<City>();
     public SystemHospitaljPanel() {
         initComponents();
-        this.phistory= new City();
+        this.phistory= new CityDirectory();
         jUpdatebtn.setEnabled(false);
         tableModel = (DefaultTableModel)jHospitaltbl.getModel();
-        //populateTable();
+        populateTable();
     }
     
-    /*private void populateTable() {
+    private void populateTable() {
         
         DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
         model.setRowCount(0);
         
-        for (City pd : phistory.()){
+        for (City pd : phistory.getCity()){
           
             Object[] row = new Object[3];
             row[0] = pd.getCityName();
@@ -47,7 +50,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
 
         }
 
-    }*/
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -71,7 +74,10 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
         jCommunitylbl = new javax.swing.JLabel();
         jHospitallbl = new javax.swing.JLabel();
         jHospitaltxt = new javax.swing.JTextField();
+        jSearchtxt = new javax.swing.JTextField();
+        jSearchbtn = new javax.swing.JButton();
 
+        jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +98,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
         ));
         jHScrollPane.setViewportView(jHospitaltbl);
 
+        jDeletebtn.setBackground(new java.awt.Color(255, 204, 51));
         jDeletebtn.setText("DELETE");
         jDeletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +106,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
             }
         });
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +114,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
             }
         });
 
+        jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +161,20 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
             }
         });
 
+        jSearchtxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSearchtxtActionPerformed(evt);
+            }
+        });
+
+        jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jSearchbtn.setText("SEARCH");
+        jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSearchbtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -161,6 +184,10 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jHospitaldetailslbl)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jSearchbtn)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jHScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)
@@ -197,7 +224,11 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
-                .addComponent(jHospitaldetailslbl)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jSearchbtn)
+                        .addComponent(jSearchtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jHospitaldetailslbl))
                 .addGap(18, 18, 18)
                 .addComponent(jHScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -220,7 +251,7 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jUpdatebtn))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jDeletebtn, jReadbtn, jUpdatebtn});
@@ -243,6 +274,11 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
             cityList.add(city);
             Object[] data = {cityName, community,hospital};
             tableModel.addRow(data);
+            City c = phistory.addNewCityDetails();
+            c.setCityName(cityName);
+            c.setCommunity(community);
+            c.setHospital(hospital);
+            populateTable();
             JOptionPane.showMessageDialog(this,
                 "City Data Saved",
                 "Success",
@@ -352,6 +388,23 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jHospitaltxtKeyTyped
 
+    private void jSearchtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchtxtActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        TableRowSorter<DefaultTableModel> tm = new TableRowSorter<>(model);
+        jHospitaltbl.setRowSorter(tm);
+        tm.setRowFilter(RowFilter.regexFilter(jSearchtxt.getText().trim()));
+    }//GEN-LAST:event_jSearchtxtActionPerformed
+
+    private void jSearchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSearchbtnActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jHospitaltbl.getModel();
+        TableRowSorter<DefaultTableModel> tm = new TableRowSorter<>(model);
+        jHospitaltbl.setRowSorter(tm);
+        tm.setRowFilter(RowFilter.regexFilter(jSearchtxt.getText().trim()));
+
+    }//GEN-LAST:event_jSearchbtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jCitylbl;
@@ -366,6 +419,8 @@ public class SystemHospitaljPanel extends javax.swing.JPanel {
     private javax.swing.JTable jHospitaltbl;
     private javax.swing.JTextField jHospitaltxt;
     private javax.swing.JButton jReadbtn;
+    private javax.swing.JButton jSearchbtn;
+    private javax.swing.JTextField jSearchtxt;
     private javax.swing.JButton jUpdatebtn;
     // End of variables declaration//GEN-END:variables
 }

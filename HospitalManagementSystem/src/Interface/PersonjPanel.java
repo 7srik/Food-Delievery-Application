@@ -124,6 +124,7 @@ public class PersonjPanel extends javax.swing.JPanel {
             }
         });
 
+        jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +132,7 @@ public class PersonjPanel extends javax.swing.JPanel {
             }
         });
 
+        jClearbtn.setBackground(new java.awt.Color(255, 204, 51));
         jClearbtn.setText("CLEAR");
         jClearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
