@@ -45,9 +45,12 @@ public class AdminjFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ADMIN LOGIN");
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(0, 0, 0));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(new java.awt.Color(0, 0, 0));
 
         jLoginbtn.setBackground(new java.awt.Color(255, 204, 0));
+        jLoginbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +59,7 @@ public class AdminjFrame extends javax.swing.JFrame {
         });
 
         jClearbtn.setBackground(new java.awt.Color(255, 204, 0));
+        jClearbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jClearbtn.setText("CLEAR");
         jClearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,10 +83,12 @@ public class AdminjFrame extends javax.swing.JFrame {
             }
         });
 
+        jAdminHeading.setBackground(new java.awt.Color(255, 255, 255));
         jAdminHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jAdminHeading.setText("ADMIN LOGIN");
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 0));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +146,7 @@ public class AdminjFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordlbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(jSelectadminlbl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jAdminbox, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,7 +156,7 @@ public class AdminjFrame extends javax.swing.JFrame {
                 .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jBackbtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)

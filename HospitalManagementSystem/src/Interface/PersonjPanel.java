@@ -84,6 +84,8 @@ public class PersonjPanel extends javax.swing.JPanel {
         jCommunitytxt = new javax.swing.JComboBox<>();
         jCitytxt = new javax.swing.JComboBox<>();
 
+        setToolTipText("");
+
         jHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jHeading.setText("PERSON REGISTRATION");
 
@@ -125,6 +127,7 @@ public class PersonjPanel extends javax.swing.JPanel {
         });
 
         jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +136,7 @@ public class PersonjPanel extends javax.swing.JPanel {
         });
 
         jClearbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jClearbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jClearbtn.setText("CLEAR");
         jClearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,8 +196,8 @@ public class PersonjPanel extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(137, 137, 137)
+                                .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(130, 130, 130)
                                 .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,9 +271,9 @@ public class PersonjPanel extends javax.swing.JPanel {
                     .addComponent(jCitytxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCreatebtn)
+                    .addComponent(jCreatebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jClearbtn))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresslbl, jAgelbl, jCitylbl, jCommunitylbl, jNamelbl});

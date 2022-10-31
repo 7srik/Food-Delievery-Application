@@ -121,6 +121,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jEncountertxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PATIENT");
 
         jPhonenotxt.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -148,6 +149,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jEncountersHeading.setText("Personal Encounters");
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("HOME");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +161,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jCitylbl.setText("City :");
 
         jDCReadbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jDCReadbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jDCReadbtn.setText("READ");
         jDCReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +173,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jAddresslbl.setText("Address :");
 
         jButton1.setBackground(new java.awt.Color(255, 204, 51));
+        jButton1.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jButton1.setText("BOOK APPOINTMENT");
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
@@ -179,6 +183,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jPhonenolbl.setText("Phone Number :");
 
         jPIEditbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jPIEditbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPIEditbtn.setText("EDIT");
         jPIEditbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +192,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         });
 
         jPISavebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jPISavebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPISavebtn.setText("SAVE");
         jPISavebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,6 +261,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jDoctorcomHeading.setText("Doctors in the Community");
 
         jLogoutbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jLogoutbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLogoutbtn.setText("LOGOUT");
         jLogoutbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,6 +321,7 @@ public class PatientDetailsjFrame extends javax.swing.JFrame {
         jHeightlbl.setText("Height :");
 
         jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jReadbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

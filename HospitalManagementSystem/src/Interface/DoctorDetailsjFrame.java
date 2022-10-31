@@ -95,8 +95,10 @@ public class DoctorDetailsjFrame extends javax.swing.JFrame {
         jEncounterlbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("DOCTOR");
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +128,7 @@ public class DoctorDetailsjFrame extends javax.swing.JFrame {
         });
 
         jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jSearchbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +167,7 @@ public class DoctorDetailsjFrame extends javax.swing.JFrame {
         jVitallbl.setText("Vital Signs :");
 
         jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

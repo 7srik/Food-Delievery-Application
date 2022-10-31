@@ -99,6 +99,7 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jSearchtxt = new javax.swing.JTextField();
 
         jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jReadbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +111,7 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jPersonalinfolbl.setText("Doctor Information");
 
         jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jUpdatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +183,7 @@ public class HospitalAdminDoctorjPanel extends javax.swing.JPanel {
         jNamelbl.setText("Name :");
 
         jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

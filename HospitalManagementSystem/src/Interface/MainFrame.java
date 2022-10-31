@@ -55,6 +55,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuPanel.setBackground(new java.awt.Color(0, 0, 0));
 
         jHomebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jHomebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jHomebtn.setText("HOME");
         jHomebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +64,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jPatientbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jPatientbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPatientbtn.setText("PATIENT");
         jPatientbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +73,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jDoctorbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jDoctorbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jDoctorbtn.setText("DOCTOR");
         jDoctorbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +82,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jAdminbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jAdminbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jAdminbtn.setText("ADMIN");
         jAdminbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +91,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jRefreshbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jRefreshbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jRefreshbtn.setText("REFRESH");
         jRefreshbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +100,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jExitbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jExitbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jExitbtn.setText("EXIT");
         jExitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +109,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jPersonbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jPersonbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPersonbtn.setText("PERSON");
         jPersonbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,31 +140,35 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuPanelLayout.setVerticalGroup(
             jMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jMenuPanelLayout.createSequentialGroup()
-                .addComponent(jHomebtn)
-                .addGap(83, 83, 83)
+                .addComponent(jHomebtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
                 .addComponent(jPersonbtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPatientbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(jDoctorbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(jAdminbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 341, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
                 .addComponent(jRefreshbtn)
-                .addGap(8, 8, 8)
+                .addGap(12, 12, 12)
                 .addComponent(jExitbtn))
         );
+
+        jMenuPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAdminbtn, jDoctorbtn, jExitbtn, jHomebtn, jPatientbtn, jPersonbtn, jRefreshbtn});
 
         jSplitPane.setLeftComponent(jMenuPanel);
 
         jHomePanel.setBackground(new java.awt.Color(0, 0, 0));
 
-        jHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jHeading.setFont(new java.awt.Font("Tw Cen MT", 1, 38)); // NOI18N
         jHeading.setForeground(new java.awt.Color(255, 255, 255));
         jHeading.setText("HOSPITAL MANAGEMENT SYSTEM");
 
+        jStatement.setBackground(new java.awt.Color(0, 0, 0));
         jStatement.setColumns(20);
-        jStatement.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jStatement.setFont(new java.awt.Font("Segoe UI Variable", 2, 24)); // NOI18N
+        jStatement.setForeground(new java.awt.Color(255, 255, 255));
         jStatement.setRows(5);
         jStatement.setText("“Our mission is to bring healthcare of International standards within the reach of every individual. \nWe are committed to the achievement and maintenance of excellence in education, research and \nhealthcare for the benefit of humanity”");
         jScrollPane1.setViewportView(jStatement);
@@ -167,11 +178,11 @@ public class MainFrame extends javax.swing.JFrame {
         jHomePanelLayout.setHorizontalGroup(
             jHomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jHomePanelLayout.createSequentialGroup()
-                .addGap(500, 500, 500)
+                .addGap(400, 400, 400)
                 .addComponent(jHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(317, 317, 317))
             .addGroup(jHomePanelLayout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(208, 208, 208)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -179,9 +190,9 @@ public class MainFrame extends javax.swing.JFrame {
             jHomePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jHomePanelLayout.createSequentialGroup()
                 .addComponent(jHeading)
-                .addGap(180, 180, 180)
+                .addGap(186, 186, 186)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 289, Short.MAX_VALUE))
+                .addGap(0, 243, Short.MAX_VALUE))
         );
 
         jSplitPane.setRightComponent(jHomePanel);

@@ -98,6 +98,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         jPScrollPane.setViewportView(jPatienttbl);
 
         jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +107,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         });
 
         jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jReadbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +116,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         });
 
         jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jUpdatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +167,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
         jPhonenolbl.setText("Phone Number :");
 
         jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jSearchbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,7 +370,7 @@ public class HospitalAdminPatientjPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jUpdatebtn)
                     .addComponent(jCreatebtn))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jCreatebtn, jReadbtn, jSearchbtn, jUpdatebtn});

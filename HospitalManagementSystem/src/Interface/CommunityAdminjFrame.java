@@ -54,8 +54,10 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jHcctbl = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("COMMUNITY ADMIN");
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +66,7 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         });
 
         jHomebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jHomebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jHomebtn.setText("HOME");
         jHomebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +78,7 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jSystemadminheading.setText("COMMUNITY ADMIN");
 
         jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jReadbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +90,7 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         jCitylbl.setText("Community :");
 
         jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jUpdatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +123,7 @@ public class CommunityAdminjFrame extends javax.swing.JFrame {
         });
 
         jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

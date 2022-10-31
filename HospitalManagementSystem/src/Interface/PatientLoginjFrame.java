@@ -44,8 +44,10 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         jPasswordtxt = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PATIENT LOGIN");
 
         jClearbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jClearbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jClearbtn.setText("CLEAR");
         jClearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +65,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         jPasswordlbl.setText("PASSWORD");
 
         jLoginbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jLoginbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +74,7 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         });
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,17 +87,17 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(611, 611, 611)
+                .addGap(620, 620, 620)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jPasswordtxt)
+                    .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPatientHeading)
                     .addComponent(jUsernamelbl)
-                    .addComponent(jUsernametxt, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                    .addComponent(jUsernametxt, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPasswordlbl)
                     .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBackbtn))
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jClearbtn, jLoginbtn});
@@ -112,11 +116,11 @@ public class PatientLoginjFrame extends javax.swing.JFrame {
                 .addComponent(jPasswordtxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(jClearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(jBackbtn)
-                .addGap(0, 166, Short.MAX_VALUE))
+                .addGap(0, 178, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBackbtn, jClearbtn, jLoginbtn});

@@ -39,8 +39,10 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         jDisplaypnl = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("SYSTEM ADMIN");
 
         jHomebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jHomebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jHomebtn.setText("HOME");
         jHomebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,6 +54,7 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         jSystemadminheading.setText("SYSTEM ADMIN");
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("LOGOUT");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +63,7 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         });
 
         jPatientbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jPatientbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jPatientbtn.setText("PATIENT");
         jPatientbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +72,7 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         });
 
         jDoctorbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jDoctorbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jDoctorbtn.setText("DOCTOR");
         jDoctorbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +81,7 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         });
 
         jHospitalbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jHospitalbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jHospitalbtn.setText("HOSPITAL");
         jHospitalbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +90,7 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         });
 
         jEncounterbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jEncounterbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jEncounterbtn.setText("ENCOUNTER");
         jEncounterbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,14 +102,13 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
         jMenupnl.setLayout(jMenupnlLayout);
         jMenupnlLayout.setHorizontalGroup(
             jMenupnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jMenupnlLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addGroup(jMenupnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jEncounterbtn)
-                    .addComponent(jHospitalbtn)
-                    .addComponent(jDoctorbtn)
-                    .addComponent(jPatientbtn))
-                .addGap(30, 30, 30))
+            .addGroup(jMenupnlLayout.createSequentialGroup()
+                .addGroup(jMenupnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPatientbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jEncounterbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jHospitalbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jDoctorbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 49, Short.MAX_VALUE))
         );
 
         jMenupnlLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jDoctorbtn, jEncounterbtn, jHospitalbtn, jPatientbtn});
@@ -111,15 +117,17 @@ public class SystemAdminjFrame extends javax.swing.JFrame {
             jMenupnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jMenupnlLayout.createSequentialGroup()
                 .addGap(90, 90, 90)
-                .addComponent(jPatientbtn)
-                .addGap(30, 30, 30)
+                .addComponent(jPatientbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jDoctorbtn)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jHospitalbtn)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jEncounterbtn)
-                .addContainerGap(270, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
+
+        jMenupnlLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jDoctorbtn, jEncounterbtn, jHospitalbtn, jPatientbtn});
 
         jSplitPane.setLeftComponent(jMenupnl);
 

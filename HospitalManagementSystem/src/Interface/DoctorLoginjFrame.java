@@ -43,11 +43,13 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         jPasswordtxt = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("DOCTOR LOGIN");
 
         jPasswordlbl.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
         jPasswordlbl.setText("PASSWORD");
 
         jLoginbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jLoginbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jLoginbtn.setText("LOGIN");
         jLoginbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +58,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         });
 
         jCancelbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCancelbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCancelbtn.setText("CLEAR");
         jCancelbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +73,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         jUsernamelbl.setText("USERNAME");
 
         jBackbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jBackbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jBackbtn.setText("BACK");
         jBackbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +86,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(611, 611, 611)
+                .addGap(620, 620, 620)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jUsernamelbl)
                     .addComponent(jBackbtn)
@@ -92,7 +96,7 @@ public class DoctorLoginjFrame extends javax.swing.JFrame {
                     .addComponent(jLoginbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCancelbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jDoctorHeading))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBackbtn, jCancelbtn});

@@ -138,6 +138,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jNamelbl.setText("Name :");
 
         jCreatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jCreatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jCreatebtn.setText("CREATE");
         jCreatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +147,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         });
 
         jReadbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jReadbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jReadbtn.setText("READ");
         jReadbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,6 +159,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jPersonalinfolbl.setText("Doctor Information");
 
         jUpdatebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jUpdatebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jUpdatebtn.setText("UPDATE");
         jUpdatebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +171,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jPhonenolbl.setText("Phone Number :");
 
         jDeletebtn.setBackground(new java.awt.Color(255, 204, 51));
+        jDeletebtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jDeletebtn.setText("DELETE");
         jDeletebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,6 +222,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
         jHospitallbl.setText("Hospital :");
 
         jSearchbtn.setBackground(new java.awt.Color(255, 204, 51));
+        jSearchbtn.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
         jSearchbtn.setText("SEARCH");
         jSearchbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -401,7 +406,7 @@ public class SystemDoctorjPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jUpdatebtn)
                     .addComponent(jCreatebtn))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jAddresstxt, jHospitalcmb});
